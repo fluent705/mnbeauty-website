@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bridal & Event Makeup in Metuchen, NJ | Merle Norman Spa</title>
+<meta name="description" content="Professional bridal and event makeup in Metuchen, NJ — full makeup application for weddings and special occasions, plus one-on-one and group makeup classes. Call (848) 229-2742.">
+<link rel="icon" href="../images/logo/certified-spa-badge-sm.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<style>
+/* ── MAKEUP HUB PAGE ── */
+
+/* HERO — split: dark left / full-bleed photo right */
+.mk-hero {
+  display: grid;
+  grid-template-columns: 48% 52%;
+  min-height: 92vh;
+  background: var(--ink);
+  overflow: hidden;
+}
+.mk-hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 140px 72px 100px 64px;
+  position: relative;
+  z-index: 2;
+}
+.mk-hero-left h1 {
+  font-family: var(--serif);
+  font-size: clamp(40px, 4.5vw, 62px);
+  line-height: 1.07;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 26px;
+  letter-spacing: -.01em;
+}
+.mk-hero-left h1 em { font-style: italic; color: var(--gold); }
+.mk-hero-left p {
+  font-size: 16.5px;
+  color: rgba(255,255,255,.65);
+  line-height: 1.82;
+  max-width: 440px;
+  margin-bottom: 48px;
+}
+.mk-hero-left .mk-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.mk-hero-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 52px 0;
+}
+.mk-hero-divider::before, .mk-hero-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,.1);
+}
+.mk-hero-divider span {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.3);
+  white-space: nowrap;
+}
+
+.mk-hero-services {
+  display: flex;
+  gap: 0;
+}
+.mk-hero-service-link {
+  flex: 1;
+  text-decoration: none;
+  padding: 22px 0;
+  border-right: 1px solid rgba(255,255,255,.08);
+  padding-right: 28px;
+  margin-right: 28px;
+  transition: opacity .2s;
+}
+.mk-hero-service-link:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+.mk-hero-service-link:hover { opacity: .75; }
+.mk-hero-service-link .svc-num {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: .7;
+  display: block;
+  margin-bottom: 6px;
+}
+.mk-hero-service-link .svc-name {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  display: block;
+  margin-bottom: 4px;
+}
+.mk-hero-service-link .svc-desc {
+  font-family: var(--sans);
+  font-size: 12px;
+  color: rgba(255,255,255,.42);
+  display: block;
+}
+
+.mk-hero-right {
+  position: relative;
+  overflow: hidden;
+}
+.mk-hero-right img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(72%) contrast(1.08) brightness(.88);
+  transform: scale(1.03);
+}
+.mk-hero-right-tint {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(22,32,40,.6) 0%, rgba(22,32,40,.05) 40%);
+}
+
+/* SERVICE PANELS — full-width editorial sections */
+.mk-service {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  min-height: 80vh;
+  overflow: hidden;
+}
+.mk-service.reverse { direction: rtl; }
+.mk-service.reverse > * { direction: ltr; }
+
+.mk-service-media {
+  position: relative;
+  overflow: hidden;
+}
+.mk-service-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: grayscale(78%) contrast(1.07) brightness(.9);
+  transform: scale(1.04);
+  transition: filter 1s ease, transform 1.2s ease;
+}
+.mk-service:hover .mk-service-media img {
+  filter: grayscale(0%) contrast(1.06);
+  transform: scale(1.09);
+}
+.mk-service-media-tint {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(22,32,40,.1), rgba(198,164,117,.12));
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+.mk-service-content {
+  background: var(--cloud);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 90px;
+  position: relative;
+  overflow: hidden;
+}
+.mk-service:nth-child(even) .mk-service-content { background: var(--sky); }
+
+.mk-service-bg-letter {
+  position: absolute;
+  bottom: -40px;
+  right: 40px;
+  font-family: var(--serif);
+  font-size: 280px;
+  font-weight: 500;
+  line-height: 1;
+  color: rgba(22,32,40,.03);
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -.04em;
+}
+.mk-service.reverse .mk-service-bg-letter { right: auto; left: 40px; }
+
+.mk-service-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.mk-service-tag::before {
+  content: "";
+  width: 24px; height: 1px;
+  background: var(--gold);
+}
+
+.mk-service-content h2 {
+  font-family: var(--serif);
+  font-size: clamp(32px, 3.5vw, 52px);
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 22px;
+  line-height: 1.1;
+  max-width: 460px;
+}
+.mk-service-content h2 em { font-style: italic; color: var(--gold-deep); }
+
+.mk-service-content > p {
+  font-size: 16px;
+  color: var(--ink-soft);
+  line-height: 1.82;
+  max-width: 460px;
+  margin-bottom: 18px;
+}
+
+.mk-service-details {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin: 28px 0 36px;
+}
+.mk-service-detail {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.mk-service-detail::before {
+  content: "";
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.mk-service-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--sans);
+  font-size: 11.5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--ink);
+  border: none;
+  border-bottom: 1px solid rgba(22,32,40,.2);
+  padding: 0 0 4px;
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color .25s, border-color .25s;
+  width: fit-content;
+}
+.mk-service-btn::after { content: "→"; transition: transform .25s; }
+.mk-service-btn:hover { color: var(--gold-deep); border-color: var(--gold-deep); }
+.mk-service-btn:hover::after { transform: translateX(3px); }
+
+/* WHY US STRIP */
+.mk-why {
+  background: var(--ink);
+  padding: 80px 32px;
+}
+.mk-why-inner {
+  max-width: var(--wrap);
+  margin: 0 auto;
+}
+.mk-why-top {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 64px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.mk-why-top h2 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.12;
+}
+.mk-why-top h2 em { font-style: italic; color: var(--gold); }
+.mk-why-top p {
+  font-size: 15.5px;
+  color: rgba(255,255,255,.58);
+  line-height: 1.82;
+}
+.mk-why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+.mk-why-item {
+  background: rgba(255,255,255,.04);
+  padding: 36px 32px;
+  border: 1px solid rgba(255,255,255,.06);
+}
+.mk-why-item-num {
+  font-family: var(--serif);
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.mk-why-item h4 {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: .5px;
+  margin-bottom: 8px;
+}
+.mk-why-item p {
+  font-size: 13.5px;
+  color: rgba(255,255,255,.48);
+  line-height: 1.68;
+}
+
+/* FULL-BLEED CTA */
+.mk-cta {
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+.mk-cta-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  filter: grayscale(65%) brightness(.38) contrast(1.15);
+  transform: scale(1.03);
+}
+.mk-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(22,32,40,.96) 0%, rgba(22,32,40,.65) 55%, rgba(22,32,40,.15) 100%);
+}
+.mk-cta-inner {
+  position: relative;
+  z-index: 2;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 80px 64px;
+  width: 100%;
+}
+.mk-cta-inner h2 {
+  font-family: var(--serif);
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 18px;
+  line-height: 1.1;
+  max-width: 600px;
+}
+.mk-cta-inner h2 em { font-style: italic; color: var(--gold); }
+.mk-cta-inner p {
+  font-size: 16px;
+  color: rgba(255,255,255,.65);
+  line-height: 1.78;
+  max-width: 480px;
+  margin-bottom: 42px;
+}
+.mk-cta-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .mk-why-grid { grid-template-columns: repeat(2, 1fr); }
+  .mk-service { grid-template-columns: 1fr; min-height: auto; }
+  .mk-service.reverse { direction: ltr; }
+  .mk-service-media { aspect-ratio: 16/10; min-height: 300px; position: relative; }
+  .mk-service-content { padding: 64px 48px; }
+  .mk-service-bg-letter { display: none; }
+}
+@media (max-width: 900px) {
+  .mk-hero { grid-template-columns: 1fr; }
+  .mk-hero-right { aspect-ratio: 4/3; min-height: 340px; position: relative; }
+  .mk-hero-left { padding: 100px 40px 64px; }
+  .mk-why-top { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .mk-hero-left { padding: 100px 28px 56px; }
+  .mk-hero-services { flex-direction: column; gap: 20px; }
+  .mk-hero-service-link { border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); margin: 0; padding: 0 0 20px; }
+  .mk-service-content { padding: 48px 28px; }
+  .mk-why-grid { grid-template-columns: 1fr; }
+  .mk-cta-inner { padding: 64px 28px; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar" role="complementary">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span>Merle Norman Certified Spa &mdash; Metuchen, NJ</span>
+      <span>By Appointment Only</span>
+    </div>
+    <a href="tel:+18482292742" class="book-link">(848) 229-2742</a>
+  </div>
+</div>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">
+      <img src="../images/logo/certified-spa-badge-sm.png" alt="Merle Norman Metuchen certified spa badge">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li class="has-dropdown">
+        <a href="../index.html#treatments">Treatments <svg class="nav-caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="dropdown">
+          <div class="dropdown-col">
+            <h5>Facials</h5>
+            <a href="../services/facials/index.html">Glow N Go Facial</a>
+            <a href="../services/facials/diamond-glow/index.html">Diamond Glow Microderm</a>
+            <a href="../services/facials/index.html">Smart Lift Facial</a>
+            <a href="../services/facials/index.html" class="view-all">View All Facials &rarr;</a>
+          </div>
+          <div class="dropdown-col">
+            <h5>Advanced Skin Treatments</h5>
+            <a href="../services/advance-skin-treatments/index.html">Procell Microchanneling</a>
+            <a href="../services/advance-skin-treatments/index.html">Non Surgical RF Treatment</a>
+            <a href="../services/advance-skin-treatments/index.html">Bio Re Peel</a>
+            <a href="../services/advance-skin-treatments/index.html" class="view-all">View All Treatments &rarr;</a>
+          </div>
+          <div class="dropdown-col">
+            <h5><a href="index.html">Bridal &amp; Event</a></h5>
+            <a href="makeup-service/index.html">Makeup Service</a>
+            <a href="makeup-classes/index.html">Makeup Classes</a>
+            <a href="index.html" class="view-all">View All &rarr;</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="../pages/facial-club/index.html">Facial Club</a></li>
+      <li><a href="../pages/acne-bootcamp/index.html">Acne Bootcamp</a></li>
+      <li><a href="../index.html#products">Shop Products</a></li>
+      <li><a href="../index.html#visit">Visit</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="#" class="btn btn-primary btn-sm nav-cta desktop-only" data-modal-open="reserve-modal">Reserve a Beauty Specialist</a>
+      <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-inner">
+      <details>
+        <summary>Treatments</summary>
+        <div class="mobile-submenu">
+          <span class="msub-label">Facials</span>
+          <a href="../services/facials/index.html">All Facials</a>
+          <span class="msub-label">Advanced Skin Treatments</span>
+          <a href="../services/advance-skin-treatments/index.html">All Treatments</a>
+          <span class="msub-label">Bridal &amp; Event</span>
+          <a href="index.html">All Bridal &amp; Event</a>
+          <a href="makeup-service/index.html">Makeup Service</a>
+          <a href="makeup-classes/index.html">Makeup Classes</a>
+        </div>
+      </details>
+      <a href="../pages/facial-club/index.html">Facial Club</a>
+      <a href="../pages/acne-bootcamp/index.html">Acne Bootcamp</a>
+      <a href="../index.html#products">Shop Products</a>
+      <a href="../index.html#visit">Visit</a>
+      <a href="#" class="btn btn-primary btn-block" data-modal-open="reserve-modal">Reserve a Beauty Specialist</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO — split dark / photo -->
+  <section class="mk-hero">
+    <div class="mk-hero-left">
+      <h1>Makeup for your<br>most important<br><em>moments.</em></h1>
+      <p>Professional makeup application for weddings and events — and one-on-one classes if you'd rather learn to do it yourself. Both done by our trained team, at a studio that takes its time.</p>
+      <div class="mk-hero-actions">
+        <a href="#" class="btn btn-gold" data-modal-open="reserve-modal">Book a Consultation</a>
+        <a href="#services" class="btn btn-light">Explore Both Services</a>
+      </div>
+      <div class="mk-hero-divider"><span>What we offer</span></div>
+      <div class="mk-hero-services">
+        <a class="mk-hero-service-link" href="makeup-service/index.html">
+          <span class="svc-num">01</span>
+          <span class="svc-name">Makeup Service</span>
+          <span class="svc-desc">Professional application for your day</span>
+        </a>
+        <a class="mk-hero-service-link" href="makeup-classes/index.html">
+          <span class="svc-num">02</span>
+          <span class="svc-name">Makeup Classes</span>
+          <span class="svc-desc">Learn the techniques yourself</span>
+        </a>
+      </div>
+    </div>
+    <div class="mk-hero-right">
+      <img src="https://images.pexels.com/photos/35538643/pexels-photo-35538643.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Professional bridal makeup artist at work">
+      <div class="mk-hero-right-tint"></div>
+    </div>
+  </section>
+
+  <!-- SERVICE 01 — MAKEUP SERVICE -->
+  <section class="mk-service" id="services">
+    <div class="mk-service-media">
+      <img src="https://images.pexels.com/photos/20181205/pexels-photo-20181205.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Professional bridal makeup application">
+      <div class="mk-service-media-tint"></div>
+    </div>
+    <div class="mk-service-content">
+      <div class="mk-service-bg-letter">MU</div>
+      <div class="mk-service-tag">Service 01</div>
+      <h2>Makeup <em>Service</em></h2>
+      <p>For weddings, engagements, parties, proms, and any occasion that matters — our artist does the full application. We work with your face shape, skin type, and the look you have in mind, from natural and polished to full glam.</p>
+      <p>Makeup is built to last the entire event and photograph beautifully under any lighting. Trials available before the date so there are no surprises.</p>
+      <div class="mk-service-details">
+        <span class="mk-service-detail">Bridal &amp; Bridesmaid Packages</span>
+        <span class="mk-service-detail">Trial Runs Available</span>
+        <span class="mk-service-detail">All Skin Types</span>
+      </div>
+      <a href="makeup-service/index.html" class="mk-service-btn">See Makeup Service</a>
+    </div>
+  </section>
+
+  <!-- SERVICE 02 — MAKEUP CLASSES -->
+  <section class="mk-service reverse">
+    <div class="mk-service-media">
+      <img src="https://images.pexels.com/photos/6684148/pexels-photo-6684148.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="One-on-one makeup class">
+      <div class="mk-service-media-tint"></div>
+    </div>
+    <div class="mk-service-content">
+      <div class="mk-service-bg-letter">CL</div>
+      <div class="mk-service-tag">Service 02</div>
+      <h2>Makeup <em>Classes</em></h2>
+      <p>One-on-one or small group classes covering everyday natural makeup, office looks, glam techniques, contouring, and more. Taught hands-on at the studio, using your own face and your own products if you prefer.</p>
+      <p>Because instruction is personalized, what you learn is actually useful — not generic techniques that don't suit your features or skill level.</p>
+      <div class="mk-service-details">
+        <span class="mk-service-detail">Private &amp; Group Options</span>
+        <span class="mk-service-detail">Beginner to Advanced</span>
+        <span class="mk-service-detail">All Techniques Covered</span>
+      </div>
+      <a href="makeup-classes/index.html" class="mk-service-btn">See Makeup Classes</a>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="mk-why">
+    <div class="mk-why-inner">
+      <div class="mk-why-top">
+        <h2>Why <em>Merle Norman</em><br>Metuchen?</h2>
+        <p>We're not a chain. Every visit is one-on-one. Our team gets to know your face, your preferences, and your timeline — and we don't rush. When the day matters, you'll want someone who actually takes the time to get it right.</p>
+      </div>
+      <div class="mk-why-grid">
+        <div class="mk-why-item">
+          <div class="mk-why-item-num">01</div>
+          <h4>One-on-One Attention</h4>
+          <p>No assembly lines. Every appointment is with one artist, focused entirely on you and your look.</p>
+        </div>
+        <div class="mk-why-item">
+          <div class="mk-why-item-num">02</div>
+          <h4>Trial Runs Available</h4>
+          <p>Wedding or event prep includes the option for a full trial run. No guessing on the day itself.</p>
+        </div>
+        <div class="mk-why-item">
+          <div class="mk-why-item-num">03</div>
+          <h4>Certified Merle Norman</h4>
+          <p>Trained in professional-grade Merle Norman products with decades of color science behind them.</p>
+        </div>
+        <div class="mk-why-item">
+          <div class="mk-why-item-num">04</div>
+          <h4>Built to Last</h4>
+          <p>We set and finish makeup to hold through ceremonies, receptions, and everything in between.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mk-cta">
+    <img class="mk-cta-bg" src="https://images.pexels.com/photos/35538641/pexels-photo-35538641.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="">
+    <div class="mk-cta-overlay"></div>
+    <div class="mk-cta-inner">
+      <h2>Planning a wedding<br>or <em>special event?</em></h2>
+      <p>Book a consultation and we'll talk through your look, timeline, trial run options, and everything else. No pressure — just a conversation to make sure you feel confident about the day.</p>
+      <div class="mk-cta-actions">
+        <a href="#" class="btn btn-gold" data-modal-open="reserve-modal">Book a Consultation</a>
+        <a href="tel:+18482292742" class="btn btn-light">(848) 229-2742</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-contact-row">
+      <a class="fc-item" href="tel:+18482292742">
+        <span class="fc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+        <span><span class="fc-label">Let's Talk</span><strong>(848) 229-2742</strong></span>
+      </a>
+      <a class="fc-item" href="mailto:hello@merlenormanmetuchen.com">
+        <span class="fc-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span><span class="fc-label">Say Hello</span><strong>hello@merlenormanmetuchen.com</strong></span>
+      </a>
+      <a class="fc-item" href="https://maps.google.com/?q=556+Middlesex+Avenue+Metuchen+NJ+08840" target="_blank" rel="noopener noreferrer">
+        <span class="fc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.6 7-11.6A7 7 0 0 0 5 9.4C5 14.4 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.4" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg></span>
+        <span><span class="fc-label">Address</span><strong>556 Middlesex Ave, Metuchen, NJ</strong></span>
+      </a>
+    </div>
+    <div class="foot-top">
+      <div class="foot-brand-col">
+        <div class="foot-brand">
+          <img src="../images/logo/certified-spa-badge-sm.png" alt="Certified Merle Norman Spa badge">
+          <span class="foot-brand-text">Merle Norman Metuchen</span>
+        </div>
+        <p>Professional facials, advanced skin treatments, and bridal makeup in Metuchen, NJ. By appointment only.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#treatments">Treatments</a></li>
+          <li><a href="../pages/facial-club/index.html">Facial Club</a></li>
+          <li><a href="../pages/acne-bootcamp/index.html">Acne Bootcamp</a></li>
+          <li><a href="../index.html#products">Shop Products</a></li>
+          <li><a href="../pages/reviews/index.html">Reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../services/facials/index.html">Facials</a></li>
+          <li><a href="../services/advance-skin-treatments/index.html">Advanced Skin Treatments</a></li>
+          <li><a href="makeup-service/index.html">Bridal &amp; Event Makeup</a></li>
+          <li><a href="makeup-classes/index.html">Makeup Classes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li>Tue – Wed: 10AM–5PM</li>
+          <li>Fri: 10AM–5PM</li>
+          <li>Sat: 11AM–3PM</li>
+          <li>Sun, Mon, Thu: Closed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Merle Norman Metuchen. All rights reserved.</span>
+      <div class="legal-links">
+        <a href="../pages/refund-policy/index.html">Refund &amp; Services Policy</a>
+        <a href="https://spa.mnbeautystudio.com/privacy_policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        <a href="https://spa.mnbeautystudio.com/terms_and_conditions" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="mn-overlay" id="reserve-modal">
+  <div class="mn-modal">
+    <button type="button" class="mn-modal-close" data-modal-close aria-label="Close">✕</button>
+    <div class="mn-modal-head">
+      <h3>Let's plan your look</h3>
+      <p>Share your details and we'll reach out to discuss your event, timeline, and how we can help.</p>
+    </div>
+    <div class="mn-modal-body">
+      <form data-demo-form>
+        <div class="mn-field"><label for="rb-name">Full Name</label><input type="text" id="rb-name" name="name" required></div>
+        <div class="mn-field"><label for="rb-phone">Phone Number</label><input type="tel" id="rb-phone" name="phone" required></div>
+        <div class="mn-field"><label for="rb-email">Email</label><input type="email" id="rb-email" name="email" required></div>
+        <div class="mn-field">
+          <label for="rb-interest">What are you looking for?</label>
+          <select id="rb-interest" name="interest">
+            <option>Bridal Makeup Application</option>
+            <option>Event Makeup Application</option>
+            <option>Bridesmaid Package</option>
+            <option>One-on-One Makeup Class</option>
+            <option>Group Makeup Class</option>
+            <option>Not sure yet — help me decide</option>
+          </select>
+        </div>
+        <div class="mn-field"><label for="rb-date">Event date (if applicable)</label><input type="text" id="rb-date" name="date" placeholder="e.g. March 2025"></div>
+        <div class="mn-field"><label for="rb-message">Anything else we should know?</label><textarea id="rb-message" name="message"></textarea></div>
+        <label class="mn-consent">
+          <input type="checkbox" name="sms_consent">
+          <span>By checking this box, I agree to receive text messages from Merle Norman Metuchen about appointment reminders and offers. Message &amp; data rates may apply. Reply STOP to unsubscribe.</span>
+        </label>
+        <button type="submit" class="btn btn-primary btn-block">Send My Request</button>
+        <p data-form-status style="display:none; margin-top:14px; font-size:13px; color:var(--ink-soft);"></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

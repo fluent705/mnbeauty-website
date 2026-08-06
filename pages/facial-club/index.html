@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facial Club Membership | Merle Norman Metuchen</title>
+<meta name="description" content="Join the Facial Club at Merle Norman Metuchen — monthly professional facials, member pricing, and priority booking. Consistent care for consistently better skin.">
+<link rel="icon" href="../../images/logo/certified-spa-badge-sm.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/main.css">
+<style>
+/* ── PAGE-SPECIFIC STYLES ── */
+
+/* HERO */
+.fc-hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--ink);
+}
+.fc-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: grayscale(60%) brightness(.72) contrast(1.05);
+  transform: scale(1.04);
+}
+.fc-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg,
+    rgba(22,32,40,.82) 0%,
+    rgba(22,32,40,.45) 55%,
+    rgba(198,164,117,.15) 100%
+  );
+}
+.fc-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 120px 32px 100px;
+  max-width: 700px;
+  margin-left: max(32px, calc((100vw - 1220px)/2 + 32px));
+}
+.fc-hero-eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.fc-hero-eyebrow::before {
+  content: "";
+  width: 28px; height: 1px;
+  background: var(--gold);
+}
+.fc-hero h1 {
+  font-size: clamp(40px, 5.5vw, 68px);
+  line-height: 1.08;
+  color: #fff;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.fc-hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.fc-hero-sub {
+  font-size: 17px;
+  color: rgba(255,255,255,.78);
+  line-height: 1.7;
+  max-width: 520px;
+  margin-bottom: 44px;
+}
+.fc-hero-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.fc-hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,.5);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.fc-hero-scroll span.line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255,255,255,.5), transparent);
+}
+
+/* WHY SECTION */
+.fc-why {
+  background: var(--cloud);
+  padding: 110px 0 100px;
+}
+.fc-why-inner {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.fc-why-text .section-eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.fc-why-text .section-eyebrow::before {
+  content: "";
+  width: 22px; height: 1px;
+  background: var(--gold-deep);
+}
+.fc-why-text h2 {
+  font-size: clamp(30px, 3.2vw, 42px);
+  line-height: 1.15;
+  margin-bottom: 22px;
+}
+.fc-why-text p {
+  color: var(--ink-soft);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+.fc-why-visual {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  background: var(--sky);
+}
+.fc-why-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(80%) contrast(1.05);
+  transition: filter .7s ease;
+}
+.fc-why-visual:hover img { filter: grayscale(0%) contrast(1.06); }
+
+/* BENEFITS STRIP */
+.fc-benefits {
+  background: var(--ink);
+  padding: 100px 0;
+}
+.fc-benefits-inner {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.fc-benefits-head {
+  max-width: 600px;
+  margin-bottom: 64px;
+}
+.fc-benefits-head .section-eyebrow-light {
+  font-family: var(--sans);
+  font-size: 10.5px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.fc-benefits-head .section-eyebrow-light::before {
+  content: "";
+  width: 22px; height: 1px;
+  background: var(--gold);
+}
+.fc-benefits-head h2 {
+  font-size: clamp(26px, 3vw, 38px);
+  color: #fff;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+.fc-benefits-head p {
+  color: rgba(255,255,255,.55);
+  font-size: 15.5px;
+  line-height: 1.75;
+}
+.fc-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,.06);
+}
+.fc-benefit-card {
+  background: var(--ink);
+  padding: 44px 40px;
+  transition: background .25s ease;
+}
+.fc-benefit-card:hover { background: rgba(255,255,255,.04); }
+.fc-benefit-num {
+  font-family: var(--serif);
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  display: block;
+}
+.fc-benefit-card h3 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.fc-benefit-card p {
+  font-size: 14.5px;
+  color: rgba(255,255,255,.52);
+  line-height: 1.75;
+}
+
+/* HOW IT WORKS */
+.fc-how {
+  background: #fff;
+  padding: 110px 0;
+}
+.fc-how-inner {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.fc-how-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 72px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid rgba(198,164,117,.2);
+}
+.fc-how-head-text {}
+.fc-how-head-text .section-eyebrow {
+  font-family: var(--sans);
+  font-size: 10.5px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.fc-how-head-text .section-eyebrow::before {
+  content: "";
+  width: 22px; height: 1px;
+  background: var(--gold-deep);
+}
+.fc-how-head-text h2 {
+  font-size: clamp(28px, 3vw, 40px);
+  margin-bottom: 0;
+  line-height: 1.12;
+}
+.fc-how-head-sub {
+  font-family: var(--sans);
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  padding-top: 8px;
+}
+.fc-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+}
+.fc-step {
+  padding: 0 40px 0 0;
+  border-right: 1px solid rgba(198,164,117,.2);
+  padding-right: 40px;
+}
+.fc-step:first-child { padding-left: 0; }
+.fc-step:last-child { border-right: none; padding-right: 0; padding-left: 40px; }
+.fc-step:nth-child(2), .fc-step:nth-child(3) { padding: 0 40px; border-right: 1px solid rgba(198,164,117,.2); }
+.fc-step-num {
+  font-family: var(--serif);
+  font-size: 4rem;
+  font-weight: 600;
+  color: rgba(198,164,117,.2);
+  line-height: 1;
+  letter-spacing: -.04em;
+  margin-bottom: 20px;
+}
+.fc-step h4 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.fc-step p {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.75;
+}
+
+/* TIER COMPARE STRIP */
+.fc-compare {
+  background: var(--blush);
+  padding: 80px 0;
+}
+.fc-compare-inner {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.fc-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--sans);
+}
+.fc-compare-table th {
+  padding: 16px 24px;
+  font-size: 10.5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(198,164,117,.3);
+  text-align: left;
+}
+.fc-compare-table th:first-child { color: var(--ink-soft); font-weight: 400; }
+.fc-compare-table th.col-silver { color: var(--ink); }
+.fc-compare-table th.col-gold { color: var(--gold-deep); background: rgba(198,164,117,.1); }
+.fc-compare-table th.col-diamond { color: var(--ink); }
+.fc-compare-table td {
+  padding: 14px 24px;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  border-bottom: 1px solid rgba(198,164,117,.15);
+  vertical-align: middle;
+}
+.fc-compare-table td:first-child { color: var(--ink); font-weight: 500; }
+.fc-compare-table td.col-gold { background: rgba(198,164,117,.07); }
+.fc-compare-table .check { color: var(--gold-deep); font-size: 15px; font-weight: 700; }
+.fc-compare-table .dash { color: rgba(22,32,40,.2); }
+.fc-compare-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  gap: 32px;
+}
+.fc-compare-head h2 {
+  font-size: clamp(24px, 2.8vw, 34px);
+  line-height: 1.15;
+}
+.fc-compare-head p {
+  font-family: var(--sans);
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  max-width: 360px;
+  text-align: right;
+  line-height: 1.65;
+}
+@media (max-width: 700px) {
+  .fc-compare-head { flex-direction: column; align-items: flex-start; }
+  .fc-compare-head p { text-align: left; }
+  .fc-compare-table th, .fc-compare-table td { padding: 12px 14px; font-size: 12.5px; }
+}
+
+/* TESTIMONIAL PANEL */
+.fc-quote {
+  background: var(--blush);
+  padding: 90px 0;
+}
+.fc-quote-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 32px;
+  text-align: center;
+}
+.fc-quote svg {
+  width: 36px;
+  height: 36px;
+  color: var(--gold);
+  margin: 0 auto 30px;
+  opacity: .7;
+}
+.fc-quote blockquote {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.4vw, 28px);
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0 0 28px;
+  font-weight: 400;
+}
+.fc-quote cite {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-style: normal;
+}
+
+/* FAQ */
+/* MEMBERSHIP TIERS */
+.fc-tiers {
+  background: var(--sky);
+  padding: 100px 0;
+}
+.fc-tiers-inner {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.fc-tiers-head {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.fc-tiers-head h2 { font-size: clamp(28px, 3.2vw, 42px); margin-bottom: 14px; }
+.fc-tiers-head p { font-size: 15.5px; color: var(--ink-soft); max-width: 480px; margin: 0 auto; line-height: 1.72; }
+.fc-tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: var(--wrap);
+  margin: 0 auto;
+}
+@media (max-width: 900px) { .fc-tier-grid { grid-template-columns: 1fr; } }
+.fc-tier-card {
+  background: #fff;
+  border: 1px solid rgba(22,32,40,.1);
+  padding: 52px 52px 48px;
+  position: relative;
+}
+.fc-tier-card.featured {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+.fc-tier-label {
+  font-family: var(--sans);
+  font-size: 10.5px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.fc-tier-card.featured .fc-tier-label { color: var(--gold); }
+.fc-tier-name {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+.fc-tier-card.featured .fc-tier-name { color: #fff; }
+.fc-tier-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: .75rem;
+  margin-bottom: 24px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(22,32,40,.1);
+}
+.fc-tier-card.featured .fc-tier-price-row { border-color: rgba(255,255,255,.12); }
+.fc-tier-amount {
+  font-family: var(--serif);
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -.04em;
+  line-height: 1;
+}
+.fc-tier-card.featured .fc-tier-amount { color: #fff; }
+.fc-tier-freq {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(22,32,40,.4);
+  font-weight: 500;
+}
+.fc-tier-card.featured .fc-tier-freq { color: rgba(255,255,255,.42); }
+.fc-tier-desc {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  line-height: 1.72;
+  margin-bottom: 32px;
+}
+.fc-tier-card.featured .fc-tier-desc { color: rgba(255,255,255,.62); }
+@media (max-width: 700px) { .fc-tier-grid { grid-template-columns: 1fr; } .fc-tier-card { padding: 40px 32px; } }
+
+/* FAQ */
+.fc-faq {
+  background: var(--cloud);
+  padding: 110px 0;
+}
+.fc-faq-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.fc-faq-head {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.fc-faq-head h2 { font-size: clamp(28px, 3vw, 38px); }
+.fc-faq-list { list-style: none; padding: 0; margin: 0; }
+.fc-faq-item {
+  border-bottom: 1px solid var(--sky-line);
+}
+.fc-faq-item:first-child { border-top: 1px solid var(--sky-line); }
+.fc-faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 26px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: var(--serif);
+  font-size: 19px;
+  color: var(--ink);
+  text-align: left;
+  gap: 16px;
+}
+.fc-faq-q svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--gold-deep);
+  transition: transform .3s ease;
+}
+.fc-faq-item.open .fc-faq-q svg { transform: rotate(45deg); }
+.fc-faq-a {
+  display: none;
+  padding: 0 0 26px;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 640px;
+}
+.fc-faq-item.open .fc-faq-a { display: block; }
+
+/* CTA BANNER */
+.fc-cta {
+  position: relative;
+  background: var(--ink);
+  overflow: hidden;
+  padding: 110px 0;
+}
+.fc-cta-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: .18;
+  filter: grayscale(100%);
+}
+.fc-cta-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 32px;
+  text-align: center;
+}
+.fc-cta-inner h2 {
+  font-size: clamp(30px, 3.8vw, 48px);
+  color: #fff;
+  margin-bottom: 18px;
+  line-height: 1.15;
+}
+.fc-cta-inner p {
+  color: rgba(255,255,255,.65);
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 40px;
+}
+.fc-cta-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .fc-how-head { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 900px) {
+  .fc-hero-inner { margin-left: 24px; padding: 100px 24px 80px; }
+  .fc-why { padding: 72px 0; }
+  .fc-why-inner { grid-template-columns: 1fr; gap: 48px; padding: 0 24px; }
+  .fc-why-visual { aspect-ratio: 16/9; }
+  .fc-benefits { padding: 72px 0; }
+  .fc-benefits-inner { padding: 0 24px; }
+  .fc-benefits-grid { grid-template-columns: 1fr 1fr; gap: 1px; }
+  .fc-how { padding: 72px 0; }
+  .fc-how-inner { padding: 0 24px; }
+  .fc-steps { grid-template-columns: 1fr 1fr; gap: 48px; }
+  .fc-step, .fc-step:nth-child(2), .fc-step:nth-child(3), .fc-step:last-child {
+    padding: 0 0 32px; border-right: none; border-bottom: 1px solid rgba(198,164,117,.2);
+  }
+  .fc-step:last-child { border-bottom: none; padding-bottom: 0; }
+  .fc-compare { padding: 72px 0; }
+  .fc-compare-inner { padding: 0 24px; }
+  .fc-tiers { padding: 72px 0; }
+  .fc-tiers-inner { padding: 0 24px; }
+}
+@media (max-width: 600px) {
+  .fc-hero-inner { padding: 88px 20px 64px; margin-left: 0; }
+  .fc-hero h1 { font-size: 36px; }
+  .fc-hero-ctas { flex-direction: column; }
+  .fc-hero-ctas .btn { width: 100%; text-align: center; }
+  .fc-steps { grid-template-columns: 1fr; }
+  .fc-benefits-grid { grid-template-columns: 1fr; }
+  .fc-benefit-card { padding: 32px 24px; }
+  .fc-compare-table { min-width: 520px; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar" role="complementary">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span>Merle Norman Certified Spa &mdash; Metuchen, NJ</span>
+      <span>By Appointment Only</span>
+    </div>
+    <a href="tel:+18482292742" class="book-link">(848) 229-2742</a>
+  </div>
+</div>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="../../index.html">
+      <img src="../../images/logo/certified-spa-badge-sm.png" alt="Merle Norman Metuchen certified spa badge">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../../index.html">Home</a></li>
+      <li class="has-dropdown">
+        <a href="../../index.html#treatments">Treatments <svg class="nav-caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="dropdown">
+          <div class="dropdown-col">
+            <h5>Facials</h5>
+            <a href="../../services/facials/index.html">Glow N Go Facial</a>
+            <a href="../../services/facials/diamond-glow/index.html">Diamond Glow Microderm</a>
+            <a href="../../services/facials/index.html">Smart Lift Facial</a>
+            <a href="../../services/facials/index.html" class="view-all">View All Facials &rarr;</a>
+          </div>
+          <div class="dropdown-col">
+            <h5>Advanced Skin Treatments</h5>
+            <a href="../../services/advance-skin-treatments/index.html">Procell Microchanneling</a>
+            <a href="../../services/advance-skin-treatments/index.html">Non Surgical RF Treatment</a>
+            <a href="../../services/advance-skin-treatments/index.html">Bio Re Peel</a>
+            <a href="../../services/advance-skin-treatments/index.html" class="view-all">View All Treatments &rarr;</a>
+          </div>
+          <div class="dropdown-col">
+            <h5><a href="../../makeup/index.html">Bridal &amp; Event</a></h5>
+            <a href="../../makeup/makeup-service/index.html">Makeup Service</a>
+            <a href="../../makeup/makeup-classes/index.html">Makeup Classes</a>
+            <a href="../../makeup/index.html" class="view-all">View All &rarr;</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="index.html" style="color:var(--gold-deep);">Facial Club</a></li>
+      <li><a href="../acne-bootcamp/index.html">Acne Bootcamp</a></li>
+      <li><a href="../../index.html#products">Shop Products</a></li>
+      <li><a href="../../index.html#visit">Visit</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="#" class="btn btn-primary btn-sm nav-cta desktop-only" data-modal-open="reserve-modal">Join the Club</a>
+      <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-inner">
+      <details>
+        <summary>Treatments</summary>
+        <div class="mobile-submenu">
+          <span class="msub-label">Facials</span>
+          <a href="../../services/facials/index.html">All Facials</a>
+          <span class="msub-label">Advanced Skin Treatments</span>
+          <a href="../../services/advance-skin-treatments/index.html">All Advanced Treatments</a>
+          <span class="msub-label">Bridal &amp; Event</span>
+          <a href="../../makeup/index.html">All Bridal &amp; Event</a>
+          <a href="../../makeup/makeup-service/index.html">Makeup Service</a>
+          <a href="../../makeup/makeup-classes/index.html">Makeup Classes</a>
+        </div>
+      </details>
+      <a href="index.html">Facial Club</a>
+      <a href="../acne-bootcamp/index.html">Acne Bootcamp</a>
+      <a href="../../index.html#products">Shop Products</a>
+      <a href="../../index.html#visit">Visit</a>
+      <a href="#" class="btn btn-primary btn-block" data-modal-open="reserve-modal">Join the Club</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ── HERO ── -->
+  <section class="fc-hero">
+    <img class="fc-hero-img" src="https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Woman relaxing during a professional facial treatment">
+    <div class="fc-hero-overlay"></div>
+    <div class="fc-hero-inner">
+      <div class="fc-hero-eyebrow">Merle Norman Metuchen &nbsp;·&nbsp; Metuchen, NJ</div>
+      <h1>Your skin, once<br>a month. <em>Every</em> month.</h1>
+      <p class="fc-hero-sub">The Facial Club is a monthly membership giving you a professional facial, member pricing on products and add-ons, and priority scheduling — so consistent skin care becomes easy, not expensive.</p>
+      <div class="fc-hero-ctas">
+        <a href="#" class="btn btn-gold" data-modal-open="reserve-modal">Join the Facial Club</a>
+        <a href="#how-it-works" class="btn btn-light">See How It Works</a>
+      </div>
+    </div>
+    <div class="fc-hero-scroll">
+      <span class="line"></span>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ── WHY CONSISTENT FACIALS WORK ── -->
+  <section class="fc-why">
+    <div class="fc-why-inner">
+      <div class="fc-why-text">
+        <div class="section-eyebrow">Why Membership</div>
+        <h2>One facial is a treat.<br>Monthly facials change your skin.</h2>
+        <p>Your skin renews itself on roughly a 28-day cycle. A single professional facial gives it a boost — but skin that's treated consistently, on a regular schedule, responds completely differently. Congestion stays clear, hydration holds, and concerns like dullness, uneven tone, and fine lines improve steadily over time instead of resetting between visits.</p>
+        <p>The Facial Club exists for exactly that reason. You get one professional facial every month, your esthetician knows your skin over time, and the cost of keeping it consistent is designed to actually be sustainable.</p>
+      </div>
+      <div class="fc-why-visual">
+        <img src="https://images.pexels.com/photos/6634828/pexels-photo-6634828.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Facial treatment at Merle Norman Metuchen spa">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BENEFITS GRID ── -->
+  <section class="fc-benefits">
+    <div class="fc-benefits-inner">
+      <div class="fc-benefits-head">
+        <div class="section-eyebrow-light">What You Get</div>
+        <h2>Everything included in your membership</h2>
+        <p>One flat monthly cost. No hidden fees, no points to track, no expiry on your facial credit.</p>
+      </div>
+      <div class="fc-benefits-grid">
+
+        <div class="fc-benefit-card">
+          <span class="fc-benefit-num">01</span>
+          <h3>One professional facial, monthly</h3>
+          <p>Your monthly credit applies to any facial on the menu — chosen fresh each visit based on what your skin actually needs. Your esthetician advises, you decide.</p>
+        </div>
+
+        <div class="fc-benefit-card">
+          <span class="fc-benefit-num">02</span>
+          <h3>Member pricing on products &amp; add-ons</h3>
+          <p>Retail Merle Norman products, treatment enhancements, and in-studio add-ons are all priced at member rates. The savings compound quickly.</p>
+        </div>
+
+        <div class="fc-benefit-card">
+          <span class="fc-benefit-num">03</span>
+          <h3>Priority access to the schedule</h3>
+          <p>Members book before the calendar opens to the public. Even on our busiest weeks, you get first pick of times — mornings, early evenings, Saturdays.</p>
+        </div>
+
+        <div class="fc-benefit-card">
+          <span class="fc-benefit-num">04</span>
+          <h3>The same esthetician, every time</h3>
+          <p>Seeing the same person monthly means they learn your skin — what changed, what's improving, what to try next. No intake form every visit. No starting over.</p>
+        </div>
+
+        <div class="fc-benefit-card">
+          <span class="fc-benefit-num">05</span>
+          <h3>Cancel anytime, no penalties</h3>
+          <p>Month-to-month, no annual contract. Give 30 days' notice to cancel. Your facial credit stays active for the current billing period regardless.</p>
+        </div>
+
+        <div class="fc-benefit-card">
+          <span class="fc-benefit-num">06</span>
+          <h3>Three tiers. Pick your level.</h3>
+          <p>Silver at $150/mo covers foundational facials. Gold at $199/mo unlocks technology-forward treatments. Diamond at $299/mo gives you the Smart Lift every month.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MEMBERSHIP TIERS ── -->
+  <section class="fc-tiers" id="membership-tiers">
+    <div class="fc-tiers-inner">
+      <div class="fc-tiers-head">
+        <h2>Choose your membership tier</h2>
+        <p>All three tiers include one professional facial per month with your dedicated esthetician, priority scheduling, and member pricing. Pick the level that suits your skin and your budget.</p>
+      </div>
+      <div class="fc-tier-grid">
+
+        <div class="fc-tier-card">
+          <div class="fc-tier-label">Silver Membership</div>
+          <div class="fc-tier-name">Silver Level<br>Facial Club</div>
+          <div class="fc-tier-price-row">
+            <span class="fc-tier-amount">$150</span>
+            <span class="fc-tier-freq">per month</span>
+          </div>
+          <p class="fc-tier-desc">Foundational monthly care — clean, consistent skin at a sustainable rate. A great starting point for anyone committing to regular professional facials.</p>
+          <ul style="list-style:none;padding:0;margin:0 0 28px;font-size:14px;color:var(--ink-soft);line-height:1.8;">
+            <li>— Clean Sweep Express Pro Facial</li>
+            <li>— Classic European Facial</li>
+            <li>— Deep Cleansing Facial</li>
+            <li>— Afterglow LED Facial</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-block" data-modal-open="reserve-modal">Join at Silver</a>
+        </div>
+
+        <div class="fc-tier-card featured">
+          <div class="fc-tier-label" style="color:var(--gold);">Gold Membership — Most Popular</div>
+          <div class="fc-tier-name">Gold Level<br>Facial Club</div>
+          <div class="fc-tier-price-row">
+            <span class="fc-tier-amount">$199</span>
+            <span class="fc-tier-freq">per month</span>
+          </div>
+          <p class="fc-tier-desc" style="color:rgba(255,255,255,.62);">Technology-forward monthly facials. Visible, measurable results with each visit — for skin that keeps improving between appointments.</p>
+          <ul style="list-style:none;padding:0;margin:0 0 28px;font-size:14px;color:rgba(255,255,255,.55);line-height:1.8;">
+            <li>— Diamond Glow Microdermabrasion Facial</li>
+            <li>— Acne Clearing Hydrating Facial</li>
+            <li>— Oxygen Lift Facial</li>
+            <li>— Hydro Lift N Glow (RF) Facial</li>
+            <li>— Perfect Gentleman's Facial</li>
+          </ul>
+          <a href="#" class="btn btn-gold btn-block" data-modal-open="reserve-modal">Join at Gold</a>
+        </div>
+
+        <div class="fc-tier-card">
+          <div class="fc-tier-label">Diamond Membership</div>
+          <div class="fc-tier-name">Diamond Level<br>Facial Club</div>
+          <div class="fc-tier-price-row">
+            <span class="fc-tier-amount">$299</span>
+            <span class="fc-tier-freq">per month</span>
+          </div>
+          <p class="fc-tier-desc">Our most advanced treatment, monthly. Smart Lift combines microcurrent, radiofrequency, and red light therapy — the most technically effective facial we offer, done consistently.</p>
+          <ul style="list-style:none;padding:0;margin:0 0 28px;font-size:14px;color:var(--ink-soft);line-height:1.8;">
+            <li>— Smart Lift Facial (monthly)</li>
+            <li>— Microcurrent + RF + Red Light</li>
+            <li>— Member pricing on all products</li>
+            <li>— Priority scheduling, always</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-block" data-modal-open="reserve-modal">Join at Diamond</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ── -->
+  <section class="fc-how" id="how-it-works">
+    <div class="fc-how-inner">
+      <div class="fc-how-head">
+        <div class="fc-how-head-text">
+          <div class="section-eyebrow">How It Works</div>
+          <h2>Four steps. Then it takes care of itself.</h2>
+        </div>
+        <p class="fc-how-head-sub">We designed the Facial Club to require as little friction as possible — one conversation to start, then your esthetician handles the rest.</p>
+      </div>
+      <div class="fc-steps">
+        <div class="fc-step">
+          <div class="fc-step-num">01</div>
+          <h4>Reach out</h4>
+          <p>Reserve a beauty specialist or call (848) 229-2742. We'll answer your questions, explain the tiers, and set up your first appointment at a time that works for you.</p>
+        </div>
+        <div class="fc-step">
+          <div class="fc-step-num">02</div>
+          <h4>Your skin assessment</h4>
+          <p>Your first visit starts with a real skin assessment — not a form, an actual conversation. Your esthetician looks at your skin, asks the right questions, and selects your first treatment accordingly.</p>
+        </div>
+        <div class="fc-step">
+          <div class="fc-step-num">03</div>
+          <h4>Membership activates</h4>
+          <p>Monthly billing starts after your first visit. You're immediately given priority access to the schedule and member pricing on all in-studio products and add-ons.</p>
+        </div>
+        <div class="fc-step">
+          <div class="fc-step-num">04</div>
+          <h4>Show up monthly</h4>
+          <p>Book the same slot each month or flex it — your credit waits. Your esthetician notes what changed since last time and adjusts your treatment plan accordingly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TIER COMPARISON ── -->
+  <section class="fc-compare">
+    <div class="fc-compare-inner">
+      <div class="fc-compare-head">
+        <h2>What's included<br>at each tier</h2>
+        <p>All tiers include your monthly facial, dedicated esthetician, priority scheduling, and member pricing on products.</p>
+      </div>
+      <div style="overflow-x:auto; -webkit-overflow-scrolling:touch;">
+      <table class="fc-compare-table">
+        <thead>
+          <tr>
+            <th style="width:36%"></th>
+            <th class="col-silver">Silver — $150/mo</th>
+            <th class="col-gold">Gold — $199/mo</th>
+            <th class="col-diamond">Diamond — $299/mo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Glow N Go Express Facial</td>
+            <td class="check">✓</td>
+            <td class="col-gold check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Classic European Facial</td>
+            <td class="check">✓</td>
+            <td class="col-gold check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Deep Cleansing Facial</td>
+            <td class="check">✓</td>
+            <td class="col-gold check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Afterglow LED Facial</td>
+            <td class="check">✓</td>
+            <td class="col-gold check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Diamond Glow Microderm Facial</td>
+            <td class="dash">—</td>
+            <td class="col-gold check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Oxygen Lift Facial</td>
+            <td class="dash">—</td>
+            <td class="col-gold check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Acne Clearing Hydrating Facial</td>
+            <td class="dash">—</td>
+            <td class="col-gold check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Hydro Lift N Glow (RF) Facial</td>
+            <td class="dash">—</td>
+            <td class="col-gold check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Perfect Gentleman's Facial</td>
+            <td class="dash">—</td>
+            <td class="col-gold check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Smart Lift Facial (Microcurrent + RF + LED)</td>
+            <td class="dash">—</td>
+            <td class="col-gold dash">—</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Priority scheduling</td>
+            <td class="check">✓</td>
+            <td class="col-gold check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Member pricing on retail &amp; add-ons</td>
+            <td class="check">✓</td>
+            <td class="col-gold check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Dedicated esthetician</td>
+            <td class="check">✓</td>
+            <td class="col-gold check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Cancel anytime (30 days' notice)</td>
+            <td class="check">✓</td>
+            <td class="col-gold check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIAL ── -->
+  <section class="fc-quote">
+    <div class="fc-quote-inner">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+      </svg>
+      <blockquote>"I've been a member for eight months now. My skin has never been more consistent — and honestly, having the appointment locked in every month means I actually show up instead of pushing it off for 'later.'"</blockquote>
+      <cite>— Facial Club Member, Metuchen NJ</cite>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="fc-faq">
+    <div class="fc-faq-inner">
+      <div class="fc-faq-head">
+        <span class="eyebrow center">Common Questions</span>
+        <h2>What you probably want to know</h2>
+      </div>
+      <ul class="fc-faq-list">
+        <li class="fc-faq-item">
+          <button class="fc-faq-q">
+            How much does the Facial Club cost per month?
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+          <div class="fc-faq-a">The Facial Club has three tiers: Silver at $150/month, Gold at $199/month, and Diamond at $299/month. Silver covers our foundational facials (Classic European, Deep Cleansing, Afterglow LED). Gold includes technology-forward treatments like Diamond Glow Microderm, Oxygen Lift, and RF facials. Diamond gives you the Smart Lift monthly — our most advanced non-invasive treatment. All tiers include priority scheduling and member pricing on retail products. Cancel anytime with 30 days' notice.</div>
+        </li>
+        <li class="fc-faq-item">
+          <button class="fc-faq-q">
+            Can I choose a different facial every month?
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+          <div class="fc-faq-a">Yes. Your monthly credit applies to any facial on our menu. Your esthetician will help you choose the right one based on what your skin needs at that particular visit — it doesn't need to be the same treatment every time.</div>
+        </li>
+        <li class="fc-faq-item">
+          <button class="fc-faq-q">
+            What happens if I miss a month?
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+          <div class="fc-faq-a">Your facial credit stays on your account and doesn't expire within your billing period. If life gets busy, you can use it the following month. We don't penalize missed visits — we just encourage you to come back.</div>
+        </li>
+        <li class="fc-faq-item">
+          <button class="fc-faq-q">
+            Is there a contract or long-term commitment?
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+          <div class="fc-faq-a">No. The Facial Club is month-to-month. You can cancel with 30 days' notice at any point, no questions asked. We'd rather you stay because it's working for you — not because you're locked in.</div>
+        </li>
+        <li class="fc-faq-item">
+          <button class="fc-faq-q">
+            Do I see the same esthetician every time?
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+          <div class="fc-faq-a">Yes, that's intentional. Seeing the same person every month means your esthetician builds a real picture of your skin over time — what's changed, what's improved, what to try next. It's one of the most valuable parts of the membership.</div>
+        </li>
+        <li class="fc-faq-item">
+          <button class="fc-faq-q">
+            What does the member discount on products cover?
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+          <div class="fc-faq-a">Member pricing applies to all Merle Norman retail products purchased in-studio, as well as treatment add-ons and enhancements you book alongside your monthly facial. Ask us about current member rates when you sign up.</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="fc-cta">
+    <img class="fc-cta-bg" src="https://images.pexels.com/photos/3985329/pexels-photo-3985329.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+    <div class="fc-cta-inner">
+      <span class="eyebrow on-dark center">Get Started</span>
+      <h2>Ready to make your skin a priority?</h2>
+      <p>Reserve a beauty specialist and we'll answer your questions, set up your first appointment, and walk you through membership on the day. No commitment required before you visit.</p>
+      <div class="fc-cta-actions">
+        <a href="#" class="btn btn-gold" data-modal-open="reserve-modal">Join the Facial Club</a>
+        <a href="tel:+18482292742" class="btn btn-light">Call (848) 229-2742</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-contact-row">
+      <a class="fc-item" href="tel:+18482292742">
+        <span class="fc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+        <span><span class="fc-label">Let's Talk</span><strong>(848) 229-2742</strong></span>
+      </a>
+      <a class="fc-item" href="mailto:hello@merlenormanmetuchen.com">
+        <span class="fc-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span><span class="fc-label">Say Hello</span><strong>hello@merlenormanmetuchen.com</strong></span>
+      </a>
+      <a class="fc-item" href="https://maps.google.com/?q=556+Middlesex+Avenue+Metuchen+NJ+08840" target="_blank" rel="noopener noreferrer">
+        <span class="fc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.6 7-11.6A7 7 0 0 0 5 9.4C5 14.4 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.4" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg></span>
+        <span><span class="fc-label">Address</span><strong>556 Middlesex Ave, Metuchen, NJ</strong></span>
+      </a>
+    </div>
+    <div class="foot-top">
+      <div class="foot-brand-col">
+        <div class="foot-brand">
+          <img src="../../images/logo/certified-spa-badge-sm.png" alt="Certified Merle Norman Spa badge">
+          <span class="foot-brand-text">Merle Norman Metuchen</span>
+        </div>
+        <p>Professional facials, advanced skin treatments, and bridal makeup in Metuchen, NJ. By appointment only.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../index.html#treatments">Treatments</a></li>
+          <li><a href="index.html">Facial Club</a></li>
+          <li><a href="../acne-bootcamp/index.html">Acne Bootcamp</a></li>
+          <li><a href="../../index.html#products">Shop Products</a></li>
+          <li><a href="../reviews/index.html">Reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../../services/facials/index.html">Facials</a></li>
+          <li><a href="../../services/advance-skin-treatments/index.html">Advanced Skin Treatments</a></li>
+          <li><a href="../../makeup/makeup-service/index.html">Bridal &amp; Event Makeup</a></li>
+          <li><a href="../../makeup/makeup-classes/index.html">Makeup Classes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li>Tue – Wed: 10AM–5PM</li>
+          <li>Fri: 10AM–5PM</li>
+          <li>Sat: 11AM–3PM</li>
+          <li>Sun, Mon, Thu: Closed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Merle Norman Metuchen. All rights reserved.</span>
+      <div class="legal-links">
+        <a href="../refund-policy/index.html">Refund &amp; Services Policy</a>
+        <a href="https://spa.mnbeautystudio.com/privacy_policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        <a href="https://spa.mnbeautystudio.com/terms_and_conditions" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- RESERVE MODAL -->
+<div class="mn-overlay" id="reserve-modal">
+  <div class="mn-modal">
+    <button type="button" class="mn-modal-close" data-modal-close aria-label="Close">✕</button>
+    <div class="mn-modal-head">
+      <span class="eyebrow">Facial Club Membership</span>
+      <h3>Let's get you set up</h3>
+      <p>Share your details and we'll reach out to walk you through membership and book your first appointment.</p>
+    </div>
+    <div class="mn-modal-body">
+      <form data-demo-form>
+        <div class="mn-field"><label for="rb-name">Full Name</label><input type="text" id="rb-name" name="name" required></div>
+        <div class="mn-field"><label for="rb-phone">Phone Number</label><input type="tel" id="rb-phone" name="phone" required></div>
+        <div class="mn-field"><label for="rb-email">Email</label><input type="email" id="rb-email" name="email" required></div>
+        <div class="mn-field">
+          <label for="rb-interest">What are you interested in?</label>
+          <select id="rb-interest" name="interest">
+            <option selected>Facial Club Membership</option>
+            <option>Facials</option>
+            <option>Advanced Skin Treatments</option>
+            <option>90-Day Acne Bootcamp</option>
+            <option>Bridal &amp; Event Makeup</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="mn-field"><label for="rb-message">Anything we should know?</label><textarea id="rb-message" name="message"></textarea></div>
+        <label class="mn-consent">
+          <input type="checkbox" name="sms_consent">
+          <span>By checking this box, I agree to receive text messages from Merle Norman Metuchen about appointment reminders and offers. Message &amp; data rates may apply. Reply STOP to unsubscribe.</span>
+        </label>
+        <button type="submit" class="btn btn-primary btn-block">Send My Request</button>
+        <p data-form-status style="display:none; margin-top:14px; font-size:13px; color:var(--ink-soft);"></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="../../js/main.js"></script>
+<script>
+// FAQ accordion
+document.querySelectorAll('.fc-faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.fc-faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.fc-faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
