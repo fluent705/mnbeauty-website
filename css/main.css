@@ -217,10 +217,10 @@ header.nav{
    last-resort backstop if JS hasn't run yet. */
 .has-dropdown .dropdown{
   position:absolute; top:100%; left:50%; transform:translateX(-50%);
-  width:860px; max-width:calc(100vw - 32px); background:var(--cloud); border:1px solid var(--sky-line);
+  width:760px; max-width:calc(100vw - 32px); background:var(--cloud); border:1px solid var(--sky-line);
   border-radius:var(--radius); box-shadow:0 30px 60px -24px rgba(34,48,58,.35);
   padding:28px 32px 32px; margin-top:0;
-  display:grid; grid-template-columns:2fr 1fr 1fr; gap:32px;
+  display:grid; grid-template-columns:1fr 1fr; gap:32px;
   opacity:0; visibility:hidden; pointer-events:none;
   transition: opacity .18s ease, visibility .18s ease;
   z-index:400;
@@ -247,27 +247,32 @@ header.nav{
   text-transform:uppercase; margin-top:10px; padding-top:10px;
   border-top:1px solid rgba(198,164,117,.18);
 }
-/* Facials col: 2-column link grid so 10 items stay compact */
-.dropdown-col--facials .facials-grid{
+/* Facials + Advance Skin Treatments cols: 2-column link grid so 10 items
+   each stay compact — same pattern reused for both, since the mega-menu
+   is now exactly two equal-width columns everywhere it appears. */
+.dropdown-col--facials .facials-grid,
+.dropdown-col--treatments .treatments-grid{
   display:grid; grid-template-columns:1fr 1fr; gap:0 16px;
 }
-.dropdown-col--facials .facials-grid a{
+.dropdown-col--facials .facials-grid a,
+.dropdown-col--treatments .treatments-grid a{
   display:block; padding:4px 0;
 }
-.dropdown-col--facials > a.view-all{ grid-column:1/-1; }
+.dropdown-col--facials > a.view-all,
+.dropdown-col--treatments > a.view-all{ grid-column:1/-1; }
 /* Single-column variant (Makeup) — the base .has-dropdown .dropdown rule
-   above is sized for the 3-column Treatments mega-menu; without this
+   above is sized for the 2-column Treatments mega-menu; without this
    override (matched at equal-or-higher specificity so it actually wins
    the cascade — a plain .dropdown--narrow rule was too low-specificity
    to beat .has-dropdown .dropdown and silently did nothing) a narrow
-   one-column panel inherited that 860px/3-column grid and rendered as a
-   single item next to two empty columns of blank space. */
+   one-column panel inherited that wide 2-column grid and rendered as a
+   single item next to an empty column of blank space. */
 .has-dropdown .dropdown.dropdown--narrow{
   width:max-content; max-width:min(260px, calc(100vw - 32px));
   grid-template-columns:1fr;
 }
-/* Below 1180px the 3-column mega-menu no longer comfortably fits at
-   860px even with the max-width clamp above (it'd just get squeezed and
+/* Below 1180px the 2-column mega-menu no longer comfortably fits at
+   760px even with the max-width clamp above (it'd just get squeezed and
    cramped); collapse it to one column so the clamp keeps it readable
    instead of tiny. dropdown--narrow is already single-column and just
    rides the max-width clamp from the base rule at every size. */

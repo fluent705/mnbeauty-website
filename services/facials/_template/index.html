@@ -28,7 +28,7 @@
      ============================================================ -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{TITLE}} — ${{PRICE}} | Merle Norman Metuchen</title>
+<title>{{TITLE}} · ${{PRICE}} | Merle Norman Metuchen</title>
 <meta name="description" content="{{META_DESCRIPTION — one or two sentences summarizing the treatment, duration, and price, e.g. 'A {{DURATION}}-minute facial that ... — ${{PRICE}} at Merle Norman Metuchen, NJ.'}}">
 <link rel="icon" href="../../../images/logo/certified-spa-badge-sm.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -210,7 +210,7 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-bottom:1em}p:last-chil
 <div class="topbar" role="complementary">
   <div class="topbar-inner">
     <div class="topbar-left">
-      <span>Merle Norman Certified Spa &mdash; Metuchen, NJ</span>
+      <span>Merle Norman Certified Spa &middot; Metuchen, NJ</span>
       <span>By Appointment Only</span>
     </div>
     <a href="tel:+18482292742" class="book-link">(848) 229-2742</a>
@@ -246,11 +246,20 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-bottom:1em}p:last-chil
             </div>
             <a href="../index.html" class="view-all">View All Facials &rarr;</a>
           </div>
-          <div class="dropdown-col">
+          <div class="dropdown-col dropdown-col--treatments">
             <h5>Advance Skin Treatments</h5>
-            <a href="../../advance-skin-treatments/index.html">Procell Microchanneling</a>
-            <a href="../../advance-skin-treatments/index.html">Non Surgical RF Treatment</a>
-            <a href="../../advance-skin-treatments/index.html">Bio Re Peel</a>
+            <div class="treatments-grid">
+            <a href="../../advance-skin-treatments/microneedling/index.html">Microneedling</a>
+            <a href="../../advance-skin-treatments/microchanneling/index.html">Procell Microchanneling</a>
+            <a href="../../advance-skin-treatments/chemical-peels/index.html">Chemical Peel Therapy</a>
+            <a href="../../advance-skin-treatments/double-chin-neck-lift/index.html">Double Chin &amp; Neck Lift</a>
+            <a href="../../advance-skin-treatments/venus-legacy-skin-tightening/index.html">Venus Legacy Skin Tightening</a>
+            <a href="../../advance-skin-treatments/viva-nano-fractional-rf/index.html">Viva Nano Fractional RF</a>
+            <a href="../../advance-skin-treatments/jet-cold-plasma/index.html">Jet Cold Plasma Treatment</a>
+            <a href="../../advance-skin-treatments/hifu-skin-tightening/index.html">HIFU Skin Tightening</a>
+            <a href="../../advance-skin-treatments/red-light-therapy/index.html">Red Light Therapy</a>
+            <a href="../../advance-skin-treatments/fibroblast-treatment/index.html">Fibroblast Treatment</a>
+            </div>
             <a href="../../advance-skin-treatments/index.html" class="view-all">View All Treatments &rarr;</a>
           </div>
         </div>
@@ -268,7 +277,7 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-bottom:1em}p:last-chil
       </li>
       <li><a href="../../../pages/facial-club/index.html">Facial Club</a></li>
       <li><a href="../../../index.html#acne-bootcamp">Acne Bootcamp</a></li>
-      <li><a href="../../../index.html#products">Shop Products</a></li>
+      <li><a href="../../../pages/promotions/index.html">Promotions</a></li>
       <li><a href="../../../index.html#visit">Visit</a></li>
     </ul>
     <div class="nav-right">
@@ -298,7 +307,7 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-bottom:1em}p:last-chil
       </details>
       <a href="../../../pages/facial-club/index.html">Facial Club</a>
       <a href="../../../index.html#acne-bootcamp">Acne Bootcamp</a>
-      <a href="../../../index.html#products">Shop Products</a>
+      <a href="../../../pages/promotions/index.html">Promotions</a>
       <a href="../../../index.html#visit">Visit</a>
       <a href="#" class="btn btn-primary btn-block" data-modal-open="reserve-modal">Reserve a Beauty Specialist</a>
     </div>
@@ -343,7 +352,7 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-bottom:1em}p:last-chil
       <div class="tx-overview-text">
         <span class="section-eyebrow">What It Is</span>
         <h2>{{OVERVIEW_HEADLINE — one sentence, one word wrapped in <em></em>}}</h2>
-        <p>{{OVERVIEW_PARAGRAPH_1 — 2–4 sentences on what the treatment is and why it's different}}</p>
+        <p>{{OVERVIEW_PARAGRAPH_1 — 2 to 4 sentences on what the treatment is and why it's different}}</p>
         <div class="tx-pull">
           <p>"{{PULL_QUOTE — one short, quotable sentence in the esthetician's voice}}"</p>
         </div>
@@ -360,7 +369,7 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-bottom:1em}p:last-chil
     <div class="tx-video-inner">
       <div class="tx-video-label"><span>Watch the Treatment</span></div>
       <div class="tx-video-stage" id="vimeo-stage">
-        <img id="vimeo-thumb" src="../../../images/treatments/{{HERO_IMG}}" alt="{{TITLE}} — watch the treatment" loading="lazy">
+        <img id="vimeo-thumb" src="../../../images/treatments/{{HERO_IMG}}" alt="{{TITLE}}: watch the treatment" loading="lazy">
         <div class="tx-video-stage-overlay"></div>
         <button type="button" class="tx-video-play-btn" id="vimeo-play-btn" aria-label="Play {{TITLE}} video">
           <span class="play-circle">
@@ -476,7 +485,7 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-bottom:1em}p:last-chil
           <li class="tx-xmark">{{HOLD_OFF_4}}</li>
           <li class="tx-xmark">{{HOLD_OFF_5}}</li>
         </ul>
-        <p style="margin-top:32px; font-family:var(--sans); font-size:13.5px; line-height:1.7; color:var(--ink-soft);">Not sure if this is the right treatment? <a href="#" data-modal-open="reserve-modal" style="color:var(--gold-deep); text-decoration:none; font-weight:600; border-bottom:1px solid rgba(168,129,63,.3); padding-bottom:1px;">Reach out</a> and we&rsquo;ll point you in the right direction &mdash; no booking required.</p>
+        <p style="margin-top:32px; font-family:var(--sans); font-size:13.5px; line-height:1.7; color:var(--ink-soft);">Not sure if this is the right treatment? <a href="#" data-modal-open="reserve-modal" style="color:var(--gold-deep); text-decoration:none; font-weight:600; border-bottom:1px solid rgba(168,129,63,.3); padding-bottom:1px;">Reach out</a> and we&rsquo;ll point you in the right direction, no booking required.</p>
       </div>
     </div>
   </section>
@@ -506,7 +515,7 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-bottom:1em}p:last-chil
         <div class="tx-ac-panel">
           <div class="tx-ac-panel-head">
             <div class="tx-ac-dot red"></div>
-            <h3>Avoid These for {{AVOID_WINDOW — e.g. "48–72 hrs"}}</h3>
+            <h3>Avoid These for {{AVOID_WINDOW — e.g. "48 to 72 hrs"}}</h3>
           </div>
           <ul class="tx-ac-list">
             <li>{{AVOID_1}}</li>
@@ -553,7 +562,7 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-bottom:1em}p:last-chil
           <a href="#" class="btn-book" data-modal-open="reserve-modal">Book the Series</a>
         </div>
       </div>
-      <p class="tx-pricing-note">Series packages are non-transferable. New clients save 25% &mdash; use code <strong style="color:var(--gold);">FIRSTTIME25</strong> at checkout.</p>
+      <p class="tx-pricing-note">Series packages are non-transferable. New clients save 25% with code <strong style="color:var(--gold);">FIRSTTIME25</strong> at checkout.</p>
     </div>
   </section>
 
@@ -597,7 +606,7 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-bottom:1em}p:last-chil
       <h2>{{CTA_HEADLINE — one word wrapped in <em></em>}}</h2>
       <p>Book the {{TITLE}}. {{CTA_SUBLINE}}</p>
       <div class="tx-cta-buttons">
-        <a href="#" class="btn-gold" data-modal-open="reserve-modal">Reserve Your Session &mdash; ${{PRICE}}</a>
+        <a href="#" class="btn-gold" data-modal-open="reserve-modal">Reserve Your Session (${{PRICE}})</a>
         <a href="tel:+18482292742" class="btn-ghost">Call (848) 229-2742</a>
       </div>
     </div>
@@ -676,9 +685,9 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-bottom:1em}p:last-chil
       <div>
         <h4>Hours</h4>
         <ul>
-          <li>Tue &ndash; Wed: 10AM&ndash;5PM</li>
-          <li>Fri: 10AM&ndash;5PM</li>
-          <li>Sat: 11AM&ndash;3PM</li>
+          <li>Tuesday to Wednesday: 10AM to 5PM</li>
+          <li>Fri: 10AM to 5PM</li>
+          <li>Sat: 11AM to 3PM</li>
           <li>Sun, Mon, Thu: Closed</li>
         </ul>
       </div>
@@ -700,7 +709,7 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-bottom:1em}p:last-chil
     <button type="button" class="mn-modal-close" data-modal-close aria-label="Close">&#10005;</button>
     <div class="mn-modal-head">
       <span class="eyebrow">Reserve a Beauty Specialist</span>
-      <h3>Tell us a bit about you &mdash; we&rsquo;ll take it from there</h3>
+      <h3>Tell us a bit about you, we&rsquo;ll take it from there</h3>
       <p>A member of our team will personally reach out to confirm your visit, usually within a day.</p>
     </div>
     <div class="mn-modal-body">
@@ -711,9 +720,9 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-bottom:1em}p:last-chil
         <div class="mn-field">
           <label for="rb-interest">What are you interested in?</label>
           <select id="rb-interest" name="interest">
-            <option selected>{{TITLE}} &mdash; ${{PRICE}}</option>
-            <option>Series of 3 &mdash; ${{PRICE_X3}} (save ${{SAVE_X3}})</option>
-            <option>Series of 6 &mdash; ${{PRICE_X6}} (save ${{SAVE_X6}})</option>
+            <option selected>{{TITLE}} (${{PRICE}})</option>
+            <option>Series of 3 (${{PRICE_X3}}, save ${{SAVE_X3}})</option>
+            <option>Series of 6 (${{PRICE_X6}}, save ${{SAVE_X6}})</option>
             <option>Facial Club Membership</option>
             <option>Other / Not sure yet</option>
           </select>
