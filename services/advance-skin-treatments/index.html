@@ -15,7 +15,7 @@
 
 .sp-hero {
   position: relative;
-  min-height: 88vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   background: var(--ink);
@@ -26,62 +26,69 @@
   inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: center 30%;
-  filter: grayscale(60%) brightness(.44) contrast(1.14);
-  transform: scale(1.04);
+  object-position: center 20%;
+  filter: grayscale(55%) brightness(.55) contrast(1.1);
+  transform: scale(1.03);
 }
 .sp-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(110deg, rgba(22,32,40,.98) 0%, rgba(22,32,40,.74) 45%, rgba(22,32,40,.18) 100%);
+  background:
+    linear-gradient(105deg, rgba(22,32,40,1) 0%, rgba(22,32,40,.92) 38%, rgba(22,32,40,.45) 62%, rgba(22,32,40,.08) 100%),
+    linear-gradient(to bottom, rgba(22,32,40,.25) 0%, rgba(22,32,40,0) 40%, rgba(22,32,40,.6) 100%);
 }
 .sp-hero-inner {
   position: relative;
   z-index: 2;
-  padding: 160px 48px 128px;
-  margin-left: max(32px, calc((100vw - 1220px)/2 + 32px));
-  max-width: 640px;
+  padding: 180px 48px 140px;
+  margin-left: max(32px, calc((100vw - 1220px)/2 + 48px));
+  max-width: 680px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 .sp-hero-inner h1 {
-  font-size: clamp(38px, 5.4vw, 68px);
-  line-height: 1.06;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 1.04;
   color: #fff;
   font-weight: 500;
-  margin-bottom: 24px;
-  letter-spacing: -.02em;
+  margin-bottom: 28px;
+  letter-spacing: -.03em;
 }
 .sp-hero-inner h1 em { font-style: italic; color: var(--gold); }
 .sp-hero-sub {
   font-size: 17px;
-  color: rgba(255,255,255,.68);
-  line-height: 1.78;
-  max-width: 540px;
-  margin-bottom: 42px;
+  color: rgba(255,255,255,.62);
+  line-height: 1.8;
+  max-width: 520px;
+  margin-bottom: 48px;
 }
-.sp-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.sp-hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+.sp-hero-actions .btn { font-size: 11px; letter-spacing: 2.5px; padding: 18px 40px; }
+.sp-hero-actions .btn-gold { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+.sp-hero-actions .btn-gold:hover { background: var(--gold-deep); border-color: var(--gold-deep); color: #fff; }
+.sp-hero-actions .btn-light { border-color: rgba(255,255,255,.45); color: rgba(255,255,255,.85); }
+.sp-hero-actions .btn-light:hover { border-color: #fff; color: #fff; background: rgba(255,255,255,.08); }
 .sp-hero-strip {
   display: flex;
   gap: 0;
-  margin-top: 80px;
-  padding-top: 28px;
+  margin-top: 96px;
+  padding-top: 32px;
   border-top: 1px solid rgba(255,255,255,.1);
   flex-wrap: wrap;
-  row-gap: 8px;
+  row-gap: 10px;
 }
 .sp-hero-strip-item {
   font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 2px;
+  font-size: 10.5px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: rgba(255,255,255,.38);
-  padding-right: 32px;
-  margin-right: 32px;
+  color: rgba(255,255,255,.36);
+  padding-right: 36px;
+  margin-right: 36px;
   border-right: 1px solid rgba(255,255,255,.1);
 }
-.sp-hero-strip-item:last-child { border-right: none; }
+.sp-hero-strip-item:last-child { border-right: none; margin-right: 0; padding-right: 0; }
 
 .sp-index {
   background: rgba(18,26,32,.97);
@@ -133,7 +140,7 @@
   text-transform: uppercase;
   color: var(--gold-deep);
   font-weight: 600;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 .sp-intro-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--gold-deep); opacity: .5; }
 .sp-intro-grid {
@@ -378,12 +385,86 @@
 }
 @media (max-width: 640px) {
   .sp-row-content { padding: 40px 24px; }
-  .sp-hero-inner { padding: 120px 24px 72px; margin-left: 0; max-width: 100%; }
+  .sp-hero-inner { padding: 120px 24px 80px; margin-left: 0; max-width: 100%; }
+  .sp-hero-actions .btn { padding: 16px 28px; }
+  .sp-hero-actions { flex-direction: column; align-items: stretch; }
+  .sp-hero-strip { margin-top: 56px; }
   .sp-cross-body { padding: 36px 28px; }
   .sp-intro { padding: 64px 24px; }
   .sp-hero-actions { flex-direction: column; }
   .sp-hero-actions .btn { width: 100%; text-align: center; }
   .sp-intro-stats { gap: 24px; }
+}
+
+/* CTA SPLIT PANEL */
+.sp-cta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+  background: var(--ink);
+}
+.sp-cta-bg, .sp-cta-tint { display: none; }
+.sp-cta-content {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 80px 64px 80px max(48px, calc((100vw - 1220px)/2 + 48px));
+  position: relative;
+}
+.sp-cta-content::after {
+  content: ''; position: absolute;
+  top: 60px; bottom: 60px; right: 0;
+  width: 1px; background: rgba(198,164,117,.18);
+}
+
+.sp-cta h2 {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 3vw, 3.6rem);
+  font-weight: 500; color: #fff;
+  line-height: 1.1; letter-spacing: -.02em; margin: 0 0 20px;
+}
+.sp-cta h2 em { font-style: italic; color: var(--gold-pale); }
+.sp-cta p {
+  font-family: var(--sans); font-size: 15px;
+  color: rgba(255,255,255,.5); line-height: 1.75;
+  margin: 0 0 44px; max-width: 400px;
+}
+.sp-cta-buttons {
+  display: flex; flex-direction: column;
+  align-items: flex-start; gap: 14px;
+}
+.sp-cta .btn-gold {
+  background: var(--gold); color: var(--ink);
+  border: none; padding: 16px 36px;
+  font-family: var(--sans); font-size: 11px;
+  letter-spacing: 2px; text-transform: uppercase;
+  font-weight: 600; cursor: pointer;
+  text-decoration: none; display: inline-block; transition: background .2s;
+}
+.sp-cta .btn-gold:hover { background: var(--gold-deep); color: #fff; }
+.sp-cta .btn-ghost {
+  border: none; background: none; color: rgba(255,255,255,.45);
+  padding: 4px 0; font-family: var(--sans); font-size: 11px;
+  letter-spacing: 2px; text-transform: uppercase; font-weight: 500;
+  cursor: pointer; text-decoration: none; display: inline-block;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  transition: color .2s, border-color .2s;
+}
+.sp-cta .btn-ghost:hover { color: #fff; border-color: rgba(255,255,255,.6); }
+.sp-cta-image { position: relative; overflow: hidden; }
+.sp-cta-image img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  filter: grayscale(60%) brightness(.72) contrast(1.05);
+  transition: filter .6s ease, transform .6s ease;
+}
+.sp-cta:hover .sp-cta-image img {
+  filter: grayscale(25%) brightness(.82) contrast(1.05);
+  transform: scale(1.02);
+}
+@media (max-width: 900px) {
+  .sp-cta { grid-template-columns: 1fr; }
+  .sp-cta-image { min-height: 360px; position: relative; }
+  .sp-cta-content { padding: 64px 24px; }
+  .sp-cta-content::after { display: none; }
 }
 </style>
 </head>
@@ -408,12 +489,21 @@
       <li class="has-dropdown">
         <a href="../../index.html#treatments">Treatments <svg class="nav-caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <div class="dropdown">
-          <div class="dropdown-col">
+          <div class="dropdown-col dropdown-col--facials">
             <h5>Facials</h5>
-            <a href="../../services/facials/index.html">Glow N Go Facial</a>
+            <div class="facials-grid">
+            <a href="../facials/glow-n-go/index.html">Glow N Go Facial</a>
+            <a href="../facials/rf-antiaging/index.html">RF Antiaging Facial</a>
+            <a href="../facials/deep-cleansing/index.html">Deep Cleansing Facial</a>
+            <a href="../facials/gentlemans-facial/index.html">Gentleman&rsquo;s Facial</a>
+            <a href="../facials/glow-facial/index.html">Glow Facial</a>
             <a href="../facials/diamond-glow/index.html">Diamond Glow Microderm</a>
-            <a href="../../services/facials/index.html">Smart Lift Facial</a>
-            <a href="../../services/facials/index.html" class="view-all">View All Facials &rarr;</a>
+            <a href="../facials/acne-facial/index.html">Acne Hydrating Facial</a>
+            <a href="../facials/dermaplaning-lux/index.html">Dermaplaning Lux Facial</a>
+            <a href="../facials/oxygen-lift/index.html">Oxygen Lift Facial</a>
+            <a href="../facials/smart-lift-facial/index.html">Smart Lift Facial</a>
+          </div>
+            <a href="../facials/index.html" class="view-all">View All Facials &rarr;</a>
           </div>
           <div class="dropdown-col">
             <h5>Advanced Skin Treatments</h5>
@@ -467,7 +557,7 @@
 <main id="main">
 
   <section class="sp-hero">
-    <img class="sp-hero-bg" src="https://images.pexels.com/photos/7321362/pexels-photo-7321362.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="">
+    <img class="sp-hero-bg" src="../../images/advance-skin-treatments/hero.jpg" alt="">
     <div class="sp-hero-overlay"></div>
     <div class="sp-hero-inner">
       <div class="hero-eyebrow">Advanced Skin Treatments</div>
@@ -487,30 +577,15 @@
     </div>
   </section>
 
-  <nav class="sp-index" aria-label="Jump to treatment">
-    <div class="sp-index-inner">
-      <a class="sp-index-link" href="#t01"><span class="n">01</span> Microchanneling</a>
-      <a class="sp-index-link" href="#t02"><span class="n">02</span> RF Face Treatment</a>
-      <a class="sp-index-link" href="#t03"><span class="n">03</span> RF Neck Lift</a>
-      <a class="sp-index-link" href="#t04"><span class="n">04</span> RF Face &amp; Neck</a>
-      <a class="sp-index-link" href="#t05"><span class="n">05</span> Cellulite Therapy</a>
-      <a class="sp-index-link" href="#t06"><span class="n">06</span> Bio Re Peel</a>
-      <a class="sp-index-link" href="#t07"><span class="n">07</span> Acne Lift Peel</a>
-      <a class="sp-index-link" href="#t08"><span class="n">08</span> Brightening Peel</a>
-      <a class="sp-index-link" href="#t09"><span class="n">09</span> Triple Bright Peel</a>
-      <a class="sp-index-link" href="#t10"><span class="n">10</span> Happy Peel</a>
-    </div>
-  </nav>
-
   <section class="sp-intro">
     <div class="sp-intro-inner">
-      <div class="sp-intro-eyebrow">— What to Expect</div>
       <div class="sp-intro-grid">
         <div>
+          <div class="sp-intro-eyebrow">— What to Expect</div>
           <h2>Results built from<br><em>inside your skin.</em></h2>
         </div>
         <div class="sp-intro-right">
-          <p>These treatments use technology — radiofrequency, precision needling, chemical acids, and cold plasma — to trigger your skin's own collagen and elastin production. The results build over weeks because they're coming from within. We always start with a consultation so you know what you're committing to before you book a single session.</p>
+          <p>These treatments use technology: radiofrequency, precision needling, chemical acids, and cold plasma, all designed to trigger your skin's own collagen and elastin production. The results build over weeks because they're coming from within. We always start with a consultation so you know exactly what you're committing to before you book.</p>
           <div class="sp-intro-stats">
             <div>
               <div class="sp-intro-stat-num">10</div>
@@ -534,7 +609,7 @@
 
     <div class="sp-row" id="t01">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/29648626/pexels-photo-29648626.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Procell Microchanneling Therapy">
+        <img src="../../images/advance-skin-treatments/procell.jpg" alt="Procell Microchanneling Therapy">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -544,14 +619,14 @@
           <span class="sp-duration">75 min</span>
         </div>
         <h2>Procell Microchanneling Therapy</h2>
-        <p>Microchanneling treatments unlock your skin's natural repair mechanisms — tightening, smoothing, and improving tone as collagen production is stimulated below the surface. Procell's precision approach means less downtime than traditional needling with results that build meaningfully over a series of sessions.</p>
+        <p>Microchanneling unlocks your skin's natural repair mechanisms, tightening, smoothing, and improving tone as collagen production builds beneath the surface. Procell's precision approach means less downtime than traditional needling, with results that compound meaningfully over a series of sessions.</p>
         <button class="sp-row-btn" data-modal-open="reserve-modal">Book a Consultation</button>
       </div>
     </div>
 
     <div class="sp-row" id="t02">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/5069612/pexels-photo-5069612.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Non Surgical RF Treatment">
+        <img src="../../images/facials/rf-antiaging/hero.jpg" alt="Non Surgical RF Treatment">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -561,14 +636,14 @@
           <span class="sp-duration">60 min</span>
         </div>
         <h2>Non Surgical RF Treatment</h2>
-        <p>Skin tightening at its best for the face area — Venus Legacy RF technology combined with targeted serum infusion. Radiofrequency energy heats the deeper dermal layers, stimulating collagen remodeling and firming lax skin progressively over a course of sessions. No surgery, no recovery.</p>
+        <p>Skin tightening for the face using Venus Legacy RF technology combined with targeted serum infusion. Radiofrequency energy heats the deeper dermal layers, stimulating collagen remodeling and firming skin progressively over a course of sessions. No surgery, no recovery.</p>
         <button class="sp-row-btn" data-modal-open="reserve-modal">Book a Consultation</button>
       </div>
     </div>
 
     <div class="sp-row" id="t03">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/10192208/pexels-photo-10192208.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Non Surgical RF Neck Lift">
+        <img src="../../images/advance-skin-treatments/rf-neck-lift.jpg" alt="Non Surgical RF Neck Lift">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -585,7 +660,7 @@
 
     <div class="sp-row" id="t04">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/7321362/pexels-photo-7321362.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Non Surgical RF Face and Neck Lift">
+        <img src="../../images/advance-skin-treatments/rf-face-neck-lift.jpg" alt="Non Surgical RF Face and Neck Lift">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -595,14 +670,14 @@
           <span class="sp-duration">105 min</span>
         </div>
         <h2>Non Surgical RF Face &amp; Neck Lift</h2>
-        <p>A comprehensive tightening treatment for both the face and neck in a single session — Venus Legacy RF Skin Tightening working in tandem to firm, lift, and contour. The results of this treatment are cumulative; clients typically see the most significant improvement after 4–6 sessions.</p>
+        <p>A comprehensive tightening treatment for both the face and neck in a single session. Venus Legacy RF works throughout to firm, lift, and contour, with results that build cumulatively. Most clients see their most significant improvement after 4 to 6 sessions.</p>
         <button class="sp-row-btn" data-modal-open="reserve-modal">Book a Consultation</button>
       </div>
     </div>
 
     <div class="sp-row" id="t05">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/5069423/pexels-photo-5069423.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Cellulite Therapy body sculpting treatment">
+        <img src="../../images/advance-skin-treatments/cellulite.jpg" alt="Cellulite Therapy body sculpting treatment">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -619,7 +694,7 @@
 
     <div class="sp-row" id="t06">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/5069425/pexels-photo-5069425.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Bio Re Peel Face Treatment">
+        <img src="../../images/advance-skin-treatments/bio-re-peel.webp" alt="Bio Re Peel Face Treatment">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -629,14 +704,14 @@
           <span class="sp-duration">60 min</span>
         </div>
         <h2>Bio Re Peel Face Treatment</h2>
-        <p>BioRePeel works via biostimulation technology — encouraging collagen production, refining texture, and addressing pigmentation and fine lines without harsh surface peeling. A sophisticated chemical formulation that works at multiple skin depths. Suitable for most skin types with minimal downtime.</p>
+        <p>BioRePeel works through biostimulation, encouraging collagen production, refining texture, and addressing pigmentation and fine lines without harsh surface peeling. A sophisticated chemical formulation that works at multiple skin depths. Suitable for most skin types with minimal downtime.</p>
         <button class="sp-row-btn" data-modal-open="reserve-modal">Book a Consultation</button>
       </div>
     </div>
 
     <div class="sp-row" id="t07">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/36930767/pexels-photo-36930767.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Acne Lift Peel treatment">
+        <img src="../../images/advance-skin-treatments/peel.jpg" alt="Acne Lift Peel treatment">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -646,14 +721,14 @@
           <span class="sp-duration">50 min</span>
         </div>
         <h2>Acne Lift Peel</h2>
-        <p>A targeted chemical peel formulated for acne-prone skin — clearing congestion, reducing active breakouts, and refining the surface texture left behind by past blemishes. Salicylic and other keratolytic acids work into the pore to address the problem at its source, not just the surface.</p>
+        <p>A targeted chemical peel formulated for acne-prone skin. Clears congestion, reduces active breakouts, and refines the surface texture left behind by past blemishes. Salicylic and other keratolytic acids work into the pore to address the problem at its source, not just the surface.</p>
         <button class="sp-row-btn" data-modal-open="reserve-modal">Book a Consultation</button>
       </div>
     </div>
 
     <div class="sp-row" id="t08">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/5069426/pexels-photo-5069426.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Lactic Acid Brightening Peel">
+        <img src="../../images/advance-skin-treatments/brightening-peel.jpg" alt="Lactic Acid Brightening Peel">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -670,7 +745,7 @@
 
     <div class="sp-row" id="t09">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/7216286/pexels-photo-7216286.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Triple Bright Peel treatment">
+        <img src="../../images/advance-skin-treatments/peel.jpg" alt="Triple Bright Peel treatment">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -687,7 +762,7 @@
 
     <div class="sp-row" id="t10">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/8558251/pexels-photo-8558251.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Happy Peel treatment">
+        <img src="../../images/facials/dermaplaning-lux/results.jpg" alt="Happy Peel treatment">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -697,7 +772,7 @@
           <span class="sp-duration">15 min</span>
         </div>
         <h2>Happy Peel</h2>
-        <p>A quick, effective introduction to chemical exfoliation. A light enzyme and acid blend refreshes the surface, clears mild congestion, and leaves skin looking brighter without any real downtime. The entry point for clients who want real results but are new to peels — and a reliable monthly skin maintenance option.</p>
+        <p>A quick, effective introduction to chemical exfoliation. A light enzyme and acid blend refreshes the surface, clears mild congestion, and leaves skin looking brighter with no downtime. The entry point for clients new to peels, and a reliable monthly skin maintenance option for those who already know what they're doing.</p>
         <button class="sp-row-btn" data-modal-open="reserve-modal">Book a Consultation</button>
       </div>
     </div>
@@ -706,7 +781,7 @@
 
   <section class="sp-cross">
     <a class="sp-cross-card" href="../../pages/facial-club/index.html">
-      <img src="https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Facial Club Membership">
+      <img src="../../images/shared/facial-club.jpg" alt="Facial Club Membership">
       <div class="sp-cross-overlay"></div>
       <div class="sp-cross-body">
         <h3>Facial Club Membership</h3>
@@ -715,7 +790,7 @@
       </div>
     </a>
     <a class="sp-cross-card" href="../../services/facials/index.html">
-      <img src="https://images.pexels.com/photos/7480282/pexels-photo-7480282.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Facial Treatments">
+      <img src="../../images/shared/all-facials.jpg" alt="Facial Treatments">
       <div class="sp-cross-overlay"></div>
       <div class="sp-cross-body">
         <h3>Browse Our Facials</h3>
@@ -723,6 +798,21 @@
         <span class="btn btn-light btn-sm">View All Facials</span>
       </div>
     </a>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="sp-cta">
+    <div class="sp-cta-content">
+      <h2>Ready to see what your skin <em>is actually capable of?</em></h2>
+      <p>Start with a consultation. We will walk through your concerns, explain which treatments fit, and build a plan around your goals.</p>
+      <div class="sp-cta-buttons">
+        <a href="#" class="btn-gold" data-modal-open="reserve-modal">Book a Consultation</a>
+        <a href="tel:+18482292742" class="btn-ghost">Call (848) 229-2742</a>
+      </div>
+    </div>
+    <div class="sp-cta-image">
+      <img src="../../images/advance-skin-treatments/final-cta.jpg" alt="Advanced skin treatment at Merle Norman Metuchen">
+    </div>
   </section>
 
 </main>

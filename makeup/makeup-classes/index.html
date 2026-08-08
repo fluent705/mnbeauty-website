@@ -3,34 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Makeup Classes in Metuchen, NJ — Private & Group | Merle Norman</title>
-<meta name="description" content="One-on-one and group makeup classes in Metuchen, NJ — everyday looks to full glam, taught hands-on at Merle Norman Spa. Book your session today. Call (848) 229-2742.">
+<title>Makeup Classes &amp; Lessons in Metuchen, NJ | Merle Norman</title>
+<meta name="description" content="One-on-one and small group makeup classes in Metuchen, NJ. Learn professional techniques for everyday wear, bridal prep, and contouring at Merle Norman Metuchen.">
 <link rel="icon" href="../../images/logo/certified-spa-badge-sm.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/main.css">
 <style>
-.ms-pricing { background: var(--cloud); padding: 96px 0 120px; }
-.ms-pricing-inner { max-width: 860px; margin: 0 auto; padding: 0 32px; }
-.ms-pricing-head { margin-bottom: 64px; border-bottom: 1px solid rgba(198,164,117,.22); padding-bottom: 40px; }
-.ms-pricing-head h2 { font-family: var(--serif); font-size: clamp(30px,3.5vw,46px); font-weight: 500; color: var(--ink); margin-bottom: 14px; line-height: 1.1; }
-.ms-pricing-head p { font-size: 15.5px; color: var(--ink-soft); max-width: 540px; line-height: 1.78; }
-.ms-price-row { display: flex; align-items: flex-start; justify-content: space-between; padding: 30px 0; border-bottom: 1px solid rgba(22,32,40,.08); gap: 32px; }
-.ms-price-row:first-of-type { border-top: 1px solid rgba(22,32,40,.08); }
-.ms-price-row-name { font-family: var(--serif); font-size: clamp(19px,2vw,26px); font-weight: 500; color: var(--ink); line-height: 1.2; margin-bottom: 7px; }
-.ms-price-row-desc { font-size: 14px; color: var(--ink-soft); line-height: 1.72; max-width: 500px; }
-.ms-price-row-right { text-align: right; flex-shrink: 0; }
-.ms-amount { font-family: var(--serif); font-size: 2rem; font-weight: 600; color: var(--ink); letter-spacing: -.03em; line-height: 1; display: block; }
-.ms-dur { font-family: var(--sans); font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: rgba(22,32,40,.38); font-weight: 500; display: block; margin-top: 5px; }
-.ms-offer { background: var(--sky); border-left: 3px solid var(--gold); padding: 18px 24px; margin-top: 52px; border-radius: 2px; }
-.ms-offer p { font-size: 14px; color: var(--ink-soft); line-height: 1.68; margin: 0; }
-.ms-offer strong { color: var(--gold-deep); }
-.ms-cta-bar { margin-top: 48px; display: flex; gap: 14px; flex-wrap: wrap; }
-@media(max-width:600px){ .ms-price-row { flex-direction: column; gap: 14px; } .ms-price-row-right { text-align: left; } }
+/* ─── SHARED BRAND VARS ─────────────────────────────────────────── */
+:root{--serif:'Cormorant Garamond',serif;--sans:'Jost',sans-serif;--ink:#22303a;--gold:#c6a475;--blush:#f4ece7;--sky:#eef5f9;--cloud:#fbfdfe;--gold-pale:#e9dcc4;--gold-deep:#a8813f;--wrap:1220px;--ink-soft:rgba(22,32,40,.48)}
+/* ─── HERO ──────────────────────────────────────────────────────── */
+.mk-hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
+.mk-hero-media{position:absolute;inset:0}
+.mk-hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:brightness(.58) contrast(1.06)}
+.mk-hero-tint{position:absolute;inset:0;background:linear-gradient(to top,rgba(22,32,40,.9) 0%,rgba(22,32,40,.3) 55%,rgba(22,32,40,.1) 100%)}
+.mk-hero-inner{position:relative;z-index:2;max-width:var(--wrap);margin:0 auto;padding:0 48px 80px;width:100%}
+.mk-hero-eyebrow{font-family:var(--sans);font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:20px;display:flex;align-items:center;gap:14px}
+.mk-hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
+.mk-hero h1{font-family:var(--serif);font-size:clamp(3rem,6vw,6.5rem);font-weight:500;color:#fff;line-height:1;letter-spacing:-.03em;margin-bottom:32px;max-width:780px}
+.mk-hero h1 em{font-style:italic;color:var(--gold-pale)}
+.mk-hero-sub{font-family:var(--sans);font-size:16px;color:rgba(255,255,255,.6);line-height:1.7;max-width:440px;margin-bottom:44px}
+.mk-hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.btn-mk-gold{background:var(--gold);color:var(--ink);border:none;padding:16px 40px;font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s}
+.btn-mk-gold:hover{background:var(--gold-deep);color:#fff}
+.btn-mk-ghost{border:1px solid rgba(255,255,255,.35);background:none;color:rgba(255,255,255,.75);padding:15px 36px;font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block;transition:border-color .2s,color .2s}
+.btn-mk-ghost:hover{border-color:var(--gold);color:var(--gold-pale)}
+/* ─── STATEMENT ─────────────────────────────────────────────────── */
+.mk-statement{background:#fff;padding:100px 0;text-align:center}
+.mk-statement-inner{max-width:760px;margin:0 auto;padding:0 32px}
+.mk-statement-rule{width:40px;height:1px;background:var(--gold);margin:0 auto 32px}
+.mk-statement h2{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3.4rem);font-weight:500;color:var(--ink);line-height:1.15;letter-spacing:-.02em;margin-bottom:24px}
+.mk-statement h2 em{font-style:italic;color:var(--gold-deep)}
+.mk-statement p{font-family:var(--sans);font-size:15.5px;color:var(--ink-soft);line-height:1.8}
+/* ─── FORMAT GRID ───────────────────────────────────────────────── */
+.mkc-formats{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:rgba(22,32,40,.08)}
+.mkc-format-card{position:relative;overflow:hidden;aspect-ratio:4/3}
+.mkc-format-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.52) contrast(1.05);transition:filter .5s,transform .5s;transform:scale(1.03)}
+.mkc-format-card:hover img{filter:brightness(.38) contrast(1.08);transform:scale(1)}
+.mkc-format-tint{position:absolute;inset:0;background:linear-gradient(to top,rgba(22,32,40,.75) 0%,transparent 65%)}
+.mkc-format-content{position:absolute;bottom:0;left:0;right:0;padding:36px 40px;z-index:2}
+.mkc-format-tag{font-family:var(--sans);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.mkc-format-tag::before{content:'';display:block;width:16px;height:1px;background:var(--gold)}
+.mkc-format-content h3{font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:500;color:#fff;line-height:1.1;margin-bottom:10px;letter-spacing:-.02em}
+.mkc-format-content p{font-family:var(--sans);font-size:13.5px;color:rgba(255,255,255,.65);line-height:1.6;max-width:360px}
+/* ─── CURRICULUM ────────────────────────────────────────────────── */
+.mkc-curriculum{background:var(--cloud);padding:110px 0}
+.mkc-curriculum-inner{max-width:var(--wrap);margin:0 auto;padding:0 48px}
+.mkc-curriculum-head{margin-bottom:80px}
+.section-eyebrow{font-family:var(--sans);font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:16px}
+.mkc-curriculum-head h2{font-family:var(--serif);font-size:clamp(2rem,3vw,3.2rem);font-weight:500;color:var(--ink);line-height:1.1;letter-spacing:-.025em;max-width:560px}
+.mkc-curriculum-head h2 em{font-style:italic}
+.mkc-skill-row{display:grid;grid-template-columns:100px 1fr 1fr;gap:0 60px;padding:52px 0;border-top:1px solid rgba(198,164,117,.2);align-items:start}
+.mkc-skill-row:last-child{border-bottom:1px solid rgba(198,164,117,.2)}
+.mkc-skill-num{font-family:var(--serif);font-size:5rem;font-weight:400;color:rgba(198,164,117,.25);line-height:1;letter-spacing:-.04em;padding-top:4px}
+.mkc-skill-title{font-family:var(--serif);font-size:clamp(1.4rem,2vw,2rem);font-weight:600;color:var(--ink);line-height:1.2;padding-top:6px}
+.mkc-skill-body{font-family:var(--sans);font-size:14.5px;color:var(--ink-soft);line-height:1.78}
+/* ─── CLASS TYPES ───────────────────────────────────────────────── */
+.mkc-types{background:var(--ink);padding:110px 0}
+.mkc-types-inner{max-width:var(--wrap);margin:0 auto;padding:0 48px}
+.mkc-types-head{margin-bottom:64px}
+.mkc-types-head h2{font-family:var(--serif);font-size:clamp(2rem,3vw,3.2rem);font-weight:500;color:#fff;line-height:1.1;letter-spacing:-.025em;margin-top:12px}
+.mkc-types-head h2 em{font-style:italic;color:var(--gold-pale)}
+.mkc-types-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.mkc-type-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:44px 36px 40px;transition:background .25s}
+.mkc-type-card:hover{background:rgba(255,255,255,.08)}
+.mkc-type-icon{width:44px;height:44px;margin-bottom:28px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(198,164,117,.3);color:var(--gold)}
+.mkc-type-card h3{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:#fff;margin-bottom:14px;line-height:1.2}
+.mkc-type-card p{font-family:var(--sans);font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.72;margin-bottom:24px}
+.mkc-type-detail{font-family:var(--sans);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;display:block}
+/* ─── PRICING ───────────────────────────────────────────────────── */
+.mkc-pricing{background:var(--cloud);padding:110px 0}
+.mkc-pricing-inner{max-width:900px;margin:0 auto;padding:0 48px}
+.mkc-pricing-head{margin-bottom:64px;padding-bottom:40px;border-bottom:1px solid rgba(198,164,117,.2)}
+.mkc-pricing-head h2{font-family:var(--serif);font-size:clamp(2rem,3vw,3.2rem);font-weight:500;color:var(--ink);line-height:1.1;letter-spacing:-.025em;margin-top:14px;margin-bottom:16px}
+.mkc-pricing-head p{font-family:var(--sans);font-size:15px;color:var(--ink-soft);line-height:1.75;max-width:520px}
+.mkc-price-row{display:flex;align-items:flex-start;justify-content:space-between;padding:32px 0;border-bottom:1px solid rgba(22,32,40,.07);gap:32px}
+.mkc-price-row:first-of-type{border-top:1px solid rgba(22,32,40,.07)}
+.mkc-price-row-left{flex:1}
+.mkc-price-name{font-family:var(--serif);font-size:clamp(1.2rem,2vw,1.7rem);font-weight:600;color:var(--ink);line-height:1.2;margin-bottom:8px}
+.mkc-price-desc{font-family:var(--sans);font-size:13.5px;color:var(--ink-soft);line-height:1.7;max-width:480px}
+.mkc-price-right{text-align:right;flex-shrink:0}
+.mkc-amount{font-family:var(--serif);font-size:2.2rem;font-weight:600;color:var(--ink);letter-spacing:-.04em;line-height:1;display:block}
+.mkc-amount sup{font-size:.45em;vertical-align:super;opacity:.7;font-weight:400}
+.mkc-dur{font-family:var(--sans);font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-soft);font-weight:500;display:block;margin-top:5px}
+.mkc-note{margin-top:40px;padding:22px 28px;background:rgba(198,164,117,.08);border-left:3px solid var(--gold)}
+.mkc-note p{font-family:var(--sans);font-size:13.5px;color:var(--ink-soft);line-height:1.7;margin:0}
+.mkc-note strong{color:var(--gold-deep)}
+.mkc-pricing-cta{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap}
+.btn-ink{background:var(--ink);color:#fff;border:none;padding:16px 40px;font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s}
+.btn-ink:hover{background:rgba(22,32,40,.8)}
+/* ─── OUTCOMES ──────────────────────────────────────────────────── */
+.mkc-outcomes{background:var(--blush);padding:100px 0}
+.mkc-outcomes-inner{max-width:var(--wrap);margin:0 auto;padding:0 48px}
+.mkc-outcomes-head{text-align:center;margin-bottom:72px}
+.mkc-outcomes-head h2{font-family:var(--serif);font-size:clamp(2rem,3vw,3.2rem);font-weight:500;color:var(--ink);line-height:1.1;letter-spacing:-.025em;margin-top:14px}
+.mkc-outcomes-head h2 em{font-style:italic;color:var(--gold-deep)}
+.mkc-outcomes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.mkc-outcome-item{background:#fff;padding:44px 32px;text-align:center}
+.mkc-outcome-num{font-family:var(--serif);font-size:3.2rem;font-weight:600;color:var(--gold);letter-spacing:-.04em;line-height:1;display:block;margin-bottom:14px}
+.mkc-outcome-item h3{font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--ink);margin-bottom:12px;line-height:1.25}
+.mkc-outcome-item p{font-family:var(--sans);font-size:13px;color:var(--ink-soft);line-height:1.68}
+/* ─── FAQ ───────────────────────────────────────────────────────── */
+.mkc-faq{background:#fff;padding:110px 0}
+.mkc-faq-inner{max-width:800px;margin:0 auto;padding:0 48px}
+.mkc-faq-head{margin-bottom:56px}
+.mkc-faq-head h2{font-family:var(--serif);font-size:clamp(2rem,3vw,3rem);font-weight:500;color:var(--ink);line-height:1.1;letter-spacing:-.025em;margin-top:14px}
+.mkc-faq-item{border-bottom:1px solid rgba(198,164,117,.2)}
+.mkc-faq-item:first-of-type{border-top:1px solid rgba(198,164,117,.2)}
+.mkc-faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 0;cursor:pointer;list-style:none;font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--ink);line-height:1.3}
+.mkc-faq-item summary::-webkit-details-marker{display:none}
+.mkc-faq-chevron{width:20px;height:20px;flex-shrink:0;transition:transform .25s;color:var(--gold)}
+.mkc-faq-item[open] .mkc-faq-chevron{transform:rotate(180deg)}
+.mkc-faq-item[open] summary{color:var(--gold-deep)}
+.mkc-faq-body{padding:0 0 26px;font-family:var(--sans);font-size:14.5px;line-height:1.78;color:rgba(22,32,40,.65)}
+.mkc-faq-body p{margin:0 0 12px}
+.mkc-faq-body p:last-child{margin-bottom:0}
+/* ─── CTA ───────────────────────────────────────────────────────── */
+.mk-cta{display:grid;grid-template-columns:1fr 1fr;min-height:520px}
+.mk-cta-content{display:flex;flex-direction:column;justify-content:center;padding:80px 64px 80px max(48px,calc((100vw - 1220px)/2 + 48px));background:var(--ink);position:relative}
+.mk-cta-content::after{content:'';position:absolute;top:60px;bottom:60px;right:0;width:1px;background:rgba(198,164,117,.18)}
+.mk-cta h2{font-family:var(--serif);font-size:clamp(2.2rem,3vw,3.6rem);font-weight:500;color:#fff;line-height:1.1;letter-spacing:-.025em;margin-bottom:20px}
+.mk-cta h2 em{font-style:italic;color:var(--gold-pale)}
+.mk-cta p{font-family:var(--sans);font-size:15px;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:40px;max-width:380px}
+.mk-cta-btns{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.btn-ghost-light{background:none;border:none;color:rgba(255,255,255,.45);padding:4px 0;font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block;border-bottom:1px solid rgba(255,255,255,.2);transition:color .2s,border-color .2s}
+.btn-ghost-light:hover{color:#fff;border-color:rgba(255,255,255,.6)}
+.mk-cta-image{position:relative;overflow:hidden}
+.mk-cta-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(50%) brightness(.72) contrast(1.05);transition:filter .6s,transform .6s}
+.mk-cta:hover .mk-cta-image img{filter:grayscale(20%) brightness(.78) contrast(1.05);transform:scale(1.02)}
+/* ─── NAV STRIP ─────────────────────────────────────────────────── */
+.mk-nav-strip{display:grid;grid-template-columns:1fr 1fr}
+.mk-nav-card{position:relative;overflow:hidden;display:block;text-decoration:none;aspect-ratio:16/7;background:var(--ink)}
+.mk-nav-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(85%) brightness(.5) contrast(1.08);transition:filter .55s,transform .55s;transform:scale(1.04)}
+.mk-nav-card:hover img{filter:grayscale(20%) brightness(.45) contrast(1.05);transform:scale(1)}
+.mk-nav-card-tint{position:absolute;inset:0;background:linear-gradient(135deg,rgba(22,32,40,.7) 0%,rgba(22,32,40,.35) 100%)}
+.mk-nav-card-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:40px 48px}
+.mk-nav-card-label{font-family:var(--sans);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.mk-nav-card-label::before{content:'';display:block;width:20px;height:1px;background:var(--gold);opacity:.6}
+.mk-nav-card h3{font-family:var(--serif);font-size:clamp(1.4rem,2.2vw,2rem);font-weight:500;color:#fff;line-height:1.15;margin-bottom:18px;letter-spacing:-.02em}
+.mk-nav-arrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:500;transition:color .25s,gap .25s}
+.mk-nav-card:hover .mk-nav-arrow{color:var(--gold);gap:16px}
+/* ─── BREADCRUMB ────────────────────────────────────────────────── */
+
+
+
+
+
+/* ─── RESPONSIVE ────────────────────────────────────────────────── */
+@media(max-width:960px){.mk-hero-inner{padding:0 28px 64px}.mkc-formats{grid-template-columns:1fr}.mkc-curriculum-inner,.mkc-types-inner,.mkc-outcomes-inner{padding:0 28px}.mkc-skill-row{grid-template-columns:60px 1fr;grid-template-rows:auto auto;gap:0 24px}.mkc-skill-body{grid-column:2}.mkc-types-grid{grid-template-columns:1fr}.mkc-outcomes-grid{grid-template-columns:1fr 1fr}.mk-cta{grid-template-columns:1fr}.mk-cta-image{min-height:380px;position:relative}.mk-cta-content{padding:72px 32px}.mk-cta-content::after{display:none}.mk-nav-strip{grid-template-columns:1fr}.mkc-pricing-inner,.mkc-faq-inner{padding:0 28px}}
+@media(max-width:600px){.mk-hero h1{font-size:2.6rem}.mk-hero-actions{flex-direction:column}.mkc-skill-row{grid-template-columns:1fr}.mkc-skill-num{font-size:3rem;margin-bottom:8px}.mkc-skill-body{grid-column:1}.mkc-outcomes-grid{grid-template-columns:1fr 1fr}.mkc-price-row{flex-direction:column;gap:12px}.mkc-price-right{text-align:left}.mkc-pricing-inner{padding:0 24px}}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <div class="topbar" role="complementary">
   <div class="topbar-inner">
@@ -43,19 +169,26 @@
 </div>
 <header class="nav">
   <div class="nav-inner">
-    <a class="brand" href="../../index.html">
-      <img src="../../images/logo/certified-spa-badge-sm.png" alt="Merle Norman Metuchen certified spa badge">
-    </a>
+    <a class="brand" href="../../index.html"><img src="../../images/logo/certified-spa-badge-sm.png" alt="Merle Norman Metuchen certified spa badge"></a>
     <ul class="nav-links">
       <li><a href="../../index.html">Home</a></li>
       <li class="has-dropdown">
-        <a href="../../index.html#treatments">Treatments <svg class="nav-caret" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="../../index.html#treatments">Treatments <svg class="nav-caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <div class="dropdown">
-          <div class="dropdown-col">
+          <div class="dropdown-col dropdown-col--facials">
             <h5>Facials</h5>
-            <a href="../../services/facials/index.html">Glow N Go Facial</a>
+            <div class="facials-grid">
+            <a href="../../services/facials/glow-n-go/index.html">Glow N Go Facial</a>
+            <a href="../../services/facials/rf-antiaging/index.html">RF Antiaging Facial</a>
+            <a href="../../services/facials/deep-cleansing/index.html">Deep Cleansing Facial</a>
+            <a href="../../services/facials/gentlemans-facial/index.html">Gentleman&rsquo;s Facial</a>
+            <a href="../../services/facials/glow-facial/index.html">Glow Facial</a>
             <a href="../../services/facials/diamond-glow/index.html">Diamond Glow Microderm</a>
-            <a href="../../services/facials/index.html">Smart Lift Facial</a>
+            <a href="../../services/facials/acne-facial/index.html">Acne Hydrating Facial</a>
+            <a href="../../services/facials/dermaplaning-lux/index.html">Dermaplaning Lux Facial</a>
+            <a href="../../services/facials/oxygen-lift/index.html">Oxygen Lift Facial</a>
+            <a href="../../services/facials/smart-lift-facial/index.html">Smart Lift Facial</a>
+            </div>
             <a href="../../services/facials/index.html" class="view-all">View All Facials &rarr;</a>
           </div>
           <div class="dropdown-col">
@@ -64,9 +197,13 @@
             <a href="../../services/advance-skin-treatments/index.html">Non Surgical RF Treatment</a>
             <a href="../../services/advance-skin-treatments/index.html">Bio Re Peel</a>
             <a href="../../services/advance-skin-treatments/index.html" class="view-all">View All Treatments &rarr;</a>
-          </div>
+          </div></div>
+      </li>
+      <li class="has-dropdown">
+        <a href="../../makeup/index.html">Makeup <svg class="nav-caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="dropdown dropdown--narrow">
           <div class="dropdown-col">
-            <h5><a href="../../makeup/index.html">Bridal &amp; Event</a></h5>
+            <h5>Bridal &amp; Event</h5>
             <a href="../../makeup/makeup-service/index.html">Makeup Service</a>
             <a href="../../makeup/makeup-classes/index.html">Makeup Classes</a>
             <a href="../../makeup/index.html" class="view-all">View All &rarr;</a>
@@ -85,15 +222,17 @@
   </div>
   <div class="mobile-menu" id="mobile-menu">
     <div class="mobile-menu-inner">
-      <details>
-        <summary>Treatments</summary>
+      <details><summary>Treatments</summary>
         <div class="mobile-submenu">
-          <span class="msub-label">Facials</span>
-          <a href="../../services/facials/index.html">All Facials</a>
-          <span class="msub-label">Advance Skin Treatments</span>
-          <a href="../../services/advance-skin-treatments/index.html">All Advance Treatments</a>
+          <span class="msub-label">Facials</span><a href="../../services/facials/index.html">All Facials</a>
+          <span class="msub-label">Advance Skin Treatments</span><a href="../../services/advance-skin-treatments/index.html">All Advance Treatments</a>
+        </div>
+      </details>
+      <details>
+        <summary>Makeup</summary>
+        <div class="mobile-submenu">
           <span class="msub-label">Bridal &amp; Event</span>
-          <a href="../../makeup/index.html">All Bridal &amp; Event</a>
+          <a href="../../makeup/index.html">All Makeup</a>
           <a href="../../makeup/makeup-service/index.html">Makeup Service</a>
           <a href="../../makeup/makeup-classes/index.html">Makeup Classes</a>
         </div>
@@ -108,124 +247,235 @@
 </header>
 
 <main id="main">
-  <section class="stub-hero">
-    <div class="wrap">      <h1>Makeup Classes in Metuchen, NJ — Private &amp; Group</h1>
-      <p>Learn makeup directly from our team — one-on-one or in a small group. From everyday basics to special occasion looks, classes are hands-on and personalized to your skill level.</p>
-    </div>
-  </section>
-  <section class="ms-pricing">
-    <div class="ms-pricing-inner">
-      <div class="ms-pricing-head">
-        <h2>Class Options &amp; Pricing</h2>
-        <p>All classes are hands-on at the studio and taught directly on your face with your own products. Because it's personalized, what you learn is actually applicable — not generic technique that doesn't suit your features or skin type.</p>
-      </div>
 
-      <div class="ms-price-row">
-        <div>
-          <div class="ms-price-row-name">Makeup Class — Full Face</div>
-          <div class="ms-price-row-desc">A comprehensive one-on-one class covering the full face — foundation, concealer, contouring, eye techniques, brows, and lip. You leave knowing how to recreate your entire personal makeup look. Best for anyone wanting to build proper technique from the ground up.</div>
-        </div>
-        <div class="ms-price-row-right">
-          <span class="ms-amount">$199</span>
-          <span class="ms-dur">150 min</span>
-        </div>
-      </div>
-
-      <div class="ms-price-row">
-        <div>
-          <div class="ms-price-row-name">Makeup Class — Single Focus</div>
-          <div class="ms-price-row-desc">A targeted class on one specific area or technique — eyes, contouring, brows, or skin. Ideal if you're confident with most of your routine but want to get one thing right.</div>
-        </div>
-        <div class="ms-price-row-right">
-          <span class="ms-amount">$89</span>
-          <span class="ms-dur">50 min</span>
-        </div>
-      </div>
-
-      <div class="ms-price-row">
-        <div>
-          <div class="ms-price-row-name">Group Makeup Class</div>
-          <div class="ms-price-row-desc">A shared session for up to 5 participants — great for bachelorette groups, birthdays, or friends who want to learn together. Everyone works on their own look with guidance throughout. A fun, hands-on experience with real, usable results.</div>
-        </div>
-        <div class="ms-price-row-right">
-          <span class="ms-amount">$400</span>
-          <span class="ms-dur">95 min · up to 5</span>
-        </div>
-      </div>
-
-      <div class="ms-offer">
-        <p><strong>New clients:</strong> Use code <strong>FIRSTTIME25</strong> to enjoy $25 off your first appointment with us.</p>
-      </div>
-
-      <div class="ms-cta-bar">
-        <a href="#" class="btn btn-primary" data-modal-open="reserve-modal">Book a Class</a>
-        <a href="tel:+18482292742" class="btn btn-ghost">(848) 229-2742</a>
+  <section class="mk-hero">
+    <div class="mk-hero-media"><img src="../../images/makeup/eye-shadow.jpg" alt="Makeup classes at Merle Norman Metuchen" loading="eager"></div>
+    <div class="mk-hero-tint"></div>
+    <div class="mk-hero-inner">
+      <div class="mk-hero-eyebrow">Makeup Classes &amp; Lessons</div>
+      <h1>Learn to do your own<br>makeup <em>beautifully.</em></h1>
+      <p class="mk-hero-sub">One-on-one and small group classes taught by licensed estheticians. From everyday confidence to bridal prep &mdash; at your pace, in Metuchen, NJ.</p>
+      <div class="mk-hero-actions">
+        <a href="#" class="btn-mk-gold" data-modal-open="reserve-modal">Book a Class</a>
+        <a href="#mkc-pricing" class="btn-mk-ghost">View Pricing</a>
       </div>
     </div>
   </section>
+
+  <section class="mk-statement">
+    <div class="mk-statement-inner">
+      <div class="mk-statement-rule"></div>
+      <h2>Most people were never <em>actually taught</em> how to do their makeup.</h2>
+      <p>YouTube tutorials give you technique in a vacuum &mdash; they don&rsquo;t account for your face shape, your skin tone, your eye shape, or what actually flatters you specifically. Our classes do. Every lesson is built around you: your features, your goals, your current products, your questions. You leave with skills that translate to your mirror at home every single morning.</p>
+    </div>
+  </section>
+
+  <div class="mkc-formats">
+    <div class="mkc-format-card">
+      <img src="../../images/makeup/makeup-2.jpg" alt="Private one-on-one makeup class" loading="lazy">
+      <div class="mkc-format-tint"></div>
+      <div class="mkc-format-content">
+        <div class="mkc-format-tag">Most Popular</div>
+        <h3>Private Lesson</h3>
+        <p>One instructor, one student, full attention. Complete customization to your face, your goals, and your products. The fastest path to real skill.</p>
+      </div>
+    </div>
+    <div class="mkc-format-card">
+      <img src="../../images/makeup/consultation.png" alt="Group makeup workshop" loading="lazy">
+      <div class="mkc-format-tint"></div>
+      <div class="mkc-format-content">
+        <div class="mkc-format-tag">Small Group</div>
+        <h3>Group Workshop</h3>
+        <p>A shared learning experience for 2&ndash;4 participants. Great for friends, mother-daughter sessions, and bridal parties who want to learn together.</p>
+      </div>
+    </div>
+    <div class="mkc-format-card">
+      <img src="../../images/makeup/eyebrow.jpg" alt="Bridal DIY makeup lesson" loading="lazy">
+      <div class="mkc-format-tint"></div>
+      <div class="mkc-format-content">
+        <div class="mkc-format-tag">Bridal Prep</div>
+        <h3>Bridal DIY Lesson</h3>
+        <p>For brides who want to do their own makeup on their wedding day. A dedicated session focused entirely on your bridal look &mdash; trial run included.</p>
+      </div>
+    </div>
+    <div class="mkc-format-card">
+      <img src="../../images/makeup/makeup.webp" alt="First-timer makeup lesson" loading="lazy">
+      <div class="mkc-format-tint"></div>
+      <div class="mkc-format-content">
+        <div class="mkc-format-tag">For All Ages</div>
+        <h3>First-Timer Lesson</h3>
+        <p>Starting from zero. Learn the basics of skin prep, foundation, eyes, and lip &mdash; without overwhelm. Perfect for teens and adults with no prior instruction.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="mkc-types">
+    <div class="mkc-types-inner">
+      <div class="mkc-types-head">
+        <span class="section-eyebrow" style="color:var(--gold)">Specialty Classes</span>
+        <h2>Classes built around <em>specific goals.</em></h2>
+      </div>
+      <div class="mkc-types-grid">
+        <div class="mkc-type-card">
+          <div class="mkc-type-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="5"/><path d="M3 21c0-4 4-7 9-7s9 3 9 7"/></svg></div>
+          <h3>Everyday Essentials</h3>
+          <p>A 5&ndash;10 minute morning routine you can actually maintain. Foundation, mascara, brow, and a lip &mdash; done quickly, done well. For clients who want to look polished without spending an hour getting there.</p>
+          <span class="mkc-type-detail">60 min &nbsp;&middot;&nbsp; Beginner to Intermediate</span>
+        </div>
+        <div class="mkc-type-card">
+          <div class="mkc-type-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <h3>Glam &amp; Evening</h3>
+          <p>Bold eyes, strong lips, and the techniques behind a polished evening look. Smoky eye application, cut crease basics, and how to make color work for your skin tone &mdash; for clients ready to go beyond their daily routine.</p>
+          <span class="mkc-type-detail">90 min &nbsp;&middot;&nbsp; Intermediate</span>
+        </div>
+        <div class="mkc-type-card">
+          <div class="mkc-type-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+          <h3>Bridal DIY Prep</h3>
+          <p>For brides who want control on their wedding morning. We&rsquo;ll create and perfect your look together, document every step, and send you home with a personalized routine card so you can recreate it calmly and confidently.</p>
+          <span class="mkc-type-detail">120 min &nbsp;&middot;&nbsp; All Levels</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mkc-pricing" id="mkc-pricing">
+    <div class="mkc-pricing-inner">
+      <div class="mkc-pricing-head">
+        <span class="section-eyebrow">Investment</span>
+        <h2>Honest, transparent pricing.</h2>
+        <p>All classes are taught one-on-one or in small groups by licensed estheticians. Every session ends with a written product list and step guide you keep.</p>
+      </div>
+      <div class="mkc-price-row">
+        <div class="mkc-price-row-left">
+          <div class="mkc-price-name">Private Lesson &mdash; 60 min</div>
+          <div class="mkc-price-desc">One-on-one instruction on any topic or skill area. Fully customized to your face, products, and goals. The most efficient way to build lasting skill.</div>
+        </div>
+        <div class="mkc-price-right"><span class="mkc-amount"><sup>$</sup>95</span><span class="mkc-dur">Per Session</span></div>
+      </div>
+      <div class="mkc-price-row">
+        <div class="mkc-price-row-left">
+          <div class="mkc-price-name">Private Lesson &mdash; 90 min</div>
+          <div class="mkc-price-desc">Extended session for more complex topics &mdash; glam, contouring, or bridal everyday prep. Includes practice time with real-time guidance and take-home notes.</div>
+        </div>
+        <div class="mkc-price-right"><span class="mkc-amount"><sup>$</sup>130</span><span class="mkc-dur">Per Session</span></div>
+      </div>
+      <div class="mkc-price-row">
+        <div class="mkc-price-row-left">
+          <div class="mkc-price-name">Bridal DIY Prep Lesson</div>
+          <div class="mkc-price-desc">2-hour dedicated session to build, practice, and document your complete bridal look. Includes a written step-by-step routine card and full product list. Available standalone or as an add-on to a bridal service booking.</div>
+        </div>
+        <div class="mkc-price-right"><span class="mkc-amount"><sup>$</sup>165</span><span class="mkc-dur">120 min</span></div>
+      </div>
+      <div class="mkc-price-row">
+        <div class="mkc-price-row-left">
+          <div class="mkc-price-name">Group Workshop (2&ndash;4 people)</div>
+          <div class="mkc-price-desc">A shared class for small groups. Each participant receives individual attention and personalized instruction. Ideal for friends, mother-daughter sessions, and bridal parties.</div>
+        </div>
+        <div class="mkc-price-right"><span class="mkc-amount"><sup>$</sup>75</span><span class="mkc-dur">Per Person</span></div>
+      </div>
+      <div class="mkc-price-row">
+        <div class="mkc-price-row-left">
+          <div class="mkc-price-name">Product Shopping Session</div>
+          <div class="mkc-price-desc">30-minute guided walkthrough of your current products with honest advice on what to keep, what to replace, and exactly what to add. Credited toward any same-day Merle Norman purchase.</div>
+        </div>
+        <div class="mkc-price-right"><span class="mkc-amount"><sup>$</sup>45</span><span class="mkc-dur">30 min</span></div>
+      </div>
+      <div class="mkc-note">
+        <p>Classes are held at our Metuchen studio. You&rsquo;re welcome to <strong>bring your own products</strong> &mdash; we work with what you already own. Not sure which class is right? <a href="#" data-modal-open="reserve-modal" style="color:var(--gold-deep)">Ask us</a> and we&rsquo;ll match you to the right session.</p>
+      </div>
+      <div class="mkc-pricing-cta">
+        <a href="#" class="btn-ink" data-modal-open="reserve-modal">Book a Class</a>
+        <a href="tel:+18482292742" style="font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;font-weight:500;align-self:center;border-bottom:1px solid rgba(22,32,40,.25);padding-bottom:2px">Call (848) 229-2742</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mkc-faq">
+    <div class="mkc-faq-inner">
+      <div class="mkc-faq-head">
+        <span style="font-family:var(--sans);font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:12px">Common Questions</span>
+        <h2>What to know before you book</h2>
+      </div>
+      <details class="mkc-faq-item" open>
+        <summary>Do I need experience before my first class?<svg class="mkc-faq-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="mkc-faq-body"><p>Not at all. Our First-Timer Lesson starts from zero &mdash; no experience required, no judgment. Many students learn more in 60 minutes than they did from years of self-teaching. We meet you exactly where you are.</p></div>
+      </details>
+      <details class="mkc-faq-item">
+        <summary>Should I bring my own makeup products?<svg class="mkc-faq-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="mkc-faq-body"><p>We recommend it for private lessons &mdash; learning with your own products means you can replicate the lesson at home exactly. We also have a full professional product range you can try. Bring everything and we&rsquo;ll go through it together.</p></div>
+      </details>
+      <details class="mkc-faq-item">
+        <summary>How is this different from watching tutorials online?<svg class="mkc-faq-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="mkc-faq-body"><p>Tutorials show you one person&rsquo;s technique on one person&rsquo;s face. Your instructor looks at your face, watches your application in real time, and corrects the specific things that don&rsquo;t work for your features. &ldquo;Your blush is sitting too low for your face shape&rdquo; is something no video can tell you. The difference in learning speed is significant.</p></div>
+      </details>
+      <details class="mkc-faq-item">
+        <summary>What age groups do you teach?<svg class="mkc-faq-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="mkc-faq-body"><p>All ages are welcome. Our youngest students are typically teens (13+) getting their first lesson. Our oldest are in their 70s, updating technique and adapting to how makeup interacts with aging skin. We adjust the approach based on the client, not a fixed curriculum.</p></div>
+      </details>
+      <details class="mkc-faq-item">
+        <summary>Can I book a class as a gift?<svg class="mkc-faq-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="mkc-faq-body"><p>Yes &mdash; makeup classes are one of our most popular gifts. Contact us to arrange a gift class and we&rsquo;ll provide a gift note the recipient can schedule at their convenience. Perfect for birthdays, Mother&rsquo;s Day, bridal party gifts, and graduations.</p></div>
+      </details>
+      <details class="mkc-faq-item">
+        <summary>What if I want to focus on one specific technique?<svg class="mkc-faq-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="mkc-faq-body"><p>Tell us when you book. Private lessons are completely customizable &mdash; if you want to learn sharp liner, how to make eyes look more open, or how to get foundation to last all day, we build the session around exactly that. No standard curriculum required.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="mk-cta">
+    <div class="mk-cta-content">
+      <h2>Learn once. Apply <em>every morning.</em></h2>
+      <p>Book your class in Metuchen, NJ. One-on-one instruction tailored entirely to your face, your products, and your goals.</p>
+      <div class="mk-cta-btns">
+        <a href="#" class="btn-mk-gold" data-modal-open="reserve-modal">Book a Makeup Class</a>
+        <a href="tel:+18482292742" class="btn-ghost-light">Call (848) 229-2742</a>
+      </div>
+    </div>
+    <div class="mk-cta-image"><img src="../../images/makeup/makeup-2.jpg" alt="Makeup class at Merle Norman Metuchen"></div>
+  </section>
+
+  <div class="mk-nav-strip">
+    <a href="../../makeup/makeup-service/index.html" class="mk-nav-card">
+      <img src="../../images/makeup/makeup.webp" alt="Makeup Service at Merle Norman Metuchen" loading="lazy">
+      <div class="mk-nav-card-tint"></div>
+      <div class="mk-nav-card-inner">
+        <div class="mk-nav-card-label">Also Available</div>
+        <h3>Want us to do your makeup instead?</h3>
+        <span class="mk-nav-arrow">Explore Makeup Service &nbsp;&rarr;</span>
+      </div>
+    </a>
+    <a href="../../services/facials/glow-facial/index.html" class="mk-nav-card">
+      <img src="../../images/facials/glow-n-go/hero.jpg" alt="Glow Facial" loading="lazy">
+      <div class="mk-nav-card-tint"></div>
+      <div class="mk-nav-card-inner">
+        <div class="mk-nav-card-label">Popular Pairing</div>
+        <h3>Start with a Glow Facial first</h3>
+        <span class="mk-nav-arrow">View Glow Facial &nbsp;&rarr;</span>
+      </div>
+    </a>
+  </div>
+
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
     <div class="foot-contact-row">
-      <a class="fc-item" href="tel:+18482292742">
-        <span class="fc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
-        <span><span class="fc-label">Let's Talk</span><strong>(848) 229-2742</strong></span>
-      </a>
-      <a class="fc-item" href="mailto:hello@merlenormanmetuchen.com">
-        <span class="fc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <span><span class="fc-label">Say Hello</span><strong>hello@merlenormanmetuchen.com</strong></span>
-      </a>
-      <a class="fc-item" href="https://maps.google.com/?q=556+Middlesex+Avenue+Metuchen+NJ+08840" target="_blank" rel="noopener noreferrer">
-        <span class="fc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21s7-6.6 7-11.6A7 7 0 0 0 5 9.4C5 14.4 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.4" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg></span>
-        <span><span class="fc-label">Address</span><strong>556 Middlesex Ave, Metuchen, NJ</strong></span>
-      </a>
+      <a class="fc-item" href="tel:+18482292742"><span class="fc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><span><span class="fc-label">Let&rsquo;s Talk</span><strong>(848) 229-2742</strong></span></a>
+      <a class="fc-item" href="mailto:hello@merlenormanmetuchen.com"><span class="fc-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="fc-label">Say Hello</span><strong>hello@merlenormanmetuchen.com</strong></span></a>
+      <a class="fc-item" href="https://maps.google.com/?q=556+Middlesex+Avenue+Metuchen+NJ+08840" target="_blank" rel="noopener noreferrer"><span class="fc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.6 7-11.6A7 7 0 0 0 5 9.4C5 14.4 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.4" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg></span><span><span class="fc-label">Address</span><strong>556 Middlesex Ave, Metuchen, NJ</strong></span></a>
     </div>
     <div class="foot-top">
       <div class="foot-brand-col">
-        <div class="foot-brand">
-          <img src="../../images/logo/certified-spa-badge-sm.png" alt="Certified Merle Norman Spa badge">
-          <span class="foot-brand-text">Merle Norman Metuchen</span>
-        </div>
+        <div class="foot-brand"><img src="../../images/logo/certified-spa-badge-sm.png" alt="Certified Merle Norman Spa badge"><span class="foot-brand-text">Merle Norman Metuchen</span></div>
         <p>Professional facials, advanced skin treatments, and bridal makeup in Metuchen, NJ. By appointment only.</p>
-        <div class="foot-social">
-          <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="Instagram">ig</a>
-          <a href="#" aria-label="YouTube">yt</a>
-        </div>
       </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="../../index.html#treatments">Treatments</a></li>
-          <li><a href="../../pages/facial-club/index.html">Facial Club</a></li>
-          <li><a href="../../index.html#acne-bootcamp">Acne Bootcamp</a></li>
-          <li><a href="../../index.html#products">Shop Products</a></li>
-          <li><a href="../../pages/reviews/index.html">Reviews</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Services</h4>
-        <ul>
-          <li><a href="../../services/facials/index.html">Facials</a></li>
-          <li><a href="../../services/advance-skin-treatments/index.html">Advance Skin Treatments</a></li>
-          <li><a href="../../makeup/makeup-service/index.html">Bridal &amp; Event Makeup</a></li>
-          <li><a href="../../makeup/makeup-classes/index.html">Makeup Classes</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Hours</h4>
-        <ul>
-          <li>Tue – Wed: 10AM–5PM</li>
-          <li>Fri: 10AM–5PM</li>
-          <li>Sat: 11AM–3PM</li>
-          <li>Sun, Mon, Thu: Closed</li>
-        </ul>
-      </div>
+      <div><h4>Quick Links</h4><ul><li><a href="../../index.html">Home</a></li><li><a href="../../index.html#treatments">Treatments</a></li><li><a href="../../pages/facial-club/index.html">Facial Club</a></li><li><a href="../../pages/reviews/index.html">Reviews</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="../../services/facials/index.html">Facials</a></li><li><a href="../../services/advance-skin-treatments/index.html">Advance Skin Treatments</a></li><li><a href="../../makeup/makeup-service/index.html">Bridal &amp; Event Makeup</a></li><li><a href="../../makeup/makeup-classes/index.html">Makeup Classes</a></li></ul></div>
+      <div><h4>Hours</h4><ul><li>Tue &ndash; Wed: 10AM&ndash;5PM</li><li>Fri: 10AM&ndash;5PM</li><li>Sat: 11AM&ndash;3PM</li><li>Sun, Mon, Thu: Closed</li></ul></div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Merle Norman Metuchen. All rights reserved.</span>
+      <span>&copy; 2026 Merle Norman Metuchen. All rights reserved.</span>
       <div class="legal-links">
         <a href="../../pages/refund-policy/index.html">Refund &amp; Services Policy</a>
         <a href="https://spa.mnbeautystudio.com/privacy_policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
@@ -237,11 +487,11 @@
 
 <div class="mn-overlay" id="reserve-modal">
   <div class="mn-modal">
-    <button type="button" class="mn-modal-close" data-modal-close aria-label="Close">✕</button>
+    <button type="button" class="mn-modal-close" data-modal-close aria-label="Close">&#10005;</button>
     <div class="mn-modal-head">
-      <span class="eyebrow">Reserve a Beauty Specialist</span>
-      <h3>Let's find your perfect treatment</h3>
-      <p>Share your details below and our team will personally reach out to confirm your visit.</p>
+      <span class="eyebrow">Book a Makeup Class</span>
+      <h3>Tell us what you&rsquo;d like to learn</h3>
+      <p>We&rsquo;ll reach out to schedule your session &mdash; usually within one business day.</p>
     </div>
     <div class="mn-modal-body">
       <form data-demo-form>
@@ -249,23 +499,20 @@
         <div class="mn-field"><label for="rb-phone">Phone Number</label><input type="tel" id="rb-phone" name="phone" required></div>
         <div class="mn-field"><label for="rb-email">Email</label><input type="email" id="rb-email" name="email" required></div>
         <div class="mn-field">
-          <label for="rb-interest">What are you interested in?</label>
-          <select id="rb-interest" name="interest">
-            <option>Facials</option>
-            <option>Advance Skin Treatments</option>
-            <option>Facial Club Membership</option>
-            <option>90 Days Acne Bootcamp</option>
-            <option>Bridal &amp; Event Makeup</option>
-            <option>Not sure yet</option>
+          <label for="rb-class">Which class interests you?</label>
+          <select id="rb-class" name="class">
+            <option selected>Private Lesson (60 min) &mdash; $95</option>
+            <option>Private Lesson (90 min) &mdash; $130</option>
+            <option>Bridal DIY Prep Lesson &mdash; $165</option>
+            <option>Group Workshop (per person) &mdash; $75</option>
+            <option>Product Shopping Session &mdash; $45</option>
+            <option>Not sure yet &mdash; help me choose</option>
           </select>
         </div>
-        <div class="mn-field"><label for="rb-message">Anything we should know?</label><textarea id="rb-message" name="message"></textarea></div>
-        <label class="mn-consent">
-          <input type="checkbox" name="sms_consent">
-          <span>By checking this box, I agree to receive text messages from Merle Norman Metuchen about appointment reminders and offers. Message &amp; data rates may apply. Reply STOP to unsubscribe.</span>
-        </label>
-        <button type="submit" class="btn btn-primary btn-block">Send Reservation Request</button>
-        <p data-form-status style="display:none; margin-top:14px; font-size:13px; color:var(--ink-soft);"></p>
+        <div class="mn-field"><label for="rb-goal">What do you most want to learn?</label><textarea id="rb-goal" name="goal" placeholder="e.g. everyday makeup, contouring, eye looks, bridal look..."></textarea></div>
+        <label class="mn-consent"><input type="checkbox" name="sms_consent"><span>I agree to receive text messages from Merle Norman Metuchen about my booking. Reply STOP to unsubscribe.</span></label>
+        <button type="submit" class="btn btn-primary btn-block">Send My Request</button>
+        <p data-form-status style="display:none;margin-top:14px;font-size:13px;color:var(--ink-soft)"></p>
       </form>
     </div>
   </div>

@@ -16,7 +16,7 @@
 /* HERO */
 .sp-hero {
   position: relative;
-  min-height: 88vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   background: var(--ink);
@@ -27,61 +27,69 @@
   inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: center 35%;
-  filter: grayscale(65%) brightness(.48) contrast(1.12);
-  transform: scale(1.04);
+  object-position: center 25%;
+  filter: grayscale(55%) brightness(.55) contrast(1.1);
+  transform: scale(1.03);
 }
 .sp-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(105deg, rgba(22,32,40,.97) 0%, rgba(22,32,40,.72) 48%, rgba(22,32,40,.15) 100%);
+  background:
+    linear-gradient(105deg, rgba(22,32,40,1) 0%, rgba(22,32,40,.92) 38%, rgba(22,32,40,.45) 62%, rgba(22,32,40,.08) 100%),
+    linear-gradient(to bottom, rgba(22,32,40,.25) 0%, rgba(22,32,40,0) 40%, rgba(22,32,40,.6) 100%);
 }
 .sp-hero-inner {
   position: relative;
   z-index: 2;
-  max-width: var(--wrap);
-  margin: 0 auto;
-  padding: 148px 32px 90px;
-  width: 100%;
+  padding: 180px 48px 140px;
+  margin-left: max(32px, calc((100vw - 1220px)/2 + 48px));
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .sp-hero-inner h1 {
-  font-size: clamp(40px, 5.8vw, 70px);
-  line-height: 1.06;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 1.04;
   color: #fff;
   font-weight: 500;
-  max-width: 680px;
-  margin-bottom: 24px;
-  letter-spacing: -.01em;
+  margin-bottom: 28px;
+  letter-spacing: -.03em;
 }
 .sp-hero-inner h1 em { font-style: italic; color: var(--gold); }
 .sp-hero-sub {
   font-size: 17px;
-  color: rgba(255,255,255,.68);
-  line-height: 1.78;
+  color: rgba(255,255,255,.62);
+  line-height: 1.8;
   max-width: 520px;
-  margin-bottom: 42px;
+  margin-bottom: 48px;
 }
-.sp-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.sp-hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+.sp-hero-actions .btn { font-size: 11px; letter-spacing: 2.5px; padding: 18px 40px; }
+.sp-hero-actions .btn-gold { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+.sp-hero-actions .btn-gold:hover { background: var(--gold-deep); border-color: var(--gold-deep); color: #fff; }
+.sp-hero-actions .btn-light { border-color: rgba(255,255,255,.45); color: rgba(255,255,255,.85); }
+.sp-hero-actions .btn-light:hover { border-color: #fff; color: #fff; background: rgba(255,255,255,.08); }
 .sp-hero-strip {
   display: flex;
   gap: 0;
-  margin-top: 80px;
-  padding-top: 28px;
+  margin-top: 96px;
+  padding-top: 32px;
   border-top: 1px solid rgba(255,255,255,.1);
   flex-wrap: wrap;
-  row-gap: 8px;
+  row-gap: 10px;
 }
 .sp-hero-strip-item {
   font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 2px;
+  font-size: 10.5px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: rgba(255,255,255,.38);
-  padding-right: 32px;
-  margin-right: 32px;
+  color: rgba(255,255,255,.36);
+  padding-right: 36px;
+  margin-right: 36px;
   border-right: 1px solid rgba(255,255,255,.1);
 }
-.sp-hero-strip-item:last-child { border-right: none; }
+.sp-hero-strip-item:last-child { border-right: none; margin-right: 0; padding-right: 0; }
 
 /* TREATMENT INDEX */
 .sp-index {
@@ -115,6 +123,20 @@
 .sp-index-link:last-child { border-right: none; }
 .sp-index-link:hover { color: rgba(255,255,255,.82); background: rgba(255,255,255,.04); }
 .sp-index-link .n { color: var(--gold); opacity: .65; font-size: 9px; }
+
+/* INTRO SECTION */
+.sp-intro { background: var(--blush); padding: 96px 32px; }
+.sp-intro-inner { max-width: var(--wrap); margin: 0 auto; }
+.sp-intro-eyebrow { display: flex; align-items: center; gap: 12px; font-family: var(--sans); font-size: 10.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 20px; }
+.sp-intro-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--gold-deep); opacity: .5; }
+.sp-intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; }
+.sp-intro-grid h2 { font-family: var(--serif); font-size: clamp(28px, 3.5vw, 44px); font-weight: 500; color: var(--ink); line-height: 1.1; letter-spacing: -.02em; }
+.sp-intro-grid h2 em { font-style: italic; color: var(--gold-deep); }
+.sp-intro-right { padding-bottom: 6px; }
+.sp-intro-right p { font-size: 16px; color: var(--ink-soft); line-height: 1.82; margin-bottom: 0; }
+.sp-intro-stats { display: flex; gap: 40px; margin-top: 36px; padding-top: 28px; border-top: 1px solid rgba(198,164,117,.25); flex-wrap: wrap; }
+.sp-intro-stat-num { font-family: var(--serif); font-size: 28px; font-weight: 600; color: var(--ink); letter-spacing: -.02em; line-height: 1; }
+.sp-intro-stat-label { font-family: var(--sans); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-soft); margin-top: 5px; font-weight: 500; }
 
 /* TREATMENT ROWS */
 .sp-treatments { background: var(--cloud); }
@@ -310,8 +332,91 @@
 }
 @media (max-width: 600px) {
   .sp-row-content { padding: 40px 24px; }
-  .sp-hero-inner { padding: 120px 24px 72px; }
+  .sp-hero-inner { padding: 120px 24px 80px; margin-left: 0; max-width: 100%; }
+  .sp-hero-actions .btn { padding: 16px 28px; }
+  .sp-hero-actions { flex-direction: column; align-items: stretch; }
+  .sp-hero-strip { margin-top: 56px; }
   .sp-cross-body { padding: 36px 28px; }
+}
+
+/* CTA SPLIT PANEL */
+.sp-cta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+  background: var(--ink);
+}
+.sp-cta-bg, .sp-cta-tint { display: none; }
+.sp-cta-content {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 80px 64px 80px max(48px, calc((100vw - 1220px)/2 + 48px));
+  position: relative;
+}
+.sp-cta-content::after {
+  content: ''; position: absolute;
+  top: 60px; bottom: 60px; right: 0;
+  width: 1px; background: rgba(198,164,117,.18);
+}
+.sp-cta-eyebrow {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--sans); font-size: 10px;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 28px;
+}
+.sp-cta-eyebrow::before {
+  content: ''; display: block;
+  width: 28px; height: 1px; background: var(--gold); opacity: .6;
+}
+.sp-cta h2 {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 3vw, 3.6rem);
+  font-weight: 500; color: #fff;
+  line-height: 1.1; letter-spacing: -.02em; margin: 0 0 20px;
+}
+.sp-cta h2 em { font-style: italic; color: var(--gold-pale); }
+.sp-cta p {
+  font-family: var(--sans); font-size: 15px;
+  color: rgba(255,255,255,.5); line-height: 1.75;
+  margin: 0 0 44px; max-width: 400px;
+}
+.sp-cta-buttons {
+  display: flex; flex-direction: column;
+  align-items: flex-start; gap: 14px;
+}
+.sp-cta .btn-gold {
+  background: var(--gold); color: var(--ink);
+  border: none; padding: 16px 36px;
+  font-family: var(--sans); font-size: 11px;
+  letter-spacing: 2px; text-transform: uppercase;
+  font-weight: 600; cursor: pointer;
+  text-decoration: none; display: inline-block; transition: background .2s;
+}
+.sp-cta .btn-gold:hover { background: var(--gold-deep); color: #fff; }
+.sp-cta .btn-ghost {
+  border: none; background: none; color: rgba(255,255,255,.45);
+  padding: 4px 0; font-family: var(--sans); font-size: 11px;
+  letter-spacing: 2px; text-transform: uppercase; font-weight: 500;
+  cursor: pointer; text-decoration: none; display: inline-block;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  transition: color .2s, border-color .2s;
+}
+.sp-cta .btn-ghost:hover { color: #fff; border-color: rgba(255,255,255,.6); }
+.sp-cta-image { position: relative; overflow: hidden; }
+.sp-cta-image img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  filter: grayscale(60%) brightness(.72) contrast(1.05);
+  transition: filter .6s ease, transform .6s ease;
+}
+.sp-cta:hover .sp-cta-image img {
+  filter: grayscale(25%) brightness(.82) contrast(1.05);
+  transform: scale(1.02);
+}
+@media (max-width: 900px) {
+  .sp-cta { grid-template-columns: 1fr; }
+  .sp-cta-image { min-height: 360px; position: relative; }
+  .sp-cta-content { padding: 64px 24px; }
+  .sp-cta-content::after { display: none; }
 }
 </style>
 </head>
@@ -336,11 +441,20 @@
       <li class="has-dropdown">
         <a href="../../index.html#treatments">Treatments <svg class="nav-caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <div class="dropdown">
-          <div class="dropdown-col">
+          <div class="dropdown-col dropdown-col--facials">
             <h5>Facials</h5>
-            <a href="index.html">Glow N Go Facial</a>
+            <div class="facials-grid">
+            <a href="glow-n-go/index.html">Glow N Go Facial</a>
+            <a href="rf-antiaging/index.html">RF Antiaging Facial</a>
+            <a href="deep-cleansing/index.html">Deep Cleansing Facial</a>
+            <a href="gentlemans-facial/index.html">Gentleman&rsquo;s Facial</a>
+            <a href="glow-facial/index.html">Glow Facial</a>
             <a href="diamond-glow/index.html">Diamond Glow Microderm</a>
-            <a href="index.html">Smart Lift Facial</a>
+            <a href="acne-facial/index.html">Acne Hydrating Facial</a>
+            <a href="dermaplaning-lux/index.html">Dermaplaning Lux Facial</a>
+            <a href="oxygen-lift/index.html">Oxygen Lift Facial</a>
+            <a href="smart-lift-facial/index.html">Smart Lift Facial</a>
+          </div>
             <a href="index.html" class="view-all">View All Facials &rarr;</a>
           </div>
           <div class="dropdown-col">
@@ -396,11 +510,11 @@
 
   <!-- HERO -->
   <section class="sp-hero">
-    <img class="sp-hero-bg" src="https://images.pexels.com/photos/3985329/pexels-photo-3985329.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="">
+    <img class="sp-hero-bg" src="../../images/shared/all-facials.jpg" alt="">
     <div class="sp-hero-overlay"></div>
     <div class="sp-hero-inner">
-      <h1>Your skin deserves<br>a facial that's actually<br><em>built for it.</em></h1>
-      <p class="sp-hero-sub">Professional facials in Metuchen, NJ — chosen based on what your skin is doing, not what's trending. Each treatment below is described as it is: what happens, who it suits, what to expect.</p>
+      <h1>Your skin deserves<br>a facial that's truly<br><em>built for it.</em></h1>
+      <p class="sp-hero-sub">Professional facials in Metuchen, NJ, chosen based on what your skin is actually doing right now. Each treatment below is described honestly: what happens, who it suits, and what to expect.</p>
       <div class="sp-hero-actions">
         <a href="#" class="btn btn-gold" data-modal-open="reserve-modal">Book a Consultation</a>
         <a href="#treatments" class="btn btn-light">Explore Facials</a>
@@ -415,29 +529,41 @@
     </div>
   </section>
 
-  <!-- TREATMENT INDEX -->
-  <nav class="sp-index" aria-label="Jump to treatment">
-    <div class="sp-index-inner">
-      <a class="sp-index-link" href="#t01"><span class="n">01</span> Glow N Go</a>
-      <a class="sp-index-link" href="#t02"><span class="n">02</span> RF Antiaging</a>
-      <a class="sp-index-link" href="#t03"><span class="n">03</span> Deep Cleansing</a>
-      <a class="sp-index-link" href="#t04"><span class="n">04</span> Gentleman's</a>
-      <a class="sp-index-link" href="#t05"><span class="n">05</span> Glow Facial</a>
-      <a class="sp-index-link" href="#t06"><span class="n">06</span> Diamond Glow</a>
-      <a class="sp-index-link" href="#t07"><span class="n">07</span> Acne Hydrating</a>
-      <a class="sp-index-link" href="#t08"><span class="n">08</span> Dermaplaning Lux</a>
-      <a class="sp-index-link" href="#t09"><span class="n">09</span> Oxygen Lift</a>
-      <a class="sp-index-link" href="#t10"><span class="n">10</span> Smart Lift</a>
-    </div>
-  </nav>
-
   <!-- TREATMENTS -->
+  <section class="sp-intro">
+    <div class="sp-intro-inner">
+      <div class="sp-intro-grid">
+        <div>
+          <div class="sp-intro-eyebrow">— What to Expect</div>
+          <h2>Ten facials. One right<br><em>for your skin right now.</em></h2>
+        </div>
+        <div class="sp-intro-right">
+          <p>Every facial here is selected and performed by a licensed esthetician who looks at your skin before choosing products. We don't apply the same treatment twice — your skin changes, and so does our approach. Each listing below tells you exactly what happens, who it suits, and what results are realistic.</p>
+          <div class="sp-intro-stats">
+            <div>
+              <div class="sp-intro-stat-num">10</div>
+              <div class="sp-intro-stat-label">Facials Available</div>
+            </div>
+            <div>
+              <div class="sp-intro-stat-num">$150+</div>
+              <div class="sp-intro-stat-label">Starting From</div>
+            </div>
+            <div>
+              <div class="sp-intro-stat-num">1:1</div>
+              <div class="sp-intro-stat-label">Every Appointment</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="sp-treatments" id="treatments">
 
     <!-- 01 -->
     <div class="sp-row" id="t01">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/7480282/pexels-photo-7480282.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Glow N Go Facial treatment">
+        <img src="../../images/facials/glow-n-go/hero.jpg" alt="Glow N Go Facial treatment">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -447,15 +573,18 @@
           <span class="sp-duration">30 min</span>
         </div>
         <h2>Glow N Go Facial</h2>
-        <p>Deep cleansing steam, gentle exfoliation, and a hydrating finish — done in 30 minutes. An efficient reset for skin that's dull, congested, or just needs a proper clean. Ideal for first-timers or anyone fitting good skin into a full schedule.</p>
-        <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+        <p>Steam, gentle exfoliation, and a hydrating finish in 30 minutes. A quick reset for skin that feels dull, congested, or simply overdue for some real attention. A great starting point for first-timers, or anyone who wants results without a long appointment.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+          <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+          <a href="glow-n-go/index.html" style="font-family:var(--sans);font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(168,129,63,.3);padding-bottom:2px;">Treatment Details →</a>
+        </div>
       </div>
     </div>
 
     <!-- 02 -->
     <div class="sp-row" id="t02">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/7480297/pexels-photo-7480297.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="RF Antiaging Facial treatment">
+        <img src="../../images/facials/rf-antiaging/hero.jpg" alt="RF Antiaging Facial treatment">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -465,15 +594,18 @@
           <span class="sp-duration">75 min</span>
         </div>
         <h2>RF Antiaging Facial</h2>
-        <p>Radiofrequency energy delivered deep into the dermis triggers collagen remodeling — lifting and tightening from within. Works progressively; most clients notice results that keep improving over the weeks that follow. No needles, no downtime.</p>
-        <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+        <p>Radiofrequency energy goes deep into the dermis to trigger collagen remodeling, lifting and firming from within. Results build progressively, and most clients notice their skin continuing to improve in the weeks after each session. No needles, no recovery time.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+          <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+          <a href="rf-antiaging/index.html" style="font-family:var(--sans);font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(168,129,63,.3);padding-bottom:2px;">Treatment Details →</a>
+        </div>
       </div>
     </div>
 
     <!-- 03 -->
     <div class="sp-row" id="t03">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/18209809/pexels-photo-18209809.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Deep Cleansing Facial">
+        <img src="../../images/facials/deep-cleansing/hero.jpg" alt="Deep Cleansing Facial">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -484,14 +616,17 @@
         </div>
         <h2>Deep Cleansing Facial</h2>
         <p>A thorough purifying treatment that removes congestion, refines pores, and restores balance. Steam, extractions, and a targeted mask leave skin noticeably clearer. Particularly effective for oily, combination, or breakout-prone skin types.</p>
-        <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+          <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+          <a href="deep-cleansing/index.html" style="font-family:var(--sans);font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(168,129,63,.3);padding-bottom:2px;">Treatment Details →</a>
+        </div>
       </div>
     </div>
 
     <!-- 04 -->
     <div class="sp-row" id="t04">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/20683634/pexels-photo-20683634.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="The Perfect Gentleman's Facial">
+        <img src="../../images/facials/gentlemans-facial/hero.jpg" alt="The Perfect Gentleman's Facial">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -501,15 +636,18 @@
           <span class="sp-duration">60 min</span>
         </div>
         <h2>The Perfect Gentleman's Facial</h2>
-        <p>Men's skin is thicker, oilier, and shaped by daily shaving. This treatment addresses all of it — deep cleanse, exfoliation to prevent ingrowns, targeted extractions, and products formulated for male skin. No fuss. Clean, clear result.</p>
-        <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+        <p>Men's skin is thicker, oilier, and shaped daily by shaving. This facial addresses all of it: a deep cleanse, exfoliation to prevent ingrowns, targeted extractions, and products formulated for male skin. No fuss, just clean results.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+          <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+          <a href="gentlemans-facial/index.html" style="font-family:var(--sans);font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(168,129,63,.3);padding-bottom:2px;">Treatment Details →</a>
+        </div>
       </div>
     </div>
 
     <!-- 05 -->
     <div class="sp-row" id="t05">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/20683632/pexels-photo-20683632.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Glow Facial">
+        <img src="../../images/facials/glow-n-go/hero.jpg" alt="Glow Facial">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -519,15 +657,18 @@
           <span class="sp-duration">60 min</span>
         </div>
         <h2>Glow Facial</h2>
-        <p>Designed to brighten the skin and enhance its natural radiance — key actives work to even tone, boost luminosity, and restore that clarity that disappears with stress and screen time. A consistent choice for anyone who wants skin that looks rested without having to explain why.</p>
-        <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+        <p>Designed to brighten and enhance your skin's natural radiance. Key actives work to even tone, boost luminosity, and restore the clarity that stress and screen time tend to steal. For anyone who wants skin that looks genuinely rested and healthy.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+          <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+          <a href="glow-facial/index.html" style="font-family:var(--sans);font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(168,129,63,.3);padding-bottom:2px;">Treatment Details →</a>
+        </div>
       </div>
     </div>
 
     <!-- 06 -->
     <div class="sp-row" id="t06">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/7446686/pexels-photo-7446686.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Diamond Glow Microderm Facial">
+        <img src="../../images/facials/diamond-glow/hero.jpg" alt="Diamond Glow Microderm Facial">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -537,7 +678,7 @@
           <span class="sp-duration">60 min</span>
         </div>
         <h2>Diamond Glow Microderm Facial</h2>
-        <p>Combination therapy: microdermabrasion resurfaces the outer layer while a gentle enzyme treatment works beneath it. The result is softer texture, reduced congestion, and skin that absorbs everything you put on it afterward significantly better.</p>
+        <p>Microdermabrasion resurfaces the outer layer while a targeted enzyme treatment works beneath it, clearing pores and infusing skin with concentrated serums. The result is softer texture, cleaner pores, and noticeably better absorption of everything that follows.</p>
         <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
           <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
           <a href="diamond-glow/index.html" style="font-family:var(--sans);font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(168,129,63,.3);padding-bottom:2px;">Treatment Details →</a>
@@ -548,7 +689,7 @@
     <!-- 07 -->
     <div class="sp-row" id="t07">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/16131208/pexels-photo-16131208.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Acne Hydrating Facial">
+        <img src="../../images/facials/acne-facial/hero.jpg" alt="Acne Hydrating Facial">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -558,15 +699,18 @@
           <span class="sp-duration">75 min</span>
         </div>
         <h2>Acne Hydrating Facial</h2>
-        <p>Targets acne while bringing the skin back into balance — a common mistake in acne treatment is stripping moisture, which only worsens breakouts. This combines gentle extractions with hydrating actives that calm inflammation and support your skin's barrier. Part of our broader Acne Bootcamp approach, available as a standalone session.</p>
-        <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+        <p>Targets acne while bringing the skin back into balance. A common mistake in acne treatment is stripping moisture, which only makes breakouts worse. This facial pairs gentle extractions with hydrating actives that calm inflammation and support your skin's barrier. Available on its own, or as part of our 90-Day Acne Bootcamp.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+          <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+          <a href="acne-facial/index.html" style="font-family:var(--sans);font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(168,129,63,.3);padding-bottom:2px;">Treatment Details →</a>
+        </div>
       </div>
     </div>
 
     <!-- 08 -->
     <div class="sp-row" id="t08">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/6476065/pexels-photo-6476065.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Dermaplaning Lux Facial">
+        <img src="../../images/facials/dermaplaning-lux/hero.jpg" alt="Dermaplaning Lux Facial">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -576,15 +720,18 @@
           <span class="sp-duration">60 min</span>
         </div>
         <h2>Dermaplaning Lux Facial</h2>
-        <p>A full facial that combines dermaplaning — gently removing dead skin cells and vellus hair — with targeted serums and a sealing mask. Skin is immediately smoother and more radiant; makeup applies differently. No downtime, and results that show the same evening.</p>
-        <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+        <p>A full facial combining dermaplaning, which gently removes dead skin cells and vellus hair, with targeted serums and a finishing mask. Skin is immediately smoother and more radiant. Makeup applies beautifully, and you'll notice the difference before you even leave.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+          <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+          <a href="dermaplaning-lux/index.html" style="font-family:var(--sans);font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(168,129,63,.3);padding-bottom:2px;">Treatment Details →</a>
+        </div>
       </div>
     </div>
 
     <!-- 09 -->
     <div class="sp-row" id="t09">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/36930299/pexels-photo-36930299.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Oxygen Lift Facial">
+        <img src="../../images/facials/oxygen-lift/hero.jpg" alt="Oxygen Lift Facial">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -594,15 +741,18 @@
           <span class="sp-duration">75 min</span>
         </div>
         <h2>Oxygen Lift Facial</h2>
-        <p>O2 Lift uses 95% therapeutic oxygen with plant-derived stem cells and a mild enzyme peel to oxygenate, refine, and brighten. Pressurized delivery gets actives into the skin where topical products simply can't reach. Particularly good for skin that's dull, dehydrated, or showing the effects of stress.</p>
-        <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+        <p>O2 Lift uses 95% pure therapeutic oxygen with plant-derived stem cells and a mild enzyme peel to oxygenate, refine, and brighten. Pressurized delivery pushes actives deeper than any topical product can reach. Especially good for skin that looks dull, feels dehydrated, or has been through a stressful season.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+          <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+          <a href="oxygen-lift/index.html" style="font-family:var(--sans);font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(168,129,63,.3);padding-bottom:2px;">Treatment Details →</a>
+        </div>
       </div>
     </div>
 
     <!-- 10 -->
     <div class="sp-row" id="t10">
       <div class="sp-row-media">
-        <img src="https://images.pexels.com/photos/4586750/pexels-photo-4586750.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Smart Lift Facial">
+        <img src="../../images/facials/smart-lift-facial/hero.jpg" alt="Smart Lift Facial">
         <div class="sp-row-media-tint"></div>
       </div>
       <div class="sp-row-content">
@@ -612,30 +762,48 @@
           <span class="sp-duration">75 min</span>
         </div>
         <h2>Smart Lift Facial</h2>
-        <p>The best of three effective treatments in one session — radiofrequency skin tightening, a lifting facial protocol, and targeted serum infusion. Works cumulatively to firm, contour, and restore definition. Our most technically advanced facial. No needles, no downtime required.</p>
-        <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+        <p>Three powerful treatments in a single 75-minute session: radiofrequency skin tightening, a lifting facial protocol, and targeted serum infusion. Each one builds on the last, working together to firm, contour, and restore definition. Our most advanced facial, and completely needle-free.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+          <button class="sp-row-btn" data-modal-open="reserve-modal">Book This Facial</button>
+          <a href="smart-lift-facial/index.html" style="font-family:var(--sans);font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(168,129,63,.3);padding-bottom:2px;">Treatment Details →</a>
+        </div>
       </div>
     </div>
 
   </section>
 
+  <!-- FINAL CTA -->
+  <section class="sp-cta">
+    <div class="sp-cta-content">
+      <h2>Ready to find the facial <em>your skin actually needs?</em></h2>
+      <p>Book online or give us a call. We'll talk through what's going on with your skin and match you to the right treatment.</p>
+      <div class="sp-cta-buttons">
+        <a href="#" class="btn-gold" data-modal-open="reserve-modal">Reserve Your Facial</a>
+        <a href="tel:+18482292742" class="btn-ghost">Call (848) 229-2742</a>
+      </div>
+    </div>
+    <div class="sp-cta-image">
+      <img src="../../images/shared/all-facials.jpg" alt="Professional facial at Merle Norman Metuchen">
+    </div>
+  </section>
+
   <!-- CROSS-SELL -->
   <section class="sp-cross">
     <a class="sp-cross-card" href="../../pages/facial-club/index.html">
-      <img src="https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Facial Club Membership">
+      <img src="../../images/shared/facial-club.jpg" alt="Facial Club Membership">
       <div class="sp-cross-overlay"></div>
       <div class="sp-cross-body">
         <h3>Facial Club Membership</h3>
-        <p>One professional facial every month. Member pricing on products, priority booking, and a dedicated esthetician who knows your skin over time.</p>
+        <p>One professional facial every month, member pricing on products, priority booking, and a dedicated esthetician who truly gets to know your skin.</p>
         <span class="btn btn-gold btn-sm">Learn More</span>
       </div>
     </a>
     <a class="sp-cross-card" href="../../pages/acne-bootcamp/index.html">
-      <img src="https://images.pexels.com/photos/6476065/pexels-photo-6476065.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="90-Day Acne Bootcamp">
+      <img src="../../images/acne-bootcamp/hero.jpg" alt="90-Day Acne Bootcamp">
       <div class="sp-cross-overlay"></div>
       <div class="sp-cross-body">
         <h3>90-Day Acne Bootcamp</h3>
-        <p>A structured 3-month program for persistent acne. Regular in-studio treatments, a personalized home routine, and a plan built around your skin.</p>
+        <p>A structured 90-day program for persistent acne. Regular in-studio treatments, a personalized home care routine, and a plan built entirely around your skin.</p>
         <span class="btn btn-light btn-sm">Learn More</span>
       </div>
     </a>

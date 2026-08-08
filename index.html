@@ -36,11 +36,20 @@
       <li class="has-dropdown">
         <a href="index.html#treatments">Treatments <svg class="nav-caret" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <div class="dropdown">
-          <div class="dropdown-col">
+          <div class="dropdown-col dropdown-col--facials">
             <h5>Facials</h5>
-            <a href="services/facials/index.html">Glow N Go Facial</a>
+            <div class="facials-grid">
+            <a href="services/facials/glow-n-go/index.html">Glow N Go Facial</a>
+            <a href="services/facials/rf-antiaging/index.html">RF Antiaging Facial</a>
+            <a href="services/facials/deep-cleansing/index.html">Deep Cleansing Facial</a>
+            <a href="services/facials/gentlemans-facial/index.html">Gentleman&rsquo;s Facial</a>
+            <a href="services/facials/glow-facial/index.html">Glow Facial</a>
             <a href="services/facials/diamond-glow/index.html">Diamond Glow Microderm</a>
-            <a href="services/facials/index.html">Smart Lift Facial</a>
+            <a href="services/facials/acne-facial/index.html">Acne Hydrating Facial</a>
+            <a href="services/facials/dermaplaning-lux/index.html">Dermaplaning Lux Facial</a>
+            <a href="services/facials/oxygen-lift/index.html">Oxygen Lift Facial</a>
+            <a href="services/facials/smart-lift-facial/index.html">Smart Lift Facial</a>
+          </div>
             <a href="services/facials/index.html" class="view-all">View All Facials &rarr;</a>
           </div>
           <div class="dropdown-col">
@@ -50,8 +59,13 @@
             <a href="services/advance-skin-treatments/index.html">Bio Re Peel</a>
             <a href="services/advance-skin-treatments/index.html" class="view-all">View All Treatments &rarr;</a>
           </div>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <a href="makeup/index.html">Makeup <svg class="nav-caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="dropdown dropdown--narrow">
           <div class="dropdown-col">
-            <h5><a href="makeup/index.html">Bridal &amp; Event</a></h5>
+            <h5>Bridal &amp; Event</h5>
             <a href="makeup/makeup-service/index.html">Makeup Service</a>
             <a href="makeup/makeup-classes/index.html">Makeup Classes</a>
             <a href="makeup/index.html" class="view-all">View All &rarr;</a>
@@ -77,8 +91,13 @@
           <a href="services/facials/index.html">All Facials</a>
           <span class="msub-label">Advance Skin Treatments</span>
           <a href="services/advance-skin-treatments/index.html">All Advance Treatments</a>
+        </div>
+      </details>
+      <details>
+        <summary>Makeup</summary>
+        <div class="mobile-submenu">
           <span class="msub-label">Bridal &amp; Event</span>
-          <a href="makeup/index.html">All Bridal &amp; Event</a>
+          <a href="makeup/index.html">All Makeup</a>
           <a href="makeup/makeup-service/index.html">Makeup Service</a>
           <a href="makeup/makeup-classes/index.html">Makeup Classes</a>
         </div>
@@ -99,7 +118,7 @@
   ============================================ -->
   <section class="hero">
     <div class="media">
-      <img src="https://images.pexels.com/photos/3893744/pexels-photo-3893744.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Woman with soft, radiant skin in natural light" loading="eager">
+      <img src="images/home/hero.jpg" alt="Woman with soft, radiant skin in natural light" loading="eager">
       <div class="tint"></div>
     </div>
     <div class="hero-inner">
@@ -116,30 +135,11 @@
   <!-- ============================================
        INTRO / WELCOME
   ============================================ -->
-  <section class="intro section-pad">
-    <div class="wrap intro-grid reveal">
-      <div>
-        <h2>Skincare that's actually matched to your skin</h2>
-        <p>We start every visit with a real skin assessment — then choose a treatment based on what your skin needs that day, not what's next on a menu. No upselling, no rushing through a protocol.</p>
-        <p>As a certified Merle Norman Spa, we work with Merle Norman's clinical formulas alongside modern tools — microcurrent, radiofrequency, LED therapy, and more — so results are visible, and appointments feel worth it.</p>
-        <div class="intro-stats">
-          <div><b>20+</b><span>Treatments available</span></div>
-          <div><b>1:1</b><span>Every appointment</span></div>
-          <div><b>NJ</b><span>Metuchen studio</span></div>
-        </div>
-      </div>
-      <div class="intro-visual media">
-        <img src="https://images.pexels.com/photos/7031713/pexels-photo-7031713.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Calm, elegant treatment room interior">
-        <div class="shade"></div>
-      </div>
-    </div>
-  </section>
-
   <!-- ============================================
        EXPLORE OUR TREATMENTS
   ============================================ -->
-  <section class="treatments section-pad" id="treatments">
-    <div class="wrap reveal">
+  <section class="treatments" id="treatments">
+    <div class="wrap reveal" style="padding-top:116px; padding-bottom:56px;">
       <div class="treatments-head">
         <div class="treatments-head-left">
           <div class="section-eyebrow-gold">— Services</div>
@@ -148,10 +148,10 @@
         <p class="treatments-head-right">Ten professional facials, advanced clinical treatments, and bridal makeup — each one chosen for your skin specifically, not pulled off a menu.</p>
       </div>
     </div>
-    <div class="wrap bento-grid reveal">
+    <div class="bento-grid reveal">
       <a href="services/facials/index.html" class="bento-tile large">
         <div class="media">
-          <img src="https://images.pexels.com/photos/3985329/pexels-photo-3985329.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Facial treatment being applied at Merle Norman Metuchen">
+          <img src="images/facials/deep-cleansing/hero.jpg" alt="Facial treatment being applied at Merle Norman Metuchen" loading="lazy">
           <div class="tint"></div>
         </div>
         <div class="bento-copy">
@@ -163,25 +163,25 @@
       </a>
       <a href="services/advance-skin-treatments/index.html" class="bento-tile">
         <div class="media">
-          <img src="https://images.pexels.com/photos/7789612/pexels-photo-7789612.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Advanced skin treatment device used at Merle Norman Metuchen">
+          <img src="images/facials/smart-lift-facial/results.jpg" alt="Advanced skin treatment at Merle Norman Metuchen" loading="lazy">
           <div class="tint"></div>
         </div>
         <div class="bento-copy">
           <span class="bento-kicker">Clinical Treatments</span>
           <h3>Advanced Skin Treatments</h3>
-          <p>Procell microchanneling, RF, chemical peels, and more — for concerns that go deeper than a facial alone can reach.</p>
+          <p>Procell microchanneling, RF, chemical peels, and more — for concerns that go deeper than a facial can reach.</p>
           <span class="t-link">View All Treatments →</span>
         </div>
       </a>
       <a href="makeup/makeup-service/index.html" class="bento-tile">
         <div class="media">
-          <img src="https://images.pexels.com/photos/37710473/pexels-photo-37710473.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Bride having makeup applied by a makeup artist">
+          <img src="images/makeup/makeup-2.jpg" alt="Bridal makeup at Merle Norman Metuchen" loading="lazy">
           <div class="tint"></div>
         </div>
         <div class="bento-copy">
           <span class="bento-kicker">Bridal &amp; Event</span>
           <h3>Bridal &amp; Event Makeup</h3>
-          <p>Professional makeup for weddings and events, plus private classes for anyone who wants to learn — done by our artist, unhurried.</p>
+          <p>Professional makeup for weddings and events, plus private classes — done by our artist, unhurried.</p>
           <span class="t-link">Explore Makeup &amp; Classes →</span>
         </div>
       </a>
@@ -439,137 +439,101 @@
     background: #8f6b30;
     border-color: #8f6b30;
   }
-  /* FOOTER BAR */
-  .fc-mem-footer {
-    border-top: 1px solid rgba(255,255,255,.08);
-    padding: 24px 32px;
-    max-width: var(--wrap);
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    padding-bottom: 56px;
-  }
-  .fc-mem-footer p {
-    font-size: 14px;
-    color: rgba(255,255,255,.45);
-    margin: 0;
-    max-width: 480px;
-    line-height: 1.6;
-  }
-  .fc-mem-footer-link {
-    font-family: var(--sans);
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--gold);
-    text-decoration: none;
-    font-weight: 500;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: color .2s ease;
-  }
-  .fc-mem-footer-link:hover { color: #fff; }
-  .fc-mem-footer-link::after { content: "→"; }
 
-  /* ── ACNE BOOTCAMP ── */
-  .ab-home-section {
-    background: var(--sky);
-    overflow: hidden;
-  }
-  .ab-home-inner {
-    max-width: var(--wrap);
-    margin: 0 auto;
-    padding: 90px 32px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 72px;
-    align-items: center;
-  }
-  .ab-home-visual {
-    position: relative;
-    border-radius: 4px;
-    overflow: hidden;
-    aspect-ratio: 5/6;
-  }
-  .ab-home-visual img {
+  /* ── ACNE BOOTCAMP PROMO ── */
+  /* Full-bleed edge-to-edge photo band, content anchored bottom-left over
+     a bottom-up gradient — the same recipe as .bento-tile / .mk-occ-card
+     used on the homepage treatments grid and the makeup page's occasion
+     tiles. No side margins, no rounded corners, no boxed card. */
+  .ab-promo { position: relative; overflow: hidden; min-height: 72vh; display: flex; align-items: flex-end; }
+  .ab-promo-img {
+    position: absolute;
+    inset: 0;
     width: 100%; height: 100%;
     object-fit: cover;
-    filter: grayscale(75%) contrast(1.06) brightness(.95);
-    transition: filter .7s ease;
+    object-position: center 30%;
+    filter: brightness(.85) contrast(1.05);
+    transition: filter .5s, transform .5s;
+    transform: scale(1.03);
   }
-  .ab-home-visual:hover img { filter: grayscale(0%) contrast(1.06); }
-  .ab-home-text h2 {
-    font-size: clamp(30px, 3.5vw, 44px);
-    line-height: 1.12;
-    margin-bottom: 16px;
-    font-weight: 500;
+  .ab-promo:hover .ab-promo-img { filter: brightness(.7) contrast(1.08); transform: scale(1); }
+  .ab-promo-tint {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(22,32,40,.88) 0%, rgba(22,32,40,.45) 45%, transparent 80%);
   }
-  .ab-home-text h2 em {
-    font-style: italic;
-    color: var(--gold-deep);
+  .ab-promo-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--wrap);
+    margin: 0 auto;
+    padding: 64px max(48px, calc((100vw - 1220px)/2 + 48px)) 72px;
   }
-  .ab-home-text > p {
-    color: var(--ink-soft);
-    font-size: 16px;
-    line-height: 1.78;
-    margin-bottom: 28px;
-  }
-  .ab-home-steps {
+  .ab-promo-eyebrow {
     display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin-bottom: 36px;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--sans);
+    font-size: 10.5px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 18px;
   }
-  .ab-home-step {
-    display: flex;
-    gap: 18px;
-    align-items: flex-start;
-    padding: 16px 0;
-    border-bottom: 1px solid var(--sky-line);
-  }
-  .ab-home-step:first-child { border-top: 1px solid var(--sky-line); }
-  .ab-home-step-num {
-    font-family: var(--serif);
-    font-size: 22px;
-    color: var(--gold-deep);
-    font-weight: 500;
-    line-height: 1.2;
-    min-width: 24px;
-  }
-  .ab-home-step-text strong {
+  .ab-promo-eyebrow::before {
+    content: '';
     display: block;
-    font-size: 14.5px;
-    color: var(--ink);
-    margin-bottom: 2px;
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+    opacity: .6;
   }
-  .ab-home-step-text span {
-    font-size: 13.5px;
-    color: var(--ink-soft);
-    line-height: 1.55;
+  .ab-promo-inner h2 {
+    font-family: var(--serif);
+    font-size: clamp(38px, 4.8vw, 62px);
+    line-height: 1.08;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: -.03em;
+    margin-bottom: 18px;
+    max-width: 700px;
   }
-  .ab-home-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .ab-promo-inner h2 em { font-style: italic; color: var(--gold-pale); }
+  .ab-promo-sub {
+    font-family: var(--sans);
+    font-size: 16.5px;
+    color: rgba(255,255,255,.78);
+    line-height: 1.75;
+    margin-bottom: 34px;
+    max-width: 560px;
+  }
+  .ab-promo-ctas { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .ab-promo-ctas .btn { font-size: 11px; letter-spacing: 2.5px; padding: 18px 36px; }
+  .ab-promo-ctas .btn-gold { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+  .ab-promo-ctas .btn-gold:hover { background: var(--gold-deep); border-color: var(--gold-deep); color: #fff; }
+  .ab-promo-ctas .btn-ghost { border-color: rgba(255,255,255,.3); color: rgba(255,255,255,.75); }
+  .ab-promo-ctas .btn-ghost:hover { border-color: rgba(255,255,255,.6); color: #fff; }
 
   @media (max-width: 900px) {
     .fc-mem-tiers { grid-template-columns: 1fr; }
     .fc-mem-header-inner { padding-bottom: 36px; }
-    .ab-home-inner { grid-template-columns: 1fr; gap: 40px; }
-    .ab-home-visual { aspect-ratio: 16/9; }
+    .ab-promo { min-height: 0; }
+    .ab-promo-inner { padding: 48px 28px 56px; }
   }
   @media (max-width: 600px) {
     .fc-mem-tier { padding: 32px 24px; }
     .fc-mem-header-text h2 { font-size: 30px; }
+    .ab-promo-ctas { flex-direction: column; align-items: stretch; }
+    .ab-promo-ctas .btn { text-align: center; }
   }
   </style>
 
   <section class="fc-mem-section" id="facial-club">
     <!-- Header with photo background -->
     <div class="fc-mem-header">
-      <img class="fc-mem-header-img" src="https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Professional facial treatment at Merle Norman Metuchen">
+      <img class="fc-mem-header-img" src="images/shared/facial-club.jpg" alt="Professional facial treatment at Merle Norman Metuchen">
       <div class="fc-mem-header-overlay"></div>
       <div class="fc-mem-header-inner reveal">
         <div class="fc-mem-header-text">
@@ -633,52 +597,21 @@
       </div>
 
     </div>
-
-    <!-- Footer note -->
-    <div class="fc-mem-footer">
-      <p>All tiers include priority scheduling and member pricing on retail products. Start where your skin needs you — upgrade or change your tier anytime. New clients: use code <strong style="color:var(--gold);">FIRSTTIME25</strong> for $25 off your first appointment.</p>
-      <a href="pages/facial-club/index.html" class="fc-mem-footer-link">See Full Membership Details</a>
-    </div>
   </section>
 
   <!-- ============================================
        90 DAYS ACNE BOOTCAMP
   ============================================ -->
-  <section class="ab-home-section" id="acne-bootcamp">
-    <div class="ab-home-inner">
-      <div class="ab-home-visual reveal">
-        <img src="https://images.pexels.com/photos/20683630/pexels-photo-20683630.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Professional facial treatment at Merle Norman Metuchen">
-      </div>
-      <div class="ab-home-text reveal">
-        <h2>90-Day Acne<br><em>Bootcamp</em></h2>
-        <p>A structured 3-month program that treats acne properly — not just on the surface. We combine regular in-studio treatments with a guided home routine built around your skin.</p>
-        <div class="ab-home-steps">
-          <div class="ab-home-step">
-            <span class="ab-home-step-num">1</span>
-            <div class="ab-home-step-text">
-              <strong>Clear &amp; Calm — Month 1</strong>
-              <span>Skin assessment, extractions, and anti-inflammatory treatment. Your home routine starts here.</span>
-            </div>
-          </div>
-          <div class="ab-home-step">
-            <span class="ab-home-step-num">2</span>
-            <div class="ab-home-step-text">
-              <strong>Regulate &amp; Rebuild — Month 2</strong>
-              <span>Stronger actives, oil regulation, barrier support. A mid-program check-in to adjust the plan.</span>
-            </div>
-          </div>
-          <div class="ab-home-step">
-            <span class="ab-home-step-num">3</span>
-            <div class="ab-home-step-text">
-              <strong>Maintain &amp; Prevent — Month 3</strong>
-              <span>Lock in results, address any scarring, and build a long-term plan you leave with.</span>
-            </div>
-          </div>
-        </div>
-        <div class="ab-home-actions">
-          <a href="pages/acne-bootcamp/index.html" class="btn btn-primary">See the Full Program</a>
-          <a href="#" class="btn btn-ghost" data-modal-open="reserve-modal">Book a Consultation</a>
-        </div>
+  <section class="ab-promo" id="acne-bootcamp">
+    <img class="ab-promo-img" src="images/acne-bootcamp/hero.jpg" alt="Blue LED acne treatment at Merle Norman Metuchen" loading="lazy">
+    <div class="ab-promo-tint"></div>
+    <div class="ab-promo-inner reveal">
+      <div class="ab-promo-eyebrow">90-Day Program</div>
+      <h2>The 90-Day Acne <em>Bootcamp</em></h2>
+      <p class="ab-promo-sub">A structured 90-day path to clear skin: calm active breakouts, rebuild your skin's barrier, then lock in results — with your esthetician adjusting the plan as your skin actually responds.</p>
+      <div class="ab-promo-ctas">
+        <a href="pages/acne-bootcamp/index.html" class="btn btn-gold">See the Full Program</a>
+        <a href="#" class="btn btn-ghost" data-modal-open="reserve-modal">Book a Consultation</a>
       </div>
     </div>
   </section>
@@ -708,15 +641,54 @@
   ============================================ -->
   <section class="products section-pad" id="products">
     <div class="wrap center reveal">
-      <h2>Shop Merle Norman skincare</h2>
-      <p class="lede">Need to restock something from your last visit? Send us a mail order and we'll ship it directly to you.</p>
+      <h2>Shop your Merle Norman <em>favorites</em></h2>
+      <p class="lede">The products your esthetician actually recommended — restocked and shipped to your door, no appointment required.</p>
     </div>
     <div class="wrap product-grid reveal">
-      <div class="product-tile"><div class="ph"><div class="mark">1</div><div class="name">Cleanser</div><div class="sub">Product photo</div></div></div>
-      <div class="product-tile"><div class="ph"><div class="mark">2</div><div class="name">Day Cream</div><div class="sub">Product photo</div></div></div>
-      <div class="product-tile"><div class="ph"><div class="mark">3</div><div class="name">Serum</div><div class="sub">Product photo</div></div></div>
-      <div class="product-tile"><div class="ph"><div class="mark">4</div><div class="name">Night Repair</div><div class="sub">Product photo</div></div></div>
-      <div class="product-tile"><div class="ph"><div class="mark">5</div><div class="name">SPF</div><div class="sub">Product photo</div></div></div>
+      <div class="product-card">
+        <div class="product-card-media">
+          <img src="images/products/nighttime-recovery.png" alt="Merle Norman Nighttime Recovery Creme" loading="lazy">
+          <div class="product-card-shop">
+            <button type="button" class="btn btn-primary btn-sm" data-modal-open="mail-order-modal" data-product-name="Nighttime Recovery Creme">Shop Now</button>
+          </div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">Nighttime Recovery Creme</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-media">
+          <img src="images/products/lasting-foundation-spf12.jpg" alt="Merle Norman Lasting Foundation SPF 12" loading="lazy">
+          <div class="product-card-shop">
+            <button type="button" class="btn btn-primary btn-sm" data-modal-open="mail-order-modal" data-product-name="Lasting Foundation SPF 12">Shop Now</button>
+          </div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">Lasting Foundation SPF 12</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-media">
+          <img src="images/products/cleansing-cream.png" alt="Merle Norman Cleansing Cream" loading="lazy">
+          <div class="product-card-shop">
+            <button type="button" class="btn btn-primary btn-sm" data-modal-open="mail-order-modal" data-product-name="Cleansing Cream">Shop Now</button>
+          </div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">Cleansing Cream</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-media">
+          <img src="images/products/city-chic-shadow-palette.jpg" alt="Merle Norman City Chic Shadow Palette" loading="lazy">
+          <div class="product-card-shop">
+            <button type="button" class="btn btn-primary btn-sm" data-modal-open="mail-order-modal" data-product-name="City Chic Shadow Palette">Shop Now</button>
+          </div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">City Chic Shadow Palette</div>
+        </div>
+      </div>
     </div>
     <div class="products-copy">
       <p>Tell us what you're after — or ask what we'd recommend — and we'll follow up on sizes, pricing, and shipping. No need to come back in.</p>
@@ -725,15 +697,13 @@
       </div>
     </div>
   </section>
-  <!-- NOTE: the 5 tiles above are placeholders — swap each .product-tile for
-       <img src="images/products/your-photo.jpg" alt="..."> once real Merle Norman
-       product photography is provided, rather than shipping stock photos of
-       products that aren't actually hers. -->
 
   <!-- ============================================
        TESTIMONIAL
   ============================================ -->
-  <section class="testimonial section-pad">
+  <section class="testimonial">
+    <img class="testimonial-img" src="images/home/testimonial.jpg" alt="Relaxing facial treatment at Merle Norman Metuchen" loading="lazy">
+    <div class="testimonial-tint"></div>
     <div class="wrap quote reveal">
       <p>"Every time I come in, it feels like they actually know my skin — not just my name. You can see the difference after a few months of consistent appointments."</p>
       <div class="who">— Facial Club Member, Metuchen NJ</div>
@@ -776,7 +746,7 @@
   <section class="cta-banner">
     <div class="wrap wrap-wide">
       <div class="cta-banner-card">
-        <img src="https://images.pexels.com/photos/20861922/pexels-photo-20861922.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="" loading="lazy">
+        <img src="images/home/cta-banner.jpg" alt="" loading="lazy">
         <div class="cta-banner-text">
           <h2>Not sure where to start?</h2>
           <p>Call the studio and we'll help you figure out which treatment makes the most sense for your skin.</p>

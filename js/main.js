@@ -26,6 +26,55 @@
     });
   }
 
+  /* ---------- Nav dropdowns (desktop) ----------
+     CSS alone opens/closes these on :hover, which has two problems on a
+     real window: (1) a wide panel centered under a trigger near the edge
+     of the nav can run off the side of the browser window, and (2) the
+     instant the cursor leaves the trigger's box — even for the split
+     second it takes to travel down into the panel — :hover is lost and
+     the menu disappears before the user gets there. This closes both
+     gaps: a short close delay so brief cursor travel never slams the
+     menu shut, and a measure-then-nudge pass that only shifts the panel
+     sideways when it would actually overflow the window. */
+  var dropdownCloseTimer = null;
+  document.querySelectorAll(".has-dropdown").forEach(function (li) {
+    var dropdown = li.querySelector(".dropdown");
+    if (!dropdown) return;
+
+    function openDropdown() {
+      clearTimeout(dropdownCloseTimer);
+      document.querySelectorAll(".has-dropdown.dropdown-open").forEach(function (other) {
+        if (other !== li) other.classList.remove("dropdown-open");
+      });
+      li.classList.add("dropdown-open");
+      dropdown.style.transform = "translateX(-50%)";
+      var margin = 16;
+      var rect = dropdown.getBoundingClientRect();
+      var shift = 0;
+      if (rect.left < margin) {
+        shift = margin - rect.left;
+      } else if (rect.right > window.innerWidth - margin) {
+        shift = (window.innerWidth - margin) - rect.right;
+      }
+      if (shift !== 0) {
+        dropdown.style.transform = "translateX(calc(-50% + " + shift + "px))";
+      }
+    }
+    function scheduleClose() {
+      clearTimeout(dropdownCloseTimer);
+      dropdownCloseTimer = setTimeout(function () {
+        li.classList.remove("dropdown-open");
+      }, 300);
+    }
+
+    li.addEventListener("mouseenter", openDropdown);
+    li.addEventListener("mouseleave", scheduleClose);
+    li.addEventListener("focusin", openDropdown);
+    li.addEventListener("focusout", function (e) {
+      if (!li.contains(e.relatedTarget)) scheduleClose();
+    });
+  });
+
   /* ---------- Modal system ----------
      Any element with [data-modal-open="modal-id"] opens the overlay
      with that id. Works for the Reserve a Beauty Specialist form and
@@ -64,7 +113,15 @@
     var opener = e.target.closest("[data-modal-open]");
     if (opener) {
       e.preventDefault();
-      openModal(opener.getAttribute("data-modal-open"));
+      var modalId = opener.getAttribute("data-modal-open");
+      var productName = opener.getAttribute("data-product-name");
+      if (productName && modalId === "mail-order-modal") {
+        var productsField = document.getElementById("mo-products");
+        if (productsField && !productsField.value) {
+          productsField.value = productName + " — ";
+        }
+      }
+      openModal(modalId);
       return;
     }
     var closer = e.target.closest("[data-modal-close]");

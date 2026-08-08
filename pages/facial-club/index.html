@@ -574,45 +574,75 @@
 .fc-faq-item.open .fc-faq-a { display: block; }
 
 /* CTA BANNER */
+/* CTA SPLIT PANEL */
 .fc-cta {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
   background: var(--ink);
-  overflow: hidden;
-  padding: 110px 0;
 }
-.fc-cta-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  opacity: .18;
-  filter: grayscale(100%);
-}
-.fc-cta-inner {
+.fc-cta-bg, .fc-cta-tint { display: none; }
+.fc-cta-content {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 80px 64px 80px max(48px, calc((100vw - 1220px)/2 + 48px));
   position: relative;
-  z-index: 2;
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0 32px;
-  text-align: center;
 }
-.fc-cta-inner h2 {
-  font-size: clamp(30px, 3.8vw, 48px);
-  color: #fff;
-  margin-bottom: 18px;
-  line-height: 1.15;
+.fc-cta-content::after {
+  content: ''; position: absolute;
+  top: 60px; bottom: 60px; right: 0;
+  width: 1px; background: rgba(198,164,117,.18);
 }
-.fc-cta-inner p {
-  color: rgba(255,255,255,.65);
-  font-size: 16px;
-  line-height: 1.75;
-  margin-bottom: 40px;
+
+.fc-cta h2 {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 3vw, 3.6rem);
+  font-weight: 500; color: #fff;
+  line-height: 1.1; letter-spacing: -.02em; margin: 0 0 20px;
 }
-.fc-cta-actions {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
+.fc-cta h2 em { font-style: italic; color: var(--gold-pale); }
+.fc-cta p {
+  font-family: var(--sans); font-size: 15px;
+  color: rgba(255,255,255,.5); line-height: 1.75;
+  margin: 0 0 44px; max-width: 400px;
+}
+.fc-cta-buttons {
+  display: flex; flex-direction: column;
+  align-items: flex-start; gap: 14px;
+}
+.fc-cta .btn-gold {
+  background: var(--gold); color: var(--ink);
+  border: none; padding: 16px 36px;
+  font-family: var(--sans); font-size: 11px;
+  letter-spacing: 2px; text-transform: uppercase;
+  font-weight: 600; cursor: pointer;
+  text-decoration: none; display: inline-block; transition: background .2s;
+}
+.fc-cta .btn-gold:hover { background: var(--gold-deep); color: #fff; }
+.fc-cta .btn-ghost {
+  border: none; background: none; color: rgba(255,255,255,.45);
+  padding: 4px 0; font-family: var(--sans); font-size: 11px;
+  letter-spacing: 2px; text-transform: uppercase; font-weight: 500;
+  cursor: pointer; text-decoration: none; display: inline-block;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  transition: color .2s, border-color .2s;
+}
+.fc-cta .btn-ghost:hover { color: #fff; border-color: rgba(255,255,255,.6); }
+.fc-cta-image { position: relative; overflow: hidden; }
+.fc-cta-image img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  filter: grayscale(60%) brightness(.72) contrast(1.05);
+  transition: filter .6s ease, transform .6s ease;
+}
+.fc-cta:hover .fc-cta-image img {
+  filter: grayscale(25%) brightness(.82) contrast(1.05);
+  transform: scale(1.02);
+}
+@media (max-width: 900px) {
+  .fc-cta { grid-template-columns: 1fr; }
+  .fc-cta-image { min-height: 360px; position: relative; }
+  .fc-cta-content { padding: 64px 24px; }
+  .fc-cta-content::after { display: none; }
 }
 
 /* RESPONSIVE */
@@ -732,12 +762,12 @@
 
   <!-- ── HERO ── -->
   <section class="fc-hero">
-    <img class="fc-hero-img" src="https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Woman relaxing during a professional facial treatment">
+    <img class="fc-hero-img" src="../../images/facial-club/banner.jpg" alt="Woman relaxing during a professional facial treatment">
     <div class="fc-hero-overlay"></div>
     <div class="fc-hero-inner">
       <div class="fc-hero-eyebrow">Merle Norman Metuchen &nbsp;·&nbsp; Metuchen, NJ</div>
       <h1>Your skin, once<br>a month. <em>Every</em> month.</h1>
-      <p class="fc-hero-sub">The Facial Club is a monthly membership giving you a professional facial, member pricing on products and add-ons, and priority scheduling — so consistent skin care becomes easy, not expensive.</p>
+      <p class="fc-hero-sub">The Facial Club is a monthly membership that gives you one professional facial, member pricing on products, and priority scheduling. Consistent skin care, finally made simple.</p>
       <div class="fc-hero-ctas">
         <a href="#" class="btn btn-gold" data-modal-open="reserve-modal">Join the Facial Club</a>
         <a href="#how-it-works" class="btn btn-light">See How It Works</a>
@@ -755,11 +785,11 @@
       <div class="fc-why-text">
         <div class="section-eyebrow">Why Membership</div>
         <h2>One facial is a treat.<br>Monthly facials change your skin.</h2>
-        <p>Your skin renews itself on roughly a 28-day cycle. A single professional facial gives it a boost — but skin that's treated consistently, on a regular schedule, responds completely differently. Congestion stays clear, hydration holds, and concerns like dullness, uneven tone, and fine lines improve steadily over time instead of resetting between visits.</p>
-        <p>The Facial Club exists for exactly that reason. You get one professional facial every month, your esthetician knows your skin over time, and the cost of keeping it consistent is designed to actually be sustainable.</p>
+        <p>Your skin renews itself on a roughly 28-day cycle. A single professional facial gives it a real boost, but skin that's treated consistently responds in a completely different way. Congestion stays clear, hydration holds, and concerns like dullness, uneven tone, and fine lines improve steadily over time instead of resetting between visits.</p>
+        <p>The Facial Club exists for exactly that reason. One professional facial every month, an esthetician who truly knows your skin, and a price point that makes consistent care something you can actually keep up with.</p>
       </div>
       <div class="fc-why-visual">
-        <img src="https://images.pexels.com/photos/6634828/pexels-photo-6634828.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Facial treatment at Merle Norman Metuchen spa">
+        <img src="../../images/facials/deep-cleansing/hero.jpg" alt="Facial treatment at Merle Norman Metuchen spa">
       </div>
     </div>
   </section>
@@ -777,19 +807,19 @@
         <div class="fc-benefit-card">
           <span class="fc-benefit-num">01</span>
           <h3>One professional facial, monthly</h3>
-          <p>Your monthly credit applies to any facial on the menu — chosen fresh each visit based on what your skin actually needs. Your esthetician advises, you decide.</p>
+          <p>Your monthly credit applies to any facial on the menu, chosen fresh each visit based on what your skin needs right now. Your esthetician advises, you decide.</p>
         </div>
 
         <div class="fc-benefit-card">
           <span class="fc-benefit-num">02</span>
           <h3>Member pricing on products &amp; add-ons</h3>
-          <p>Retail Merle Norman products, treatment enhancements, and in-studio add-ons are all priced at member rates. The savings compound quickly.</p>
+          <p>Retail Merle Norman products, treatment enhancements, and in-studio add-ons are all priced at member rates. The savings add up quickly.</p>
         </div>
 
         <div class="fc-benefit-card">
           <span class="fc-benefit-num">03</span>
           <h3>Priority access to the schedule</h3>
-          <p>Members book before the calendar opens to the public. Even on our busiest weeks, you get first pick of times — mornings, early evenings, Saturdays.</p>
+          <p>Members book before the calendar opens to the public. Even on our busiest weeks, you get first pick of mornings, early evenings, and Saturdays.</p>
         </div>
 
         <div class="fc-benefit-card">
@@ -807,7 +837,7 @@
         <div class="fc-benefit-card">
           <span class="fc-benefit-num">06</span>
           <h3>Three tiers. Pick your level.</h3>
-          <p>Silver at $150/mo covers foundational facials. Gold at $199/mo unlocks technology-forward treatments. Diamond at $299/mo gives you the Smart Lift every month.</p>
+          <p>Silver at $150 a month covers foundational facials. Gold at $199 a month unlocks technology-forward treatments. Diamond at $299 a month gives you the Smart Lift, every month.</p>
         </div>
 
       </div>
@@ -887,7 +917,7 @@
           <div class="section-eyebrow">How It Works</div>
           <h2>Four steps. Then it takes care of itself.</h2>
         </div>
-        <p class="fc-how-head-sub">We designed the Facial Club to require as little friction as possible — one conversation to start, then your esthetician handles the rest.</p>
+        <p class="fc-how-head-sub">We designed the Facial Club to be as effortless as possible. One conversation to get started, then your esthetician takes care of the rest.</p>
       </div>
       <div class="fc-steps">
         <div class="fc-step">
@@ -898,7 +928,7 @@
         <div class="fc-step">
           <div class="fc-step-num">02</div>
           <h4>Your skin assessment</h4>
-          <p>Your first visit starts with a real skin assessment — not a form, an actual conversation. Your esthetician looks at your skin, asks the right questions, and selects your first treatment accordingly.</p>
+          <p>Your first visit starts with a real skin assessment: not a form, an actual conversation. Your esthetician looks at your skin, asks the right questions, and selects your first treatment accordingly.</p>
         </div>
         <div class="fc-step">
           <div class="fc-step-num">03</div>
@@ -1087,17 +1117,18 @@
     </div>
   </section>
 
-  <!-- ── CTA ── -->
+  <!-- FINAL CTA -->
   <section class="fc-cta">
-    <img class="fc-cta-bg" src="https://images.pexels.com/photos/3985329/pexels-photo-3985329.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
-    <div class="fc-cta-inner">
-      <span class="eyebrow on-dark center">Get Started</span>
-      <h2>Ready to make your skin a priority?</h2>
-      <p>Reserve a beauty specialist and we'll answer your questions, set up your first appointment, and walk you through membership on the day. No commitment required before you visit.</p>
-      <div class="fc-cta-actions">
-        <a href="#" class="btn btn-gold" data-modal-open="reserve-modal">Join the Facial Club</a>
-        <a href="tel:+18482292742" class="btn btn-light">Call (848) 229-2742</a>
+    <div class="fc-cta-content">
+      <h2>Your skin is worth <em>the consistency.</em></h2>
+      <p>Reach out and we will answer your questions, walk you through membership options, and get your first appointment on the books.</p>
+      <div class="fc-cta-buttons">
+        <a href="#" class="btn-gold" data-modal-open="reserve-modal">Join the Facial Club</a>
+        <a href="tel:+18482292742" class="btn-ghost">Call (848) 229-2742</a>
       </div>
+    </div>
+    <div class="fc-cta-image">
+      <img src="../../images/shared/all-facials.jpg" alt="Facial Club membership at Merle Norman Metuchen">
     </div>
   </section>
 

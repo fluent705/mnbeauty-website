@@ -653,82 +653,76 @@
 }
 
 /* ─── CTA + NAV STRIP ────────────────────────────────────── */
+/* CTA SPLIT PANEL */
 .ab-cta {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
   background: var(--ink);
-  overflow: hidden;
-  padding: 130px 32px;
-  text-align: center;
 }
-.ab-cta-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  filter: grayscale(90%) brightness(.35) contrast(1.1);
+.ab-cta-bg, .ab-cta-tint { display: none; }
+.ab-cta-content {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 80px 64px 80px max(48px, calc((100vw - 1220px)/2 + 48px));
+  position: relative;
 }
-.ab-cta-tint {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(22,32,40,.6), rgba(22,32,40,.75));
+.ab-cta-content::after {
+  content: ''; position: absolute;
+  top: 60px; bottom: 60px; right: 0;
+  width: 1px; background: rgba(198,164,117,.18);
 }
-.ab-cta-content { position: relative; z-index: 2; }
+
 .ab-cta h2 {
   font-family: var(--serif);
-  font-size: clamp(2.4rem, 4vw, 4.2rem);
-  font-weight: 500;
-  color: #fff;
-  line-height: 1.1;
-  letter-spacing: -.025em;
-  max-width: 620px;
-  margin: 0 auto 20px;
+  font-size: clamp(2.2rem, 3vw, 3.6rem);
+  font-weight: 500; color: #fff;
+  line-height: 1.1; letter-spacing: -.02em; margin: 0 0 20px;
 }
 .ab-cta h2 em { font-style: italic; color: var(--gold-pale); }
 .ab-cta p {
-  font-family: var(--sans);
-  font-size: 15.5px;
-  color: rgba(255,255,255,.55);
-  line-height: 1.72;
-  max-width: 480px;
-  margin: 0 auto 44px;
+  font-family: var(--sans); font-size: 15px;
+  color: rgba(255,255,255,.5); line-height: 1.75;
+  margin: 0 0 44px; max-width: 400px;
 }
 .ab-cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
+  display: flex; flex-direction: column;
+  align-items: flex-start; gap: 14px;
 }
 .ab-cta .btn-gold {
-  background: var(--gold);
-  color: var(--ink);
-  border: none;
-  padding: 17px 38px;
-  font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background .2s;
+  background: var(--gold); color: var(--ink);
+  border: none; padding: 16px 36px;
+  font-family: var(--sans); font-size: 11px;
+  letter-spacing: 2px; text-transform: uppercase;
+  font-weight: 600; cursor: pointer;
+  text-decoration: none; display: inline-block; transition: background .2s;
 }
 .ab-cta .btn-gold:hover { background: var(--gold-deep); color: #fff; }
 .ab-cta .btn-ghost {
-  border: 1px solid rgba(255,255,255,.3);
-  color: #fff;
-  padding: 16px 32px;
-  font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 500;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: border-color .2s, background .2s;
+  border: none; background: none; color: rgba(255,255,255,.45);
+  padding: 4px 0; font-family: var(--sans); font-size: 11px;
+  letter-spacing: 2px; text-transform: uppercase; font-weight: 500;
+  cursor: pointer; text-decoration: none; display: inline-block;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  transition: color .2s, border-color .2s;
 }
-.ab-cta .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.07); }
+.ab-cta .btn-ghost:hover { color: #fff; border-color: rgba(255,255,255,.6); }
+.ab-cta-image { position: relative; overflow: hidden; }
+.ab-cta-image img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  filter: grayscale(60%) brightness(.72) contrast(1.05);
+  transition: filter .6s ease, transform .6s ease;
+}
+.ab-cta:hover .ab-cta-image img {
+  filter: grayscale(25%) brightness(.82) contrast(1.05);
+  transform: scale(1.02);
+}
+@media (max-width: 900px) {
+  .ab-cta { grid-template-columns: 1fr; }
+  .ab-cta-image { min-height: 360px; position: relative; }
+  .ab-cta-content { padding: 64px 24px; }
+  .ab-cta-content::after { display: none; }
+}
 
 .ab-nav-strip {
   display: grid;
@@ -832,7 +826,7 @@
   .ab-quote { padding: 72px 0; }
   .ab-faq { padding: 72px 0; }
   .ab-faq-inner { padding: 0 24px; }
-  .ab-cta { padding: 88px 24px; }
+  
   .ab-nav-strip { grid-template-columns: 1fr; }
   .ab-nav-card { aspect-ratio: 16/8; }
 }
@@ -846,10 +840,9 @@
   .ab-phase-body { padding: 20px; }
   .ab-inc-grid { grid-template-columns: 1fr; }
   .ab-timeline-card { padding: 32px 28px; }
-  .ab-cta h2 { font-size: 2rem; }
-  .ab-cta-buttons { flex-direction: column; }
-  .ab-cta-buttons .btn-gold,
-  .ab-cta-buttons .btn-ghost { width: 100%; text-align: center; }
+  
+  
+
   .ab-nav-card-inner { padding: 28px; }
   .ab-faq-item summary { font-size: 1rem; }
   .ab-why-card { padding: 24px; }
@@ -879,22 +872,36 @@
       <li class="has-dropdown">
         <a href="../../index.html#treatments">Treatments <svg class="nav-caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <div class="dropdown">
-          <div class="dropdown-col">
+          <div class="dropdown-col dropdown-col--facials">
             <h5>Facials</h5>
-            <a href="../../services/facials/index.html">Glow N Go Facial</a>
+            <div class="facials-grid">
+            <a href="../../services/facials/glow-n-go/index.html">Glow N Go Facial</a>
+            <a href="../../services/facials/rf-antiaging/index.html">RF Antiaging Facial</a>
+            <a href="../../services/facials/deep-cleansing/index.html">Deep Cleansing Facial</a>
+            <a href="../../services/facials/gentlemans-facial/index.html">Gentleman&rsquo;s Facial</a>
+            <a href="../../services/facials/glow-facial/index.html">Glow Facial</a>
             <a href="../../services/facials/diamond-glow/index.html">Diamond Glow Microderm</a>
-            <a href="../../services/facials/index.html">Smart Lift Facial</a>
+            <a href="../../services/facials/acne-facial/index.html">Acne Hydrating Facial</a>
+            <a href="../../services/facials/dermaplaning-lux/index.html">Dermaplaning Lux Facial</a>
+            <a href="../../services/facials/oxygen-lift/index.html">Oxygen Lift Facial</a>
+            <a href="../../services/facials/smart-lift-facial/index.html">Smart Lift Facial</a>
+            </div>
             <a href="../../services/facials/index.html" class="view-all">View All Facials &rarr;</a>
           </div>
           <div class="dropdown-col">
-            <h5>Advanced Skin Treatments</h5>
+            <h5>Advance Skin Treatments</h5>
             <a href="../../services/advance-skin-treatments/index.html">Procell Microchanneling</a>
             <a href="../../services/advance-skin-treatments/index.html">Non Surgical RF Treatment</a>
             <a href="../../services/advance-skin-treatments/index.html">Bio Re Peel</a>
             <a href="../../services/advance-skin-treatments/index.html" class="view-all">View All Treatments &rarr;</a>
           </div>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <a href="../../makeup/index.html">Makeup <svg class="nav-caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="dropdown dropdown--narrow">
           <div class="dropdown-col">
-            <h5><a href="../../makeup/index.html">Bridal &amp; Event</a></h5>
+            <h5>Bridal &amp; Event</h5>
             <a href="../../makeup/makeup-service/index.html">Makeup Service</a>
             <a href="../../makeup/makeup-classes/index.html">Makeup Classes</a>
             <a href="../../makeup/index.html" class="view-all">View All &rarr;</a>
@@ -913,15 +920,17 @@
   </div>
   <div class="mobile-menu" id="mobile-menu">
     <div class="mobile-menu-inner">
-      <details>
-        <summary>Treatments</summary>
+      <details><summary>Treatments</summary>
         <div class="mobile-submenu">
-          <span class="msub-label">Facials</span>
-          <a href="../../services/facials/index.html">All Facials</a>
-          <span class="msub-label">Advanced Skin Treatments</span>
-          <a href="../../services/advance-skin-treatments/index.html">All Advanced Treatments</a>
+          <span class="msub-label">Facials</span><a href="../../services/facials/index.html">All Facials</a>
+          <span class="msub-label">Advance Skin Treatments</span><a href="../../services/advance-skin-treatments/index.html">All Advance Treatments</a>
+        </div>
+      </details>
+      <details>
+        <summary>Makeup</summary>
+        <div class="mobile-submenu">
           <span class="msub-label">Bridal &amp; Event</span>
-          <a href="../../makeup/index.html">All Bridal &amp; Event</a>
+          <a href="../../makeup/index.html">All Makeup</a>
           <a href="../../makeup/makeup-service/index.html">Makeup Service</a>
           <a href="../../makeup/makeup-classes/index.html">Makeup Classes</a>
         </div>
@@ -939,9 +948,10 @@
 
   <!-- HERO -->
   <section class="ab-hero">
-    <img class="ab-hero-img" src="https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Professional acne treatment at Merle Norman Metuchen" loading="eager">
+    <img class="ab-hero-img" src="../../images/acne-bootcamp/hero.jpg" alt="Professional acne treatment at Merle Norman Metuchen" loading="eager">
     <div class="ab-hero-overlay"></div>
     <div class="ab-hero-inner">
+      <div class="ab-hero-eyebrow">90-Day Acne Bootcamp &mdash; Metuchen, NJ</div>
       <h1>Clear acne, <em>not just today's</em> breakout</h1>
       <p class="ab-hero-sub">The 90-Day Acne Bootcamp is a structured three-month program that combines professional in-studio treatments with a guided home-care routine — designed to change your skin's behavior, not just surface symptoms.</p>
       <div class="ab-hero-ctas">
@@ -1157,7 +1167,7 @@
   <section class="ab-for">
     <div class="ab-for-inner">
       <div class="ab-for-visual">
-        <img src="https://images.pexels.com/photos/20683630/pexels-photo-20683630.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Professional facial treatment at Merle Norman Metuchen" loading="lazy">
+        <img src="../../images/acne-bootcamp/for-visual.jpg" alt="Acne skin consultation at Merle Norman Metuchen" loading="lazy">
       </div>
       <div class="ab-for-text">
         <div class="ab-why-eyebrow">Is This Right for You?</div>
@@ -1194,7 +1204,7 @@
 
   <!-- TESTIMONIAL -->
   <section class="ab-quote">
-    <img class="ab-quote-bg" src="https://images.pexels.com/photos/3985329/pexels-photo-3985329.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="">
+    <img class="ab-quote-bg" src="../../images/shared/all-facials.jpg" alt="">
     <div class="ab-quote-inner">
       <div class="ab-quote-meta">
         <div class="ab-quote-line"></div>
@@ -1264,24 +1274,25 @@
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- FINAL CTA -->
   <section class="ab-cta">
-    <img class="ab-cta-bg" src="https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="">
-    <div class="ab-cta-tint"></div>
     <div class="ab-cta-content">
       <h2>Ready to give your skin <em>90 days of real attention?</em></h2>
-      <p>Start with a consultation. We assess your skin, talk through your history, and tell you honestly whether the Bootcamp is the right fit. No obligation before that conversation.</p>
+      <p>Start with a consultation. We assess your skin, talk through your history, and tell you honestly whether the Bootcamp is the right fit.</p>
       <div class="ab-cta-buttons">
         <a href="#" class="btn-gold" data-modal-open="reserve-modal">Book a Bootcamp Consultation</a>
         <a href="tel:+18482292742" class="btn-ghost">Call (848) 229-2742</a>
       </div>
+    </div>
+    <div class="ab-cta-image">
+      <img src="../../images/acne-bootcamp/cta.jpg" alt="Professional acne extraction treatment at Merle Norman Metuchen">
     </div>
   </section>
 
   <!-- NAV STRIP -->
   <div class="ab-nav-strip">
     <a href="../../services/facials/index.html" class="ab-nav-card">
-      <img src="https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="All Facials at Merle Norman Metuchen" loading="lazy">
+      <img src="../../images/shared/facial-club.jpg" alt="All Facials at Merle Norman Metuchen" loading="lazy">
       <div class="ab-nav-card-tint"></div>
       <div class="ab-nav-card-inner">
         <div class="ab-nav-card-label">Facials</div>
@@ -1290,7 +1301,7 @@
       </div>
     </a>
     <a href="../facial-club/index.html" class="ab-nav-card">
-      <img src="https://images.pexels.com/photos/6634828/pexels-photo-6634828.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Facial Club Membership at Merle Norman Metuchen" loading="lazy">
+      <img src="../../images/shared/facial-club.jpg" alt="Facial Club Membership at Merle Norman Metuchen" loading="lazy">
       <div class="ab-nav-card-tint"></div>
       <div class="ab-nav-card-inner">
         <div class="ab-nav-card-label">Membership</div>

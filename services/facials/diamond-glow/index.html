@@ -3,1035 +3,185 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diamond Glow Microderm Facial — $225 | Merle Norman Metuchen</title>
-<meta name="description" content="Diamond-tip microdermabrasion with simultaneous serum infusion. Resurface, extract, and replenish your skin in one 60-minute session — $225 at Merle Norman Metuchen, NJ.">
+<title>Diamond Glow Microdermabrasion — $249 | Merle Norman Metuchen</title>
+<meta name="description" content="Diamond Glow combines diamond-tip microdermabrasion with vacuum extraction and serum infusion in one treatment. $249 at Merle Norman Certified Spa, Metuchen, NJ.">
 <link rel="icon" href="../../../images/logo/certified-spa-badge-sm.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../../css/main.css">
-
 <style>
-/* ─── PAGE-SPECIFIC VARIABLES ─────────────────────────────── */
-:root {
-  --serif: 'Cormorant Garamond', Georgia, serif;
-  --sans:  'Jost', system-ui, sans-serif;
-  --ink:   #22303a;
-  --gold:  #c6a475;
-  --blush: #f4ece7;
-  --sky:   #eef5f9;
-  --cloud: #fbfdfe;
-  --gold-pale: #e9dcc4;
-  --gold-deep: #a8813f;
-  --wrap:  1220px;
-  --ink-soft: rgba(22,32,40,.48);
-}
-
-/* ─── BREADCRUMB ─────────────────────────────────────────── */
-.breadcrumb {
-  background: var(--cloud);
-  border-bottom: 1px solid rgba(198,164,117,.15);
-  padding: 14px 0;
-}
-.breadcrumb-inner {
-  max-width: var(--wrap);
-  margin: 0 auto;
-  padding: 0 32px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--sans);
-  font-size: 11.5px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-}
-.breadcrumb-inner a { color: var(--ink-soft); text-decoration: none; }
-.breadcrumb-inner a:hover { color: var(--gold-deep); }
-.breadcrumb-inner .bc-sep { opacity: .4; }
-.breadcrumb-inner .bc-current { color: var(--ink); }
-
-/* ─── TREATMENT HERO ─────────────────────────────────────── */
-.tx-hero {
-  position: relative;
-  height: 78vh;
-  min-height: 540px;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-}
-.tx-hero-media {
-  position: absolute;
-  inset: 0;
-}
-.tx-hero-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(78%) contrast(1.06) brightness(.88);
-  transition: filter .7s ease;
-}
-.tx-hero:hover .tx-hero-media img { filter: grayscale(30%) contrast(1.04) brightness(.84); }
-.tx-hero-tint {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(22,32,40,.82) 0%, rgba(22,32,40,.3) 55%, transparent 100%);
-}
-.tx-hero-inner {
-  position: relative;
-  z-index: 2;
-  max-width: var(--wrap);
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 32px 64px;
-}
-.tx-hero-eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-family: var(--sans);
-  font-size: 10.5px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 20px;
-}
-.tx-hero-eyebrow::before {
-  content: '';
-  display: block;
-  width: 36px;
-  height: 1px;
-  background: var(--gold);
-  opacity: .6;
-}
-.tx-hero h1 {
-  font-family: var(--serif);
-  font-size: clamp(2.8rem, 5.5vw, 5rem);
-  font-weight: 500;
-  color: #fff;
-  line-height: 1.07;
-  letter-spacing: -.02em;
-  max-width: 740px;
-  margin: 0 0 28px;
-}
-.tx-hero h1 em { font-style: italic; color: var(--gold-pale); }
-.tx-hero-meta {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-.tx-hero-price {
-  font-family: var(--serif);
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: #fff;
-  letter-spacing: -.03em;
-  line-height: 1;
-}
-.tx-hero-price sup {
-  font-size: .55em;
-  vertical-align: super;
-  font-weight: 400;
-  opacity: .7;
-}
-.tx-hero-dur {
-  font-family: var(--sans);
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.5);
-  font-weight: 500;
-}
-.tx-hero-meta .btn-gold {
-  background: var(--gold);
-  color: var(--ink);
-  border: none;
-  padding: 14px 32px;
-  font-family: var(--sans);
-  font-size: 11.5px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background .2s;
-}
-.tx-hero-meta .btn-gold:hover { background: var(--gold-deep); }
-.tx-hero-meta .btn-outline {
-  border: 1px solid rgba(255,255,255,.35);
-  color: #fff;
-  padding: 13px 28px;
-  font-family: var(--sans);
-  font-size: 11.5px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 500;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: border-color .2s, background .2s;
-}
-.tx-hero-meta .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,.08); }
-
-/* ─── QUICK STATS BAR ────────────────────────────────────── */
-.tx-stats {
-  background: var(--ink);
-  padding: 0;
-}
-.tx-stats-inner {
-  max-width: var(--wrap);
-  margin: 0 auto;
-  padding: 0 32px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  divide-x: 1px solid rgba(255,255,255,.1);
-}
-.tx-stat {
-  padding: 26px 32px;
-  border-right: 1px solid rgba(255,255,255,.08);
-  text-align: center;
-}
-.tx-stat:last-child { border-right: none; }
-.tx-stat-num {
-  font-family: var(--serif);
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--gold);
-  letter-spacing: -.02em;
-  line-height: 1;
-  display: block;
-}
-.tx-stat-label {
-  font-family: var(--sans);
-  font-size: 10.5px;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.45);
-  font-weight: 500;
-  display: block;
-  margin-top: 6px;
-}
-
-/* ─── OVERVIEW — 2 COLUMN ────────────────────────────────── */
-.tx-overview {
-  padding: 110px 0 100px;
-  background: #fff;
-}
-.tx-overview-grid {
-  max-width: var(--wrap);
-  margin: 0 auto;
-  padding: 0 32px;
-  display: grid;
-  grid-template-columns: 52% 44%;
-  gap: 80px;
-  align-items: center;
-}
-.tx-overview-text .section-eyebrow {
-  display: block;
-  font-family: var(--sans);
-  font-size: 10.5px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--gold-deep);
-  margin-bottom: 18px;
-  font-weight: 600;
-}
-.tx-overview-text h2 {
-  font-family: var(--serif);
-  font-size: clamp(2.2rem, 3.5vw, 3.4rem);
-  font-weight: 500;
-  color: var(--ink);
-  line-height: 1.15;
-  letter-spacing: -.02em;
-  margin-bottom: 28px;
-}
-.tx-overview-text h2 em { font-style: italic; color: var(--gold-deep); }
-.tx-overview-text p {
-  font-family: var(--sans);
-  font-size: 15.5px;
-  line-height: 1.75;
-  color: rgba(22,32,40,.68);
-  margin-bottom: 18px;
-}
-.tx-overview-text p strong { color: var(--ink); font-weight: 500; }
-.tx-pull {
-  margin: 36px 0;
-  padding: 28px 32px;
-  border-left: 3px solid var(--gold);
-  background: var(--blush);
-}
-.tx-pull p {
-  font-family: var(--serif);
-  font-size: 1.45rem;
-  font-style: italic;
-  line-height: 1.5;
-  color: var(--ink);
-  margin: 0;
-  font-weight: 500;
-}
-.tx-overview-image {
-  position: relative;
-}
-.tx-overview-image img {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  display: block;
-  filter: grayscale(82%) contrast(1.06) brightness(.93);
-  transition: filter .6s ease;
-}
-.tx-overview-image:hover img { filter: grayscale(0%) contrast(1.02) brightness(.97); }
-
-/* ─── VIDEO SECTION ──────────────────────────────────────── */
-.tx-video {
-  background: var(--ink);
-  padding: 90px 32px;
-}
-.tx-video-inner {
-  max-width: 1060px;
-  margin: 0 auto;
-}
-.tx-video-label {
-  text-align: center;
-  margin-bottom: 36px;
-}
-.tx-video-label span {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  font-family: var(--sans);
-  font-size: 10.5px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--gold);
-  font-weight: 600;
-}
-.tx-video-label span::before,
-.tx-video-label span::after {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 1px;
-  background: rgba(198,164,117,.4);
-}
-.tx-video-stage {
-  position: relative;
-  aspect-ratio: 16/9;
-  overflow: hidden;
-  background: #000;
-  cursor: pointer;
-}
-.tx-video-stage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(72%) brightness(.62) contrast(1.08);
-  transition: filter .5s ease, transform .6s ease;
-  transform: scale(1.02);
-}
-.tx-video-stage:hover img {
-  filter: grayscale(20%) brightness(.55) contrast(1.05);
-  transform: scale(1.0);
-}
-.tx-video-stage-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at center, transparent 30%, rgba(22,32,40,.45) 100%);
-  pointer-events: none;
-}
-.tx-video-play-btn {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-.tx-video-play-btn .play-circle {
-  width: 96px;
-  height: 96px;
-  border: 1.5px solid rgba(255,255,255,.6);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background .3s, border-color .3s, transform .3s;
-  backdrop-filter: blur(4px);
-  background: rgba(255,255,255,.06);
-}
-.tx-video-play-btn:hover .play-circle {
-  background: var(--gold);
-  border-color: var(--gold);
-  transform: scale(1.07);
-}
-.tx-video-play-btn .play-circle svg { margin-left: 5px; }
-.tx-video-play-btn .play-label {
-  font-family: var(--sans);
-  font-size: 10px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.65);
-  font-weight: 500;
-}
-.tx-video-caption {
-  text-align: center;
-  margin-top: 28px;
-  font-family: var(--sans);
-  font-size: 11.5px;
-  color: rgba(255,255,255,.28);
-  letter-spacing: 1px;
-}
-
-/* ─── HOW IT WORKS ───────────────────────────────────────── */
-.tx-how {
-  background: #fff;
-  padding: 110px 0;
-}
-.tx-how-inner {
-  max-width: var(--wrap);
-  margin: 0 auto;
-  padding: 0 32px;
-}
-.tx-section-head {
-  text-align: center;
-  margin-bottom: 70px;
-}
-.tx-section-head .section-eyebrow {
-  display: block;
-  font-family: var(--sans);
-  font-size: 10.5px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--gold-deep);
-  margin-bottom: 16px;
-  font-weight: 600;
-}
-.tx-section-head h2 {
-  font-family: var(--serif);
-  font-size: clamp(2rem, 3.5vw, 3.2rem);
-  font-weight: 500;
-  color: var(--ink);
-  line-height: 1.18;
-  letter-spacing: -.02em;
-  margin-bottom: 16px;
-}
-.tx-section-head p {
-  font-family: var(--sans);
-  font-size: 15.5px;
-  line-height: 1.7;
-  color: var(--ink-soft);
-  max-width: 540px;
-  margin: 0 auto;
-}
-.tx-steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-}
-.tx-step {
-  padding: 48px 48px 48px 0;
-  border-right: 1px solid rgba(198,164,117,.2);
-  padding-right: 48px;
-}
-.tx-step:last-child { border-right: none; padding-right: 0; padding-left: 48px; }
-.tx-step:nth-child(2) { padding: 48px; border-right: 1px solid rgba(198,164,117,.2); }
-.tx-step-num {
-  font-family: var(--serif);
-  font-size: 5rem;
-  font-weight: 600;
-  color: rgba(198,164,117,.2);
-  line-height: 1;
-  letter-spacing: -.04em;
-  margin-bottom: 20px;
-}
-.tx-step h3 {
-  font-family: var(--serif);
-  font-size: 1.55rem;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 12px;
-  line-height: 1.2;
-}
-.tx-step p {
-  font-family: var(--sans);
-  font-size: 14.5px;
-  line-height: 1.72;
-  color: rgba(22,32,40,.62);
-}
-.tx-step-icon {
-  width: 44px;
-  height: 44px;
-  border: 1px solid rgba(198,164,117,.35);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  color: var(--gold-deep);
-}
-
-/* ─── BENEFITS ───────────────────────────────────────────── */
-.tx-benefits {
-  background: var(--sky);
-  padding: 110px 0;
-}
-.tx-benefits-inner {
-  max-width: var(--wrap);
-  margin: 0 auto;
-  padding: 0 32px;
-}
-.tx-benefit-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  margin-top: 60px;
-  background: rgba(198,164,117,.12);
-}
-.tx-benefit-card {
-  background: var(--sky);
-  padding: 44px 40px;
-  transition: background .25s;
-}
-.tx-benefit-card:hover { background: #fff; }
-.tx-benefit-num {
-  font-family: var(--serif);
-  font-size: .95rem;
-  font-weight: 600;
-  color: var(--gold);
-  letter-spacing: 1px;
-  margin-bottom: 18px;
-  display: block;
-}
-.tx-benefit-card h3 {
-  font-family: var(--serif);
-  font-size: 1.45rem;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 12px;
-  line-height: 1.2;
-}
-.tx-benefit-card p {
-  font-family: var(--sans);
-  font-size: 14px;
-  line-height: 1.7;
-  color: rgba(22,32,40,.6);
-}
-
-/* ─── WHO IT'S FOR ───────────────────────────────────────── */
-.tx-for {
-  background: #fff;
-  padding: 110px 0;
-}
-.tx-for-inner {
-  max-width: var(--wrap);
-  margin: 0 auto;
-  padding: 0 32px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
-}
-.tx-for-col h3 {
-  font-family: var(--serif);
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 28px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid rgba(198,164,117,.25);
-}
-.tx-for-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.tx-for-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  font-family: var(--sans);
-  font-size: 14.5px;
-  line-height: 1.6;
-  color: rgba(22,32,40,.7);
-}
-.tx-for-list .tx-check {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: rgba(198,164,117,.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 1px;
-  color: var(--gold-deep);
-}
-.tx-for-list .tx-x {
-  background: rgba(180,60,60,.08);
-  color: #a03030;
-}
-
-/* ─── AFTERCARE ──────────────────────────────────────────── */
-.tx-aftercare {
-  background: var(--blush);
-  padding: 100px 0;
-}
-.tx-aftercare-inner {
-  max-width: var(--wrap);
-  margin: 0 auto;
-  padding: 0 32px;
-}
-.tx-aftercare-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  margin-top: 56px;
-}
-.tx-ac-panel {
-  background: #fff;
-  padding: 44px 44px;
-}
-.tx-ac-panel-head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 28px;
-}
-.tx-ac-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--gold);
-  flex-shrink: 0;
-}
-.tx-ac-dot.red { background: #c47070; }
-.tx-ac-panel-head h3 {
-  font-family: var(--serif);
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--ink);
-}
-.tx-ac-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.tx-ac-list li {
-  font-family: var(--sans);
-  font-size: 14px;
-  line-height: 1.65;
-  color: rgba(22,32,40,.68);
-  padding-left: 18px;
-  position: relative;
-}
-.tx-ac-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 8px;
-  width: 5px;
-  height: 1px;
-  background: var(--gold);
-}
-
-/* ─── PRICING ────────────────────────────────────────────── */
-.tx-pricing {
-  background: var(--ink);
-  padding: 110px 0;
-}
-.tx-pricing-inner {
-  max-width: var(--wrap);
-  margin: 0 auto;
-  padding: 0 32px;
-}
-.tx-pricing-inner .tx-section-head h2 { color: #fff; }
-.tx-pricing-inner .tx-section-head p { color: rgba(255,255,255,.45); }
-.tx-pricing-inner .section-eyebrow { color: var(--gold); }
-.tx-price-cards {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr 1fr;
-  gap: 2px;
-  margin-top: 56px;
-}
-.tx-price-card {
-  background: rgba(255,255,255,.05);
-  padding: 52px 44px 48px;
-  border: 1px solid rgba(255,255,255,.07);
-  transition: background .25s;
-}
-.tx-price-card.featured {
-  background: var(--gold);
-  border-color: var(--gold);
-  position: relative;
-}
-.tx-price-card:not(.featured):hover { background: rgba(255,255,255,.08); }
-.tx-price-card-label {
-  font-family: var(--sans);
-  font-size: 10.5px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin-bottom: 20px;
-  display: block;
-}
-.tx-price-card:not(.featured) .tx-price-card-label { color: rgba(255,255,255,.45); }
-.tx-price-card.featured .tx-price-card-label { color: rgba(22,32,40,.6); }
-.tx-price-card-amount {
-  font-family: var(--serif);
-  font-size: 3.6rem;
-  font-weight: 600;
-  letter-spacing: -.04em;
-  line-height: 1;
-  margin-bottom: 6px;
-}
-.tx-price-card:not(.featured) .tx-price-card-amount { color: #fff; }
-.tx-price-card.featured .tx-price-card-amount { color: var(--ink); }
-.tx-price-card-amount sup {
-  font-size: .45em;
-  vertical-align: super;
-  font-weight: 400;
-  opacity: .7;
-}
-.tx-price-card-dur {
-  font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 28px;
-  padding-bottom: 28px;
-  border-bottom: 1px solid rgba(255,255,255,.1);
-}
-.tx-price-card:not(.featured) .tx-price-card-dur { color: rgba(255,255,255,.3); border-color: rgba(255,255,255,.08); }
-.tx-price-card.featured .tx-price-card-dur { color: rgba(22,32,40,.4); border-color: rgba(22,32,40,.12); }
-.tx-price-card-desc {
-  font-family: var(--sans);
-  font-size: 14px;
-  line-height: 1.7;
-  margin-bottom: 32px;
-}
-.tx-price-card:not(.featured) .tx-price-card-desc { color: rgba(255,255,255,.5); }
-.tx-price-card.featured .tx-price-card-desc { color: rgba(22,32,40,.65); }
-.tx-price-card-save {
-  display: inline-block;
-  font-family: var(--sans);
-  font-size: 10.5px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 5px 10px;
-  margin-bottom: 18px;
-}
-.tx-price-card:not(.featured) .tx-price-card-save { background: rgba(198,164,117,.15); color: var(--gold); }
-.tx-price-card.featured .tx-price-card-save { background: rgba(22,32,40,.12); color: var(--ink); }
-.tx-price-card .btn-book {
-  display: block;
-  text-align: center;
-  padding: 14px 24px;
-  font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
-  transition: background .2s, color .2s;
-}
-.tx-price-card:not(.featured) .btn-book {
-  background: rgba(198,164,117,.18);
-  color: var(--gold-pale);
-}
-.tx-price-card:not(.featured) .btn-book:hover { background: var(--gold); color: var(--ink); }
-.tx-price-card.featured .btn-book { background: var(--ink); color: #fff; }
-.tx-price-card.featured .btn-book:hover { background: rgba(22,32,40,.85); }
-.tx-pricing-note {
-  margin-top: 28px;
-  font-family: var(--sans);
-  font-size: 12px;
-  color: rgba(255,255,255,.28);
-  text-align: center;
-}
-
-/* ─── FAQ ────────────────────────────────────────────────── */
-.tx-faq {
-  background: var(--cloud);
-  padding: 110px 0;
-}
-.tx-faq-inner {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 32px;
-}
-.tx-faq-item {
-  border-bottom: 1px solid rgba(198,164,117,.2);
-}
-.tx-faq-item:first-of-type { border-top: 1px solid rgba(198,164,117,.2); }
-.tx-faq-item summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 26px 0;
-  cursor: pointer;
-  list-style: none;
-  font-family: var(--serif);
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--ink);
-  line-height: 1.3;
-}
-.tx-faq-item summary::-webkit-details-marker { display: none; }
-.tx-faq-chevron {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  transition: transform .25s;
-  color: var(--gold);
-}
-.tx-faq-item[open] .tx-faq-chevron { transform: rotate(180deg); }
-.tx-faq-item[open] summary { color: var(--gold-deep); }
-.tx-faq-body {
-  padding: 0 0 26px;
-  font-family: var(--sans);
-  font-size: 14.5px;
-  line-height: 1.75;
-  color: rgba(22,32,40,.65);
-}
-.tx-faq-body p { margin: 0 0 12px; }
-.tx-faq-body p:last-child { margin-bottom: 0; }
-
-/* ─── FINAL CTA ──────────────────────────────────────────── */
-.tx-cta {
-  position: relative;
-  background: var(--ink);
-  overflow: hidden;
-  padding: 130px 32px;
-  text-align: center;
-}
-.tx-cta-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  filter: grayscale(88%) brightness(.38) contrast(1.1);
-}
-.tx-cta-tint {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(22,32,40,.55) 0%, rgba(22,32,40,.72) 100%);
-}
-.tx-cta-content {
-  position: relative;
-  z-index: 2;
-}
-.tx-cta h2 {
-  font-family: var(--serif);
-  font-size: clamp(2.4rem, 4vw, 4.2rem);
-  font-weight: 500;
-  color: #fff;
-  line-height: 1.1;
-  letter-spacing: -.025em;
-  max-width: 620px;
-  margin: 0 auto 20px;
-}
-.tx-cta h2 em { font-style: italic; color: var(--gold-pale); }
-.tx-cta p {
-  font-family: var(--sans);
-  font-size: 15.5px;
-  color: rgba(255,255,255,.58);
-  line-height: 1.7;
-  max-width: 460px;
-  margin: 0 auto 44px;
-}
-.tx-cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-.tx-cta .btn-gold {
-  background: var(--gold);
-  color: var(--ink);
-  border: none;
-  padding: 17px 38px;
-  font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background .2s;
-}
-.tx-cta .btn-gold:hover { background: var(--gold-deep); color: #fff; }
-.tx-cta .btn-ghost {
-  border: 1px solid rgba(255,255,255,.3);
-  color: #fff;
-  padding: 16px 32px;
-  font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 500;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: border-color .2s, background .2s;
-}
-.tx-cta .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.07); }
-
-/* ─── NAVIGATE STRIP ─────────────────────────────────────── */
-.tx-nav-strip {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.tx-nav-card {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  text-decoration: none;
-  aspect-ratio: 16/7;
-  background: var(--ink);
-}
-.tx-nav-card img {
-  position: absolute;
-  inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  filter: grayscale(85%) brightness(.5) contrast(1.08);
-  transition: filter .55s ease, transform .55s ease;
-  transform: scale(1.04);
-}
-.tx-nav-card:hover img {
-  filter: grayscale(20%) brightness(.45) contrast(1.05);
-  transform: scale(1.0);
-}
-.tx-nav-card-tint {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(22,32,40,.7) 0%, rgba(22,32,40,.35) 100%);
-  transition: background .4s;
-}
-.tx-nav-card:hover .tx-nav-card-tint { background: linear-gradient(135deg, rgba(22,32,40,.8) 0%, rgba(22,32,40,.45) 100%); }
-.tx-nav-card-inner {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 40px 48px;
-}
-.tx-nav-card-label {
-  font-family: var(--sans);
-  font-size: 10px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--gold);
-  font-weight: 600;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.tx-nav-card-label::before {
-  content: '';
-  display: block;
-  width: 20px; height: 1px;
-  background: var(--gold);
-  opacity: .6;
-}
-.tx-nav-card h3 {
-  font-family: var(--serif);
-  font-size: clamp(1.4rem, 2.2vw, 2rem);
-  font-weight: 500;
-  color: #fff;
-  line-height: 1.15;
-  margin-bottom: 18px;
-  letter-spacing: -.02em;
-}
-.tx-nav-card-arrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--sans);
-  font-size: 10.5px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.55);
-  font-weight: 500;
-  transition: color .25s, gap .25s;
-}
-.tx-nav-card:hover .tx-nav-card-arrow {
-  color: var(--gold);
-  gap: 16px;
-}
-.tx-nav-card-sep {
-  width: 1px;
-  background: rgba(255,255,255,.1);
-}
-
-/* ─── RESPONSIVE ─────────────────────────────────────────── */
-@media (max-width: 960px) {
-  .tx-hero-inner { padding: 120px 24px 88px; }
-  .tx-stats-inner { grid-template-columns: repeat(2, 1fr); }
-  .tx-overview { padding: 72px 0; }
-  .tx-overview-inner { padding: 0 24px; }
-  .tx-overview-grid { grid-template-columns: 1fr; gap: 48px; }
-  .tx-overview-image { order: -1; }
-  .tx-video { padding: 64px 20px; }
-  .tx-how-works { padding: 72px 0; }
-  .tx-how-works .wrap { padding: 0 24px; }
-  .tx-steps { grid-template-columns: 1fr; }
-  .tx-benefits { padding: 72px 0; }
-  .tx-benefits .wrap { padding: 0 24px; }
-  .tx-nav-strip { grid-template-columns: 1fr; }
-  .tx-nav-card { aspect-ratio: 16/8; }
-  .tx-step,
-  .tx-step:nth-child(2),
-  .tx-step:last-child { padding: 32px 0; border-right: none; border-bottom: 1px solid rgba(198,164,117,.2); }
-  .tx-step:last-child { border-bottom: none; }
-  .tx-benefit-grid { grid-template-columns: 1fr 1fr; }
-  .tx-for-inner { grid-template-columns: 1fr; }
-  .tx-aftercare-grid { grid-template-columns: 1fr; }
-  .tx-price-cards { grid-template-columns: 1fr; }
-  .tx-price-card.featured { order: -1; }
-}
-@media (max-width: 600px) {
-  .tx-hero-inner { padding: 100px 20px 72px; }
-  .tx-hero h1 { font-size: 2.2rem; }
-  .tx-hero-meta { flex-direction: column; align-items: flex-start; gap: 20px; }
-  .tx-hero-ctas { flex-direction: column; }
-  .tx-hero-ctas .btn { width: 100%; text-align: center; }
-  .tx-benefit-grid { grid-template-columns: 1fr; }
-  .tx-stats-inner { grid-template-columns: repeat(2, 1fr); }
-  .tx-faq-item summary { font-size: 1rem; }
-  .tx-nav-card-inner { padding: 28px; }
-  .tx-cta { padding: 88px 20px; }
-}
+/* ─── BRAND VARS ─────────────────────────────────────────────────────────── */
+:root{--serif:'Cormorant Garamond',serif;--sans:'Jost',sans-serif;--ink:#22303a;--gold:#c6a475;--blush:#f4ece7;--sky:#eef5f9;--cloud:#fbfdfe;--gold-pale:#e9dcc4;--gold-deep:#a8813f;--wrap:1220px;--ink-soft:rgba(22,32,40,.48)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit}p{margin-bottom:1em}p:last-child{margin-bottom:0}
+.section-eyebrow{font-family:var(--sans);font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:16px}
+.btn-gold{display:inline-block;background:var(--gold);color:var(--ink);padding:15px 36px;font-family:var(--sans);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:background .2s,color .2s}
+.btn-gold:hover{background:var(--gold-deep);color:#fff}
+.btn-outline{display:inline-block;border:1px solid rgba(255,255,255,.35);background:none;color:rgba(255,255,255,.8);padding:14px 32px;font-family:var(--sans);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:500;text-decoration:none;cursor:pointer;transition:border-color .2s,color .2s}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold-pale)}
+.btn-book{display:inline-block;background:var(--gold);color:var(--ink);padding:14px 28px;font-family:var(--sans);font-size:10.5px;letter-spacing:2px;text-transform:uppercase;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:background .2s;margin-top:20px;width:100%;text-align:center}
+.btn-book:hover{background:var(--gold-deep);color:#fff}
+.btn-ghost{display:inline-block;border:1px solid rgba(255,255,255,.3);background:none;color:rgba(255,255,255,.65);padding:14px 32px;font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:500;text-decoration:none;cursor:pointer;transition:border-color .2s,color .2s}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-pale)}
+/* HERO */
+.tx-hero{position:relative;min-height:94vh;display:flex;align-items:flex-end;overflow:hidden}
+.tx-hero-media{position:absolute;inset:0}
+.tx-hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:brightness(.5) contrast(1.08)}
+.tx-hero-tint{position:absolute;inset:0;background:linear-gradient(to top,rgba(22,32,40,.92) 0%,rgba(22,32,40,.2) 60%,transparent 100%)}
+.tx-hero-inner{position:relative;z-index:2;max-width:var(--wrap);margin:0 auto;padding:0 48px 80px;width:100%}
+.tx-hero-eyebrow{font-family:var(--sans);font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:18px;display:flex;align-items:center;gap:14px}
+.tx-hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
+.tx-hero h1{font-family:var(--serif);font-size:clamp(3rem,6vw,7rem);font-weight:500;color:#fff;line-height:.95;letter-spacing:-.03em;margin-bottom:36px;max-width:860px}
+.tx-hero h1 em{font-style:italic;color:var(--gold-pale)}
+.tx-hero-meta{display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+.tx-hero-price{font-family:var(--serif);font-size:2.4rem;font-weight:600;color:#fff;line-height:1;letter-spacing:-.03em}
+.tx-hero-price sup{font-size:.45em;vertical-align:super;opacity:.7;font-weight:400}
+.tx-hero-dur{font-family:var(--sans);font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:500;margin-top:4px}
+/* STATS */
+.tx-stats{background:var(--ink);border-top:1px solid rgba(198,164,117,.15)}
+.tx-stats-inner{max-width:var(--wrap);margin:0 auto;padding:0 48px;display:grid;grid-template-columns:repeat(4,1fr)}
+.tx-stat{padding:36px 32px;border-right:1px solid rgba(255,255,255,.07);text-align:center}
+.tx-stat:last-child{border-right:none}
+.tx-stat-num{font-family:var(--serif);font-size:2.4rem;font-weight:500;color:var(--gold);line-height:1;letter-spacing:-.04em;display:block;margin-bottom:6px}
+.tx-stat-label{font-family:var(--sans);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:500}
+/* OVERVIEW */
+.tx-overview{background:#fff;padding:110px 0}
+.tx-overview-grid{max-width:var(--wrap);margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:start}
+.tx-overview-text h2{font-family:var(--serif);font-size:clamp(2rem,3vw,3.2rem);font-weight:500;color:var(--ink);line-height:1.1;letter-spacing:-.025em;margin-bottom:28px}
+.tx-overview-text h2 em{font-style:italic;color:var(--gold-deep)}
+.tx-overview-text p{font-family:var(--sans);font-size:15px;line-height:1.8;color:rgba(22,32,40,.7);margin-bottom:20px}
+.tx-pull{border-left:3px solid var(--gold);padding:20px 24px;margin:32px 0;background:rgba(198,164,117,.06)}
+.tx-pull p{font-family:var(--serif);font-size:1.35rem;font-weight:500;color:var(--ink);line-height:1.5;font-style:italic;margin:0}
+.tx-overview-image{overflow:hidden;aspect-ratio:3/4}
+.tx-overview-image img{width:100%;height:100%;object-fit:cover}
+/* VIDEO */
+.tx-video{background:var(--ink);padding:80px 0}
+.tx-video-inner{max-width:900px;margin:0 auto;padding:0 48px}
+.tx-video-label{text-align:center;margin-bottom:28px}
+.tx-video-label span{font-family:var(--sans);font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;display:inline-flex;align-items:center;gap:16px}
+.tx-video-label span::before,.tx-video-label span::after{content:'';display:block;width:40px;height:1px;background:var(--gold);opacity:.5}
+.tx-video-stage{position:relative;aspect-ratio:16/9;overflow:hidden;cursor:pointer;background:#000}
+.tx-video-stage img{width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.05);transition:filter .4s,transform .4s;transform:scale(1.02)}
+.tx-video-stage:hover img{filter:brightness(.55);transform:scale(1)}
+.tx-video-stage-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(22,32,40,.5) 100%)}
+.tx-video-play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:none;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:12px;z-index:2}
+.play-circle{width:72px;height:72px;border-radius:50%;background:rgba(198,164,117,.9);display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s}
+.tx-video-stage:hover .play-circle{background:var(--gold);transform:scale(1.08)}
+.play-label{font-family:var(--sans);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.7);font-weight:600}
+.tx-video-caption{text-align:center;margin-top:20px;font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35)}
+/* HOW IT WORKS */
+.tx-how{background:var(--cloud);padding:110px 0}
+.tx-how-inner{max-width:var(--wrap);margin:0 auto;padding:0 48px}
+.tx-section-head{text-align:center;margin-bottom:72px}
+.tx-section-head h2{font-family:var(--serif);font-size:clamp(2rem,3vw,3.2rem);font-weight:500;color:var(--ink);line-height:1.1;letter-spacing:-.025em;margin-bottom:16px}
+.tx-section-head h2 em{font-style:italic;color:var(--gold-deep)}
+.tx-section-head p{font-family:var(--sans);font-size:15px;color:var(--ink-soft);line-height:1.75;max-width:580px;margin:0 auto}
+.tx-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.tx-step{background:#fff;padding:44px 36px;border-top:3px solid transparent;transition:border-color .3s}
+.tx-step:hover{border-top-color:var(--gold)}
+.tx-step-num{font-family:var(--serif);font-size:4rem;font-weight:400;color:rgba(198,164,117,.2);line-height:1;margin-bottom:20px;letter-spacing:-.04em}
+.tx-step h3{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--ink);margin-bottom:14px;line-height:1.2}
+.tx-step p{font-family:var(--sans);font-size:13.5px;color:var(--ink-soft);line-height:1.75}
+/* BENEFITS */
+.tx-benefits{background:var(--ink);padding:110px 0}
+.tx-benefits-inner{max-width:var(--wrap);margin:0 auto;padding:0 48px}
+.tx-benefits-inner .tx-section-head h2{color:#fff}
+.tx-benefits-inner .tx-section-head p{color:rgba(255,255,255,.5)}
+.tx-benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:64px}
+.tx-benefit-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:40px 32px;transition:background .25s}
+.tx-benefit-card:hover{background:rgba(255,255,255,.08)}
+.tx-benefit-num{font-family:var(--serif);font-size:2.8rem;font-weight:400;color:rgba(198,164,117,.25);line-height:1;margin-bottom:16px;letter-spacing:-.04em}
+.tx-benefit-card h3{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:#fff;margin-bottom:12px;line-height:1.25}
+.tx-benefit-card p{font-family:var(--sans);font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.72}
+/* WHO IT'S FOR */
+.tx-for{background:var(--blush);padding:110px 0}
+.tx-for-inner{max-width:var(--wrap);margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.tx-for-inner .tx-section-head h2{font-size:clamp(1.6rem,2.2vw,2.4rem)}
+.tx-section-head h2 em{font-style:italic;color:var(--gold-deep)}
+.tx-for-list{list-style:none;display:flex;flex-direction:column;gap:16px}
+.tx-for-right{padding-left:60px;border-left:1px solid rgba(198,164,117,.22)}
+.tx-check{display:flex;align-items:flex-start;gap:14px;font-family:var(--sans);font-size:14.5px;line-height:1.65;color:rgba(22,32,40,.75)}
+.tx-check::before{content:'';display:block;width:20px;height:20px;flex-shrink:0;margin-top:1px;background:var(--gold);border-radius:50%;background-image:url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4l2.5 2.5L9 1' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
+.tx-xmark{display:flex;align-items:flex-start;gap:14px;font-family:var(--sans);font-size:14.5px;line-height:1.65;color:rgba(22,32,40,.75)}
+.tx-xmark::before{content:'';display:block;width:20px;height:20px;flex-shrink:0;margin-top:1px;background:rgba(168,129,63,.18);border:1px solid rgba(168,129,63,.3);border-radius:50%;background-image:url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2l6 6M8 2L2 8' stroke='%23a8813f' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
+/* AFTERCARE */
+.tx-aftercare{background:var(--ink);padding:100px 0}
+.tx-aftercare-inner{max-width:var(--wrap);margin:0 auto;padding:0 48px}
+.tx-aftercare-inner .tx-section-head h2{color:#fff}
+.tx-aftercare-inner .tx-section-head p{color:rgba(255,255,255,.5)}
+.tx-aftercare-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:56px}
+.tx-ac-panel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:44px 40px}
+.tx-ac-panel-head{display:flex;align-items:center;gap:14px;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.08)}
+.tx-ac-dot{width:10px;height:10px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.tx-ac-dot.red{background:#c0645a}
+.tx-ac-panel-head h3{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:#fff}
+.tx-ac-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.tx-ac-list li{font-family:var(--sans);font-size:14px;color:rgba(255,255,255,.6);line-height:1.65;padding-left:18px;position:relative}
+.tx-ac-list li::before{content:'';position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:rgba(198,164,117,.5)}
+/* PRICING */
+.tx-pricing{background:var(--cloud);padding:110px 0}
+.tx-pricing-inner{max-width:var(--wrap);margin:0 auto;padding:0 48px}
+.tx-price-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:64px}
+.tx-price-card{background:#fff;padding:44px 36px;display:flex;flex-direction:column;border:1px solid rgba(198,164,117,.12);transition:border-color .25s}
+.tx-price-card:hover{border-color:rgba(198,164,117,.4)}
+.tx-price-card.featured{background:var(--ink);border-color:transparent}
+.tx-price-card-label{font-family:var(--sans);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;margin-bottom:20px;display:block;color:var(--gold)}
+.tx-price-card-amount{font-family:var(--serif);font-size:3.6rem;font-weight:600;color:var(--ink);line-height:1;letter-spacing:-.04em;margin-bottom:6px}
+.tx-price-card-amount sup{font-size:.38em;vertical-align:super;opacity:.6;font-weight:400}
+.tx-price-card.featured .tx-price-card-amount{color:#fff}
+.tx-price-card-dur{font-family:var(--sans);font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-soft);font-weight:500;margin-bottom:16px}
+.tx-price-card.featured .tx-price-card-dur{color:rgba(255,255,255,.45)}
+.tx-price-card-save{display:inline-block;background:rgba(198,164,117,.12);color:var(--gold-deep);font-family:var(--sans);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;padding:5px 10px;margin-bottom:16px;border-radius:2px}
+.tx-price-card.featured .tx-price-card-save{background:rgba(198,164,117,.15);color:var(--gold)}
+.tx-price-card-desc{font-family:var(--sans);font-size:13.5px;color:var(--ink-soft);line-height:1.7;flex:1}
+.tx-price-card.featured .tx-price-card-desc{color:rgba(255,255,255,.5)}
+.tx-pricing-note{text-align:center;margin-top:40px;font-family:var(--sans);font-size:13.5px;color:var(--ink-soft);line-height:1.7}
+/* FAQ */
+.tx-faq{background:#fff;padding:110px 0}
+.tx-faq-inner{max-width:820px;margin:0 auto;padding:0 48px}
+.tx-faq-item{border-bottom:1px solid rgba(198,164,117,.2)}
+.tx-faq-item:first-of-type{border-top:1px solid rgba(198,164,117,.2)}
+.tx-faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 0;cursor:pointer;list-style:none;font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--ink);line-height:1.3}
+.tx-faq-item summary::-webkit-details-marker{display:none}
+.tx-faq-chevron{width:20px;height:20px;flex-shrink:0;transition:transform .25s;color:var(--gold)}
+.tx-faq-item[open] .tx-faq-chevron{transform:rotate(180deg)}
+.tx-faq-item[open] summary{color:var(--gold-deep)}
+.tx-faq-body{padding:0 0 28px;font-family:var(--sans);font-size:14.5px;line-height:1.78;color:rgba(22,32,40,.65)}
+.tx-faq-body p{margin:0 0 12px}
+.tx-faq-body p:last-child{margin-bottom:0}
+/* CTA */
+.tx-cta{display:grid;grid-template-columns:1fr 1fr;min-height:540px}
+.tx-cta-content{display:flex;flex-direction:column;justify-content:center;padding:80px 64px 80px max(48px,calc((100vw - 1220px)/2 + 48px));background:var(--ink)}
+.tx-cta-content h2{font-family:var(--serif);font-size:clamp(2.2rem,3vw,3.8rem);font-weight:500;color:#fff;line-height:1.1;letter-spacing:-.03em;margin-bottom:20px}
+.tx-cta-content h2 em{font-style:italic;color:var(--gold-pale)}
+.tx-cta-content p{font-family:var(--sans);font-size:15px;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:40px;max-width:400px}
+.tx-cta-buttons{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.tx-cta-image{position:relative;overflow:hidden}
+.tx-cta-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.05);transition:filter .5s,transform .5s}
+.tx-cta:hover .tx-cta-image img{filter:brightness(.6);transform:scale(1.02)}
+/* NAV STRIP */
+.tx-nav-strip{display:grid;grid-template-columns:1fr 1fr}
+.tx-nav-card{position:relative;overflow:hidden;display:block;text-decoration:none;aspect-ratio:16/7;background:var(--ink)}
+.tx-nav-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(85%) brightness(.5) contrast(1.08);transition:filter .55s,transform .55s;transform:scale(1.04)}
+.tx-nav-card:hover img{filter:grayscale(20%) brightness(.45);transform:scale(1)}
+.tx-nav-card-tint{position:absolute;inset:0;background:linear-gradient(135deg,rgba(22,32,40,.7) 0%,rgba(22,32,40,.35) 100%)}
+.tx-nav-card-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:40px 48px}
+.tx-nav-card-label{font-family:var(--sans);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.tx-nav-card-label::before{content:'';display:block;width:20px;height:1px;background:var(--gold);opacity:.6}
+.tx-nav-card h3{font-family:var(--serif);font-size:clamp(1.4rem,2.2vw,2rem);font-weight:500;color:#fff;line-height:1.15;margin-bottom:18px;letter-spacing:-.02em}
+.tx-nav-card-arrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:500;transition:color .25s,gap .25s}
+.tx-nav-card:hover .tx-nav-card-arrow{color:var(--gold);gap:16px}
+/* RESPONSIVE */
+@media(max-width:1024px){.tx-overview-grid{grid-template-columns:1fr;gap:48px}.tx-overview-image{aspect-ratio:16/9;order:-1}.tx-for-inner{grid-template-columns:1fr;gap:0}.tx-for-right{padding-left:0;border-left:none;border-top:1px solid rgba(198,164,117,.22);padding-top:48px;margin-top:48px}}
+@media(max-width:900px){.tx-hero-inner{padding:0 28px 64px}.tx-stats-inner{grid-template-columns:1fr 1fr}.tx-stat:nth-child(2){border-right:none}.tx-stat:nth-child(3){border-top:1px solid rgba(255,255,255,.07)}.tx-steps{grid-template-columns:1fr}.tx-benefit-grid{grid-template-columns:1fr 1fr}.tx-aftercare-grid{grid-template-columns:1fr}.tx-price-cards{grid-template-columns:1fr}.tx-cta{grid-template-columns:1fr}.tx-cta-image{min-height:380px;position:relative}.tx-cta-content{padding:72px 32px}.tx-nav-strip{grid-template-columns:1fr}.tx-overview-grid,.tx-how-inner,.tx-benefits-inner,.tx-for-inner,.tx-aftercare-inner,.tx-pricing-inner,.tx-faq-inner{padding:0 28px}}
+@media(max-width:600px){.tx-hero h1{font-size:2.8rem}.tx-hero-meta{flex-direction:column;align-items:flex-start;gap:20px}.tx-benefit-grid{grid-template-columns:1fr}.tx-video-inner,.tx-overview-grid,.tx-how-inner,.tx-benefits-inner,.tx-for-inner,.tx-aftercare-inner,.tx-pricing-inner,.tx-faq-inner{padding:0 20px}}
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- ============================================
-     NAV
-============================================ -->
 <div class="topbar" role="complementary">
   <div class="topbar-inner">
     <div class="topbar-left">
@@ -1051,11 +201,20 @@
       <li class="has-dropdown">
         <a href="../../../index.html#treatments">Treatments <svg class="nav-caret" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <div class="dropdown">
-          <div class="dropdown-col">
+          <div class="dropdown-col dropdown-col--facials">
             <h5>Facials</h5>
-            <a href="../index.html">Glow N Go Facial</a>
-            <a href="../index.html">Diamond Glow Microderm</a>
-            <a href="../index.html">Smart Lift Facial</a>
+            <div class="facials-grid">
+            <a href="../glow-n-go/index.html">Glow N Go Facial</a>
+            <a href="../rf-antiaging/index.html">RF Antiaging Facial</a>
+            <a href="../deep-cleansing/index.html">Deep Cleansing Facial</a>
+            <a href="../gentlemans-facial/index.html">Gentleman&rsquo;s Facial</a>
+            <a href="../glow-facial/index.html">Glow Facial</a>
+            <a href="../diamond-glow/index.html">Diamond Glow Microderm</a>
+            <a href="../acne-facial/index.html">Acne Hydrating Facial</a>
+            <a href="../dermaplaning-lux/index.html">Dermaplaning Lux Facial</a>
+            <a href="../oxygen-lift/index.html">Oxygen Lift Facial</a>
+            <a href="../smart-lift-facial/index.html">Smart Lift Facial</a>
+            </div>
             <a href="../index.html" class="view-all">View All Facials &rarr;</a>
           </div>
           <div class="dropdown-col">
@@ -1065,8 +224,13 @@
             <a href="../../advance-skin-treatments/index.html">Bio Re Peel</a>
             <a href="../../advance-skin-treatments/index.html" class="view-all">View All Treatments &rarr;</a>
           </div>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <a href="../../../makeup/index.html">Makeup <svg class="nav-caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="dropdown dropdown--narrow">
           <div class="dropdown-col">
-            <h5><a href="../../../makeup/index.html">Bridal &amp; Event</a></h5>
+            <h5>Bridal &amp; Event</h5>
             <a href="../../../makeup/makeup-service/index.html">Makeup Service</a>
             <a href="../../../makeup/makeup-classes/index.html">Makeup Classes</a>
             <a href="../../../makeup/index.html" class="view-all">View All &rarr;</a>
@@ -1092,8 +256,13 @@
           <a href="../index.html">All Facials</a>
           <span class="msub-label">Advance Skin Treatments</span>
           <a href="../../advance-skin-treatments/index.html">All Advance Treatments</a>
+        </div>
+      </details>
+      <details>
+        <summary>Makeup</summary>
+        <div class="mobile-submenu">
           <span class="msub-label">Bridal &amp; Event</span>
-          <a href="../../../makeup/index.html">All Bridal &amp; Event</a>
+          <a href="../../../makeup/index.html">All Makeup</a>
           <a href="../../../makeup/makeup-service/index.html">Makeup Service</a>
           <a href="../../../makeup/makeup-classes/index.html">Makeup Classes</a>
         </div>
@@ -1109,35 +278,18 @@
 
 <main id="main">
 
-  <!-- BREADCRUMB -->
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <div class="breadcrumb-inner">
-      <a href="../../../index.html">Home</a>
-      <span class="bc-sep">›</span>
-      <a href="../index.html">Facials</a>
-      <span class="bc-sep">›</span>
-      <span class="bc-current">Diamond Glow Microderm Facial</span>
-    </div>
-  </nav>
-
-  <!-- ============================================
-       HERO
-  ============================================ -->
+  <!-- HERO -->
   <section class="tx-hero">
     <div class="tx-hero-media">
-      <img
-        src="https://images.pexels.com/photos/7446686/pexels-photo-7446686.jpeg?auto=compress&cs=tinysrgb&w=1920"
-        alt="Woman receiving a professional facial treatment at Merle Norman Metuchen"
-        loading="eager"
-      >
+      <img src="../../../images/facials/diamond-glow/hero.jpg" alt="Diamond Glow Microderm at Merle Norman Metuchen" loading="eager">
     </div>
     <div class="tx-hero-tint"></div>
     <div class="tx-hero-inner">
-      <div class="tx-hero-eyebrow">Signature Facial Treatment</div>
-      <h1>Diamond Glow <em>Microderm</em> Facial</h1>
+      <div class="tx-hero-eyebrow">Microdermabrasion + Serum Infusion</div>
+      <h1>Diamond Glow <em>Microderm</em></h1>
       <div class="tx-hero-meta">
         <div>
-          <div class="tx-hero-price"><sup>$</sup>225</div>
+          <div class="tx-hero-price"><sup>$</sup>249</div>
           <div class="tx-hero-dur">60 Minutes</div>
         </div>
         <a href="#" class="btn-gold" data-modal-open="reserve-modal">Book This Treatment</a>
@@ -1146,264 +298,164 @@
     </div>
   </section>
 
-  <!-- STATS BAR -->
+  <!-- STATS -->
   <div class="tx-stats">
     <div class="tx-stats-inner">
-      <div class="tx-stat">
-        <span class="tx-stat-num">3-in-1</span>
-        <span class="tx-stat-label">Exfoliate · Extract · Infuse</span>
-      </div>
-      <div class="tx-stat">
-        <span class="tx-stat-num">0</span>
-        <span class="tx-stat-label">Downtime</span>
-      </div>
-      <div class="tx-stat">
-        <span class="tx-stat-num">60 min</span>
-        <span class="tx-stat-label">Session Length</span>
-      </div>
-      <div class="tx-stat">
-        <span class="tx-stat-num">4–6 wk</span>
-        <span class="tx-stat-label">Recommended Frequency</span>
-      </div>
+      <div class="tx-stat"><span class="tx-stat-num">60 min</span><span class="tx-stat-label">Session Length</span></div>
+      <div class="tx-stat"><span class="tx-stat-num">3-in-1</span><span class="tx-stat-label">Exfoliate · Extract · Infuse</span></div>
+      <div class="tx-stat"><span class="tx-stat-num">0</span><span class="tx-stat-label">Downtime</span></div>
+      <div class="tx-stat"><span class="tx-stat-num">All Types</span><span class="tx-stat-label">Skin Compatibility</span></div>
     </div>
   </div>
 
-  <!-- ============================================
-       OVERVIEW
-  ============================================ -->
+  <!-- OVERVIEW -->
   <section class="tx-overview">
     <div class="tx-overview-grid">
       <div class="tx-overview-text">
         <span class="section-eyebrow">What It Is</span>
-        <h2>The glow that shows up <em>the morning after</em></h2>
-        <p>The Diamond Glow Microderm Facial is one of our most requested treatments — and for good reason. It does three things at once: <strong>resurfaces the skin</strong> with a precision diamond tip, <strong>clears out pores</strong> through simultaneous vacuum extraction, and <strong>replenishes what was removed</strong> with a targeted serum infusion.</p>
-        <p>Unlike traditional microdermabrasion that scatters crystals across the face, the diamond-tip handpiece gives us exact control over where we treat — so we can be aggressive where your skin needs it and gentle where it doesn't.</p>
+        <h2>One pass. Three actions. <em>Skin that looks genuinely different.</em></h2>
+        <p>Diamond Glow is a simultaneous three-in-one treatment: a diamond-tip wand exfoliates the skin surface, a vacuum extraction system clears the loosened debris and congestion from pores, and a targeted serum is infused directly into the freshly cleared skin — all in a single pass. No separate steps. No waiting.</p><p>The result is immediate and visible. Dead cells are gone, pores are cleared, and skin is flooded with active ingredients at the exact moment it can absorb them best. Most clients see a measurable improvement in texture, tone, and radiance before they leave the treatment room.</p>
         <div class="tx-pull">
-          <p>"Clients walk out with a visible glow — smooth texture, even tone, and skin that actually looks rested. No redness, no recovery. Just results."</p>
+          <p>"The serum infusion step is what separates Diamond Glow from standard microderm — cleared skin absorbs actives 40–60% more effectively than untreated skin."</p>
         </div>
-        <p>Results are immediate. You leave with noticeably brighter, smoother skin — without any redness or need to hide at home. Makeup applies beautifully after, too.</p>
+        <p>Unlike chemical exfoliants or peels, Diamond Glow creates no photosensitivity and requires no recovery time. You walk out looking refreshed, not treated — making it a reliable choice before events, photos, or any occasion where your skin needs to look its best.</p>
       </div>
       <div class="tx-overview-image">
-        <img
-          src="https://images.pexels.com/photos/3985317/pexels-photo-3985317.jpeg?auto=compress&cs=tinysrgb&w=900"
-          alt="Close-up of radiant, healthy skin after Diamond Glow treatment"
-          loading="lazy"
-        >
+        <img src="../../../images/facials/dermaplaning-lux/results.jpg" alt="Diamond Glow Microderm results at Merle Norman Metuchen" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- ============================================
-       VIDEO
-  ============================================ -->
+  <!-- VIDEO -->
   <section class="tx-video" id="tx-video">
     <div class="tx-video-inner">
-      <div class="tx-video-label">
-        <span>Watch the Treatment</span>
-      </div>
+      <div class="tx-video-label"><span>Watch the Treatment</span></div>
       <div class="tx-video-stage" id="vimeo-stage">
-        <img
-          id="vimeo-thumb"
-          src="https://images.pexels.com/photos/7446686/pexels-photo-7446686.jpeg?auto=compress&cs=tinysrgb&w=1920"
-          alt="Diamond Glow Microderm Facial — watch the treatment"
-          loading="lazy"
-        >
+        <img id="vimeo-thumb" src="../../../images/facials/diamond-glow/hero.jpg" alt="Diamond Glow Microderm — watch the treatment" loading="lazy">
         <div class="tx-video-stage-overlay"></div>
-        <button type="button" class="tx-video-play-btn" id="vimeo-play-btn" aria-label="Play Diamond Glow Microderm treatment video">
+        <button type="button" class="tx-video-play-btn" id="vimeo-play-btn" aria-label="Play Diamond Glow Microderm video">
           <span class="play-circle">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5.1v13.8c0 .8.9 1.3 1.6.8l10.4-6.9a.9.9 0 0 0 0-1.6L9.6 4.3C8.9 3.8 8 4.3 8 5.1Z" fill="white"/></svg>
           </span>
           <span class="play-label">Play</span>
         </button>
       </div>
-      <p class="tx-video-caption">Diamond Glow Microderm Facial &nbsp;·&nbsp; Merle Norman Metuchen</p>
+      <p class="tx-video-caption">Diamond Glow Microderm &nbsp;&middot;&nbsp; Merle Norman Metuchen</p>
     </div>
   </section>
 
-  <!-- ============================================
-       HOW IT WORKS
-  ============================================ -->
+  <!-- HOW IT WORKS -->
   <section class="tx-how">
     <div class="tx-how-inner">
       <div class="tx-section-head">
         <span class="section-eyebrow">The Process</span>
-        <h2>Three steps. One 60-minute session.</h2>
-        <p>The Diamond Glow system works all three in a single pass — no separate tools, no extra time.</p>
+        <h2>Three things happening simultaneously, in one pass.</h2>
+        <p>The precision of the diamond tip, the clearing power of vacuum extraction, and the penetration of serum infusion — all at once.</p>
       </div>
       <div class="tx-steps">
         <div class="tx-step">
-          <div class="tx-step-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
           <div class="tx-step-num">01</div>
           <h3>Diamond-Tip Exfoliation</h3>
-          <p>A precision diamond-encrusted tip removes dead skin cells and surface buildup layer by layer. Unlike crystal microdermabrasion, there's nothing loose on your skin — just controlled, even resurfacing that we adjust in real time based on your skin's response.</p>
+          <p>A diamond-encrusted wand tip moves across the skin surface in precise, controlled passes, physically abrading and lifting the outermost layer of dead, keratinized cells. Unlike harsh crystal microderm, the diamond tip is exact and adjustable — your specialist calibrates tip coarseness and pass speed to your skin's sensitivity and condition that day. The result is controlled, even resurfacing without unpredictability.</p>
         </div>
         <div class="tx-step">
-          <div class="tx-step-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
           <div class="tx-step-num">02</div>
-          <h3>Vacuum Pore Extraction</h3>
-          <p>Simultaneously, a gentle vacuum lifts debris, congestion, and sebum from pores as exfoliation happens. Your skin is cleared at the surface level and the follicle level at the same time — leaving pores visibly tighter and cleaner without manual extraction.</p>
+          <h3>Simultaneous Vacuum Extraction</h3>
+          <p>As the diamond tip exfoliates, a built-in vacuum pulls the loosened dead cells and surface debris away — and simultaneously creates suction that draws out congestion from within the pore. Sebaceous filaments, blackheads, and trapped debris are cleared without manual squeezing or extraction pressure. The vacuum also stimulates microcirculation, which brings fresh oxygenated blood to the surface and primes the skin for the infusion phase.</p>
         </div>
         <div class="tx-step">
-          <div class="tx-step-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
           <div class="tx-step-num">03</div>
-          <h3>Targeted Serum Infusion</h3>
-          <p>With your skin freshly cleared and pores open, a concentrated serum is infused directly into the dermis — going far deeper than anything you apply at home. We select the formula based on your concerns: brightening, hydrating, anti-aging, or clarifying.</p>
+          <h3>Active Serum Infusion</h3>
+          <p>With the skin surface cleared and pores open, a selected serum is infused directly into the skin through the same wand channel — reaching the dermis at a depth and efficiency that topical application cannot achieve. Your specialist selects from brightening (vitamin C), hydrating (hyaluronic acid), clarifying (salicylic + niacinamide), or anti-aging (peptide + growth factor) formulas based on your skin goals. The freshly exfoliated, vacuum-stimulated skin absorbs these actives at 40–60% higher efficiency than normal.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================
-       BENEFITS
-  ============================================ -->
+  <!-- BENEFITS -->
   <section class="tx-benefits">
     <div class="tx-benefits-inner">
       <div class="tx-section-head">
         <span class="section-eyebrow">What You'll See</span>
-        <h2>Results you notice the same day</h2>
-        <p>This isn't a treatment where you "see results in 6 weeks." Most clients notice the difference before they leave.</p>
+        <h2>Three mechanisms. A full range of results.</h2>
+        <p>What consistent Diamond Glow treatments actually deliver, session by session.</p>
       </div>
       <div class="tx-benefit-grid">
         <div class="tx-benefit-card">
           <span class="tx-benefit-num">01</span>
-          <h3>Noticeably Smoother Texture</h3>
-          <p>The diamond tip removes the rough, flaky surface layer that products can't fully penetrate — leaving skin with a genuinely soft, refined feel.</p>
+          <h3>Immediate Texture Refinement</h3>
+          <p>Diamond-tip exfoliation removes the rough, uneven surface layer in a single session. Skin is immediately smoother to the touch, makeup goes on more evenly, and pores appear visibly smaller — results you see and feel before you leave.</p>
         </div>
         <div class="tx-benefit-card">
           <span class="tx-benefit-num">02</span>
-          <h3>Brighter, More Even Tone</h3>
-          <p>Removing dull, dead skin and stimulating cell turnover reveals the fresher layers underneath — evening out skin tone and reducing the appearance of dark spots over time.</p>
+          <h3>Vacuum-Cleared Pores, No Trauma</h3>
+          <p>Vacuum extraction simultaneously clears surface debris and draws out congestion from within pores — without the trauma of manual extractions. Blackheads, sebaceous filaments, and clogged pores are cleared consistently across the full treatment area.</p>
         </div>
         <div class="tx-benefit-card">
           <span class="tx-benefit-num">03</span>
-          <h3>Cleaner, Tighter-Looking Pores</h3>
-          <p>Vacuum extraction clears congestion without manual squeezing. Pores appear smaller and cleaner — immediately and over a series of treatments.</p>
+          <h3>Superior Serum Penetration</h3>
+          <p>Actives applied to freshly exfoliated, vacuum-stimulated skin penetrate at a depth standard topical application simply can't reach. One infusion session delivers the equivalent of weeks of consistent at-home serum use — directly into the layers that matter.</p>
         </div>
         <div class="tx-benefit-card">
           <span class="tx-benefit-num">04</span>
-          <h3>Deeper Product Absorption</h3>
-          <p>With the barrier layer removed, your skincare products — and the infused serum — penetrate significantly deeper than usual, working at the level where results actually happen.</p>
+          <h3>Brightened, Even Tone</h3>
+          <p>Removing the dead surface layer reveals the fresher, more evenly pigmented skin beneath. Vitamin C infusion treatments compound this brightening effect, gradually fading hyperpigmentation, sun damage, and post-acne marks with consistent monthly use.</p>
         </div>
         <div class="tx-benefit-card">
           <span class="tx-benefit-num">05</span>
-          <h3>Visibly Reduced Fine Lines</h3>
-          <p>Regular treatments stimulate collagen production, which gradually softens fine lines and improves overall skin structure over time.</p>
+          <h3>Zero Downtime</h3>
+          <p>No peeling, no redness, no sensitivity window. Diamond Glow creates no photosensitivity — you can go outside immediately after. Many clients book it the day before events, photoshoots, or travel specifically because there is nothing to manage afterward.</p>
         </div>
         <div class="tx-benefit-card">
           <span class="tx-benefit-num">06</span>
-          <h3>Zero Downtime</h3>
-          <p>No redness, no peeling, no hiding indoors. You can return to your day — and apply makeup — immediately after your session.</p>
+          <h3>Cumulative Improvement</h3>
+          <p>Each monthly Diamond Glow session builds on the last. Over 3–6 sessions, clients consistently report progressive improvement in skin quality, tone, and pore appearance — with effects that last longer between sessions as the skin's overall condition improves.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================
-       WHO IT'S FOR
-  ============================================ -->
+  <!-- WHO IT'S FOR -->
   <section class="tx-for">
     <div class="tx-for-inner">
       <div>
-        <div class="tx-section-head" style="text-align:left; margin-bottom: 40px;">
+        <div class="tx-section-head" style="text-align:left; margin-bottom:40px;">
           <span class="section-eyebrow">Ideal For</span>
-          <h2>Your skin concerns, addressed</h2>
+          <h2>Your skin concerns, <em>addressed</em></h2>
         </div>
         <ul class="tx-for-list">
-          <li>
-            <span class="tx-check">
-              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            Dull, uneven skin tone that doesn't respond to your at-home routine
-          </li>
-          <li>
-            <span class="tx-check">
-              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            Rough or textured skin surface, including bumpy forehead or uneven cheeks
-          </li>
-          <li>
-            <span class="tx-check">
-              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            Clogged pores, blackheads, and mild congestion — especially on the nose and chin
-          </li>
-          <li>
-            <span class="tx-check">
-              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            Fine lines and early signs of aging that you'd like to slow and soften
-          </li>
-          <li>
-            <span class="tx-check">
-              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            Hyperpigmentation, sun spots, or post-breakout marks
-          </li>
-          <li>
-            <span class="tx-check">
-              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            Anyone who wants a reliable, no-downtime "refresh" before a big event
-          </li>
+          <li class="tx-check">Dull, uneven skin tone that doesn't respond to at-home exfoliation</li>
+          <li class="tx-check">Rough or bumpy texture — congested pores, milia, rough patches on the forehead or cheeks</li>
+          <li class="tx-check">Mild to moderate hyperpigmentation, sun damage, or post-acne marks</li>
+          <li class="tx-check">Clients wanting a reliable pre-event skin treatment with zero recovery</li>
+          <li class="tx-check">Anyone who wants their serums and skincare to actually work — absorption enhancement is significant</li>
+          <li class="tx-check">Consistent monthly maintenance for clients serious about long-term skin quality</li>
         </ul>
       </div>
-      <div>
-        <div class="tx-section-head" style="text-align:left; margin-bottom: 40px;">
+      <div class="tx-for-right">
+        <div class="tx-section-head" style="text-align:left; margin-bottom:40px;">
           <span class="section-eyebrow">Please Wait If</span>
-          <h2>When to hold off</h2>
+          <h2>When to <em>hold off</em></h2>
         </div>
         <ul class="tx-for-list">
-          <li>
-            <span class="tx-check tx-x">
-              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </span>
-            Active breakouts or inflamed acne — we recommend our Acne Hydrating Facial instead
-          </li>
-          <li>
-            <span class="tx-check tx-x">
-              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </span>
-            Rosacea flare-ups or highly reactive, sensitized skin
-          </li>
-          <li>
-            <span class="tx-check tx-x">
-              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </span>
-            Recent use of Accutane (within the past 6 months) or aggressive retinoids
-          </li>
-          <li>
-            <span class="tx-check tx-x">
-              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </span>
-            Open cuts, wounds, or active skin infections on the face
-          </li>
-          <li>
-            <span class="tx-check tx-x">
-              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </span>
-            Sunburned skin — wait until fully healed before resurfacing
-          </li>
+          <li class="tx-xmark">Active inflammatory acne — open lesions or widespread cystic breakouts</li>
+          <li class="tx-xmark">Rosacea with visible telangiectasia — diamond abrasion can worsen capillary visibility</li>
+          <li class="tx-xmark">Recent retinoid or acid peel use within 72 hours — skin will be too sensitized</li>
+          <li class="tx-xmark">Sunburned, windburned, or otherwise compromised skin on the day of treatment</li>
+          <li class="tx-xmark">Eczema, psoriasis, or dermatitis in the treatment area — wait for full remission</li>
         </ul>
-        <p style="margin-top: 28px; font-family: var(--sans); font-size: 13.5px; line-height: 1.65; color: var(--ink-soft);">Not sure if this is the right treatment for you? <a href="#" data-modal-open="reserve-modal" style="color: var(--gold-deep); text-decoration: none; font-weight: 500;">Reach out</a> and we'll point you in the right direction — no booking required.</p>
+        <p style="margin-top:32px; font-family:var(--sans); font-size:13.5px; line-height:1.7; color:var(--ink-soft);">Not sure if this is the right treatment? <a href="#" data-modal-open="reserve-modal" style="color:var(--gold-deep); text-decoration:none; font-weight:600; border-bottom:1px solid rgba(168,129,63,.3); padding-bottom:1px;">Reach out</a> and we&rsquo;ll point you in the right direction &mdash; no booking required.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============================================
-       AFTERCARE
-  ============================================ -->
+  <!-- AFTERCARE -->
   <section class="tx-aftercare">
     <div class="tx-aftercare-inner">
       <div class="tx-section-head">
         <span class="section-eyebrow">Post-Treatment Care</span>
         <h2>Keep the glow going</h2>
-        <p>The Diamond Glow requires almost no recovery — but a little care in the first 24 hours makes a real difference.</p>
+        <p>The serum is still working for 48 hours. These steps protect and extend the result.</p>
       </div>
       <div class="tx-aftercare-grid">
         <div class="tx-ac-panel">
@@ -1412,195 +464,146 @@
             <h3>Do These Things</h3>
           </div>
           <ul class="tx-ac-list">
-            <li>Apply SPF 30+ every morning — your freshly resurfaced skin is more sensitive to sun exposure</li>
-            <li>Keep skin hydrated with a gentle, fragrance-free moisturizer for the first 48 hours</li>
-            <li>Drink plenty of water to support the serum infusion and cell renewal</li>
-            <li>Let your skin breathe — wait 6 hours before applying makeup if possible</li>
-            <li>Cleanse gently with a mild, non-exfoliating cleanser for the next 3 days</li>
-            <li>Enjoy your glow — results continue to improve over 3–5 days as skin renews</li>
+            <li>Apply SPF 30+ immediately and every morning for at least 5 days following treatment</li>
+            <li>Use your infused serum or a gentle hyaluronic serum for 3 nights to sustain the hydration effect</li>
+            <li>Stay well hydrated — the skin continues absorbing and benefiting for 48 hours post-treatment</li>
+            <li>Cleanse with a gentle, non-stripping cleanser for 48 hours</li>
+            <li>Book your next session in 3–4 weeks to maintain the momentum of skin improvement</li>
           </ul>
         </div>
         <div class="tx-ac-panel">
           <div class="tx-ac-panel-head">
             <div class="tx-ac-dot red"></div>
-            <h3>Avoid These for 48–72 hrs</h3>
+            <h3>Avoid These for 48&ndash;72 hrs</h3>
           </div>
           <ul class="tx-ac-list">
-            <li>Direct sun exposure without SPF protection</li>
-            <li>Retinoids, AHAs, BHAs, or any exfoliating acids — your skin has already been resurfaced</li>
-            <li>Steam rooms, saunas, or intense heat treatments</li>
-            <li>Scratching or picking — your skin is in repair mode</li>
-            <li>Heavy, occlusive makeup with alcohol-based setting sprays</li>
-            <li>Any additional exfoliating treatments within 4 weeks</li>
+            <li>Retinoids, AHAs, BHAs, or any exfoliating acids for 48 hours post-treatment</li>
+            <li>Hot showers, steam rooms, saunas, or hot yoga for 24 hours</li>
+            <li>Heavy or occlusive makeup for the rest of the treatment day</li>
+            <li>Direct sun exposure without SPF — treated skin is temporarily more UV-reactive</li>
+            <li>Any other resurfacing or exfoliating treatments within 2 weeks</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================
-       PRICING
-  ============================================ -->
+  <!-- PRICING -->
   <section class="tx-pricing" id="tx-pricing">
     <div class="tx-pricing-inner">
       <div class="tx-section-head">
         <span class="section-eyebrow">Investment</span>
         <h2>Simple, transparent pricing</h2>
-        <p>One session delivers immediate results. A series locks in long-term transformation — and better value.</p>
+        <p>One session delivers immediate results. A series locks in long-term improvement and better value with every visit.</p>
       </div>
       <div class="tx-price-cards">
-        <div class="tx-price-card featured" style="position:relative;">
-<span class="tx-price-card-label">Single Session</span>
-          <div class="tx-price-card-amount"><sup>$</sup>225</div>
+        <div class="tx-price-card featured">
+          <span class="tx-price-card-label">Single Session</span>
+          <div class="tx-price-card-amount"><sup>$</sup>249</div>
           <div class="tx-price-card-dur">60 Minutes</div>
-          <p class="tx-price-card-desc">The full Diamond Glow Microderm treatment. Exfoliation, extraction, and serum infusion — all in one session. Results are immediate.</p>
+          <p class="tx-price-card-desc">One complete Diamond Glow session — diamond-tip exfoliation, vacuum extraction, and targeted serum infusion. Serum formula selected for your skin goals.</p>
           <a href="#" class="btn-book" data-modal-open="reserve-modal">Book This Session</a>
         </div>
         <div class="tx-price-card">
           <span class="tx-price-card-label">Series of Three</span>
-          <div class="tx-price-card-amount"><sup>$</sup>615</div>
-          <div class="tx-price-card-dur">3 × 60 Minutes</div>
-          <span class="tx-price-card-save">Save $60</span>
-          <p class="tx-price-card-desc">Recommended for visible improvement in texture, tone, and pores. Most clients see their best results with a series.</p>
+          <div class="tx-price-card-amount"><sup>$</sup>657</div>
+          <div class="tx-price-card-dur">3 &times; 60 Minutes</div>
+          <span class="tx-price-card-save">Save $90</span>
+          <p class="tx-price-card-desc">Three sessions at 3–4 week intervals. The recommended starting protocol for visible, lasting improvement in texture, tone, and pore quality.</p>
           <a href="#" class="btn-book" data-modal-open="reserve-modal">Book the Series</a>
         </div>
         <div class="tx-price-card">
           <span class="tx-price-card-label">Series of Six</span>
-          <div class="tx-price-card-amount"><sup>$</sup>1,200</div>
-          <div class="tx-price-card-dur">6 × 60 Minutes</div>
-          <span class="tx-price-card-save">Save $150</span>
-          <p class="tx-price-card-desc">The full commitment. For lasting collagen stimulation, reduced pigmentation, and consistently clear, refined skin.</p>
+          <div class="tx-price-card-amount"><sup>$</sup>1,194</div>
+          <div class="tx-price-card-dur">6 &times; 60 Minutes</div>
+          <span class="tx-price-card-save">Save $300</span>
+          <p class="tx-price-card-desc">Six sessions over 5–6 months. The full Diamond Glow protocol for transformative, cumulative skin improvement — most clients maintain with monthly sessions after.</p>
           <a href="#" class="btn-book" data-modal-open="reserve-modal">Book the Series</a>
         </div>
       </div>
-      <p class="tx-pricing-note">Prices are per-session when booked as a series. Series packages are non-transferable. New clients save 25% — use code <strong style="color: var(--gold);">FIRSTTIME25</strong> at checkout.</p>
+      <p class="tx-pricing-note">Series packages are non-transferable. New clients save 25% &mdash; use code <strong style="color:var(--gold);">FIRSTTIME25</strong> at checkout.</p>
     </div>
   </section>
 
-  <!-- ============================================
-       FAQ
-  ============================================ -->
+  <!-- FAQ -->
   <section class="tx-faq">
     <div class="tx-faq-inner">
-      <div class="tx-section-head" style="text-align: left; margin-bottom: 48px;">
+      <div class="tx-section-head" style="text-align:left; margin-bottom:48px;">
         <span class="section-eyebrow">Common Questions</span>
         <h2>Everything you need to know</h2>
       </div>
-
       <details class="tx-faq-item" open>
-        <summary>
-          Does the Diamond Glow Microderm hurt?
-          <svg class="tx-faq-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <div class="tx-faq-body">
-          <p>Not at all. Most clients describe it as a gentle scratching sensation — similar to a rough brush moving across the skin. The vacuum extraction feels like a light pulling, which some people actually find satisfying. We adjust the pressure throughout the session to match your skin's sensitivity.</p>
-        </div>
+        <summary>Is Diamond Glow the same as regular microdermabrasion?<svg class="tx-faq-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="tx-faq-body"><p>Standard microdermabrasion exfoliates only — it removes surface cells and stops there. Diamond Glow adds vacuum extraction (clearing pores simultaneously) and serum infusion (delivering actives into freshly cleared skin). The three simultaneous actions make it significantly more effective than exfoliation alone, particularly for clients who want both texture improvement and targeted treatment of hyperpigmentation, hydration, or congestion.</p></div>
       </details>
-
-      <details class="tx-faq-item">
-        <summary>
-          How long does the glow last?
-          <svg class="tx-faq-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <div class="tx-faq-body">
-          <p>The immediate brightening effect typically lasts 1–2 weeks. With consistent treatments every 4–6 weeks, the cumulative results — improved texture, clearer pores, better tone — are long-lasting and continue to improve with each session.</p>
-          <p>The serum infusion benefits, particularly hydration and brightness, tend to peak around days 3–5 as your skin settles and the active ingredients take full effect.</p>
-        </div>
+      <details class="tx-faq-item" >
+        <summary>Does it hurt?<svg class="tx-faq-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="tx-faq-body"><p>No. The diamond tip creates a mild scratching sensation at most — most clients describe it as comfortable and even relaxing. The vacuum feels like a gentle suction across the skin. The serum infusion phase is imperceptible. If you have particularly sensitive skin, let your specialist know and they'll adjust the tip coarseness and pass speed accordingly.</p></div>
       </details>
-
-      <details class="tx-faq-item">
-        <summary>
-          Can I wear makeup right after?
-          <svg class="tx-faq-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <div class="tx-faq-body">
-          <p>Yes — but we recommend waiting at least 6 hours to let your skin settle and absorb the serum fully. When you do apply makeup, you'll notice it goes on much more smoothly than usual. Many clients book this treatment the day before an event for exactly that reason.</p>
-        </div>
+      <details class="tx-faq-item" >
+        <summary>How often should I come in?<svg class="tx-faq-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="tx-faq-body"><p>Every 3–4 weeks for a series, then monthly for maintenance. The skin's natural renewal cycle is approximately 28 days, so timing sessions to that rhythm gives each treatment a full surface turnover to work with. Clients who maintain monthly Diamond Glow sessions consistently report the best long-term improvement in skin quality.</p></div>
       </details>
-
-      <details class="tx-faq-item">
-        <summary>
-          How is this different from a regular facial?
-          <svg class="tx-faq-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <div class="tx-faq-body">
-          <p>A traditional facial uses products and massage to nourish and cleanse the skin's surface. The Diamond Glow goes one step deeper — mechanically removing the dead skin layer and delivering active ingredients below the surface barrier. The results are more immediate and more visible, and the treatment addresses texture and pore congestion in a way that a product-based facial simply can't.</p>
-        </div>
+      <details class="tx-faq-item" >
+        <summary>Which serum should I choose?<svg class="tx-faq-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="tx-faq-body"><p>Your specialist selects the right formula during your consultation based on your primary goals: vitamin C for brightening and hyperpigmentation, hyaluronic acid for deep hydration and plumping, salicylic + niacinamide for congestion and oil balance, or a peptide-growth factor blend for anti-aging and firmness. You don't need to decide in advance — the selection is made fresh each session based on what your skin shows that day.</p></div>
       </details>
-
-      <details class="tx-faq-item">
-        <summary>
-          How many sessions do I actually need?
-          <svg class="tx-faq-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <div class="tx-faq-body">
-          <p>You'll see results after a single session — it's genuinely one of the best treatments for a before-an-event glow. For targeted concerns like hyperpigmentation, enlarged pores, or fine lines, we recommend a series of 3 to 6 sessions spaced 4–6 weeks apart. After that, most clients maintain with a monthly session or as part of their Facial Club membership.</p>
-        </div>
+      <details class="tx-faq-item" >
+        <summary>Can I wear makeup afterward?<svg class="tx-faq-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="tx-faq-body"><p>We recommend waiting until the following morning to let the serum infusion continue working undisturbed. If you need to wear makeup on the day of treatment, wait at least 2 hours and use mineral-based products only. Avoid heavy or occlusive foundations on the day of treatment.</p></div>
       </details>
-
-      <details class="tx-faq-item">
-        <summary>
-          Is this covered by my Facial Club membership?
-          <svg class="tx-faq-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </summary>
-        <div class="tx-faq-body">
-          <p>Yes — the Diamond Glow Microderm Facial is included in our <strong>Gold Facial Club membership</strong> ($199/month). Gold members receive one Diamond Glow or similar advanced facial per month, at no additional charge. <a href="../../../pages/facial-club/index.html" style="color: var(--gold-deep);">See membership details →</a></p>
-        </div>
+      <details class="tx-faq-item" >
+        <summary>Is Diamond Glow included in the Facial Club?<svg class="tx-faq-chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="tx-faq-body"><p>Yes — Diamond Glow is one of the treatments available as a monthly Facial Club session. Gold members can use their monthly credit toward Diamond Glow, and Platinum members receive it as their standard monthly treatment at a preferred rate. <a href="../../../pages/facial-club/index.html" style="color:var(--gold-deep);">See Facial Club options &rarr;</a></p></div>
       </details>
-
     </div>
   </section>
 
-  <!-- ============================================
-       FINAL CTA
-  ============================================ -->
   <!-- CTA -->
   <section class="tx-cta">
-    <img class="tx-cta-bg" src="https://images.pexels.com/photos/3985317/pexels-photo-3985317.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="">
-    <div class="tx-cta-tint"></div>
     <div class="tx-cta-content">
-      <h2>Ready for skin that <em>speaks for itself?</em></h2>
-      <p>Book your Diamond Glow Microderm Facial today. We'll take it from there — one client, one specialist, one session at a time.</p>
+      <h2>Clearer pores. Better texture. Skin that actually absorbs your products. <em>One session.</em></h2>
+      <p>Book your Diamond Glow — exfoliation, extraction, and serum infusion in 60 minutes flat.</p>
       <div class="tx-cta-buttons">
-        <a href="#" class="btn-gold" data-modal-open="reserve-modal">Reserve Your Session — $225</a>
+        <a href="#" class="btn-gold" data-modal-open="reserve-modal">Reserve Your Session &mdash; $249</a>
         <a href="tel:+18482292742" class="btn-ghost">Call (848) 229-2742</a>
       </div>
     </div>
+    <div class="tx-cta-image">
+      <img src="../../../images/facials/diamond-glow/cta.jpg" alt="Diamond Glow Microderm at Merle Norman Metuchen">
+    </div>
   </section>
 
-  <!-- NAVIGATE STRIP -->
+  <!-- NAV STRIP -->
   <div class="tx-nav-strip">
     <a href="../index.html" class="tx-nav-card">
-      <img src="https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="All Facials at Merle Norman Metuchen" loading="lazy">
+      <img src="../../../images/shared/all-facials.jpg" alt="All Facials at Merle Norman Metuchen" loading="lazy">
       <div class="tx-nav-card-tint"></div>
       <div class="tx-nav-card-inner">
         <div class="tx-nav-card-label">All Facials</div>
         <h3>Browse every facial we offer</h3>
-        <span class="tx-nav-card-arrow">View All Facials &nbsp;→</span>
+        <span class="tx-nav-card-arrow">View All Facials &nbsp;&rarr;</span>
       </div>
     </a>
     <a href="../../../pages/facial-club/index.html" class="tx-nav-card">
-      <img src="https://images.pexels.com/photos/6634828/pexels-photo-6634828.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Facial Club Membership at Merle Norman Metuchen" loading="lazy">
+      <img src="../../../images/shared/facial-club.jpg" alt="Facial Club Membership at Merle Norman Metuchen" loading="lazy">
       <div class="tx-nav-card-tint"></div>
       <div class="tx-nav-card-inner">
         <div class="tx-nav-card-label">Membership</div>
         <h3>Get this facial every month from $199</h3>
-        <span class="tx-nav-card-arrow">Explore Facial Club &nbsp;→</span>
+        <span class="tx-nav-card-arrow">Explore Facial Club &nbsp;&rarr;</span>
       </div>
     </a>
   </div>
 
 </main>
 
-<!-- ============================================
-     FOOTER
-============================================ -->
 <footer class="site-footer">
   <div class="wrap">
     <div class="foot-contact-row">
       <a class="fc-item" href="tel:+18482292742">
         <span class="fc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
-        <span><span class="fc-label">Let's Talk</span><strong>(848) 229-2742</strong></span>
+        <span><span class="fc-label">Let&rsquo;s Talk</span><strong>(848) 229-2742</strong></span>
       </a>
       <a class="fc-item" href="mailto:hello@merlenormanmetuchen.com">
         <span class="fc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -1641,15 +644,15 @@
       <div>
         <h4>Hours</h4>
         <ul>
-          <li>Tue – Wed: 10AM–5PM</li>
-          <li>Fri: 10AM–5PM</li>
-          <li>Sat: 11AM–3PM</li>
+          <li>Tue &ndash; Wed: 10AM&ndash;5PM</li>
+          <li>Fri: 10AM&ndash;5PM</li>
+          <li>Sat: 11AM&ndash;3PM</li>
           <li>Sun, Mon, Thu: Closed</li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Merle Norman Metuchen. All rights reserved.</span>
+      <span>&copy; 2026 Merle Norman Metuchen. All rights reserved.</span>
       <div class="legal-links">
         <a href="../../../pages/refund-policy/index.html">Refund &amp; Services Policy</a>
         <a href="https://spa.mnbeautystudio.com/privacy_policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
@@ -1662,44 +665,29 @@
 <!-- RESERVE MODAL -->
 <div class="mn-overlay" id="reserve-modal">
   <div class="mn-modal">
-    <button type="button" class="mn-modal-close" data-modal-close aria-label="Close">✕</button>
+    <button type="button" class="mn-modal-close" data-modal-close aria-label="Close">&#10005;</button>
     <div class="mn-modal-head">
       <span class="eyebrow">Reserve a Beauty Specialist</span>
-      <h3>Tell us a bit about you — we'll take it from there</h3>
+      <h3>Tell us a bit about you &mdash; we&rsquo;ll take it from there</h3>
       <p>A member of our team will personally reach out to confirm your visit, usually within a day.</p>
     </div>
     <div class="mn-modal-body">
       <form data-demo-form>
-        <div class="mn-field">
-          <label for="rb-name">Full Name</label>
-          <input type="text" id="rb-name" name="name" required>
-        </div>
-        <div class="mn-field">
-          <label for="rb-phone">Phone Number</label>
-          <input type="tel" id="rb-phone" name="phone" required>
-        </div>
-        <div class="mn-field">
-          <label for="rb-email">Email</label>
-          <input type="email" id="rb-email" name="email" required>
-        </div>
+        <div class="mn-field"><label for="rb-name">Full Name</label><input type="text" id="rb-name" name="name" required></div>
+        <div class="mn-field"><label for="rb-phone">Phone Number</label><input type="tel" id="rb-phone" name="phone" required></div>
+        <div class="mn-field"><label for="rb-email">Email</label><input type="email" id="rb-email" name="email" required></div>
         <div class="mn-field">
           <label for="rb-interest">What are you interested in?</label>
           <select id="rb-interest" name="interest">
-            <option selected>Diamond Glow Microderm Facial — $225</option>
-            <option>Series of 3 — $615 (save $60)</option>
-            <option>Series of 6 — $1,200 (save $150)</option>
+            <option selected>Diamond Glow Microderm &mdash; $249</option>
+            <option>Series of 3 &mdash; $657 (save $90)</option>
+            <option>Series of 6 &mdash; $1,194 (save $300)</option>
             <option>Facial Club Membership</option>
             <option>Other / Not sure yet</option>
           </select>
         </div>
-        <div class="mn-field">
-          <label for="rb-message">Anything we should know about your skin?</label>
-          <textarea id="rb-message" name="message"></textarea>
-        </div>
-        <label class="mn-consent">
-          <input type="checkbox" name="sms_consent">
-          <span>By checking this box, I agree to receive text messages from Merle Norman Metuchen about appointment reminders and offers. Message &amp; data rates may apply. Reply STOP to unsubscribe.</span>
-        </label>
+        <div class="mn-field"><label for="rb-message">Anything we should know about your skin?</label><textarea id="rb-message" name="message"></textarea></div>
+        <label class="mn-consent"><input type="checkbox" name="sms_consent"><span>By checking this box, I agree to receive text messages from Merle Norman Metuchen about appointment reminders and offers. Message &amp; data rates may apply. Reply STOP to unsubscribe.</span></label>
         <button type="submit" class="btn btn-primary btn-block">Send Reservation Request</button>
         <p data-form-status style="display:none; margin-top:14px; font-size:13px; color:var(--ink-soft);"></p>
       </form>
@@ -1707,43 +695,25 @@
   </div>
 </div>
 
-<!-- VIDEO MODAL -->
-<div class="mn-overlay" id="video-modal">
-  <div class="mn-modal">
-    <button type="button" class="mn-modal-close" data-modal-close aria-label="Close">✕</button>
-    <div class="mn-modal-head">
-      <h3 id="video-modal-title">Diamond Glow Microderm Facial</h3>
-    </div>
-    <div class="mn-modal-body">
-      <div class="video-embed">
-        <iframe id="video-modal-iframe" src="" title="Diamond Glow Microderm Facial treatment video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-</div>
-
 <script src="../../../js/main.js"></script>
-
 <script>
 (function () {
-  var VIMEO_ID = '806668520';
+  var VIMEO_ID = '0';
   var stage = document.getElementById('vimeo-stage');
   var thumb = document.getElementById('vimeo-thumb');
-
-  // ── Load real Vimeo thumbnail ───────────────────────────
-  fetch('https://vimeo.com/api/v2/video/' + VIMEO_ID + '.json')
-    .then(function (r) { return r.json(); })
-    .then(function (data) {
-      var url = data[0].thumbnail_large || data[0].thumbnail_medium;
-      if (url) thumb.src = url;
-    })
-    .catch(function () { /* keep fallback image */ });
-
-  // ── Inline play on click ────────────────────────────────
+  if (VIMEO_ID && VIMEO_ID !== '0') {
+    fetch('https://vimeo.com/api/v2/video/' + VIMEO_ID + '.json')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var url = data[0].thumbnail_large || data[0].thumbnail_medium;
+        if (url) thumb.src = url;
+      })
+      .catch(function () {});
+  }
   stage.addEventListener('click', function () {
+    if (!VIMEO_ID || VIMEO_ID === '0') return;
     var iframe = document.createElement('iframe');
-    iframe.src = 'https://player.vimeo.com/video/' + VIMEO_ID
-      + '?autoplay=1&title=0&byline=0&portrait=0&color=c6a475';
+    iframe.src = 'https://player.vimeo.com/video/' + VIMEO_ID + '?autoplay=1&title=0&byline=0&portrait=0&color=c6a475';
     iframe.allow = 'autoplay; fullscreen; picture-in-picture';
     iframe.allowFullscreen = true;
     iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:none;background:#000;';

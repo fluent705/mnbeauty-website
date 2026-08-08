@@ -204,34 +204,74 @@ header.nav{
 .has-dropdown:hover .nav-caret, .has-dropdown:focus-within .nav-caret{ transform:rotate(180deg); }
 
 /* dropdown panel — flush against the trigger (zero gap, no margin-top)
-   so the hoverable area is one continuous shape and never drops the
-   menu when the cursor moves diagonally from the link into the panel */
+   so the hoverable area is one continuous shape and doesn't drop the
+   menu when the cursor moves diagonally from the link into the panel.
+
+   Positioning defaults to centered under the trigger word (tight to it,
+   so there's no empty space between link and panel for the cursor to
+   cross). That alone isn't enough for a trigger near the edge of the
+   nav — a wide panel centered under it can still run past the edge of
+   the window — so main.js measures the panel after it opens and nudges
+   it sideways (an extra translateX added on top of this base transform)
+   only when it would actually overflow. The max-width clamp here is the
+   last-resort backstop if JS hasn't run yet. */
 .has-dropdown .dropdown{
   position:absolute; top:100%; left:50%; transform:translateX(-50%);
-  min-width:620px; background:var(--cloud); border:1px solid var(--sky-line);
+  width:860px; max-width:calc(100vw - 32px); background:var(--cloud); border:1px solid var(--sky-line);
   border-radius:var(--radius); box-shadow:0 30px 60px -24px rgba(34,48,58,.35);
-  padding:22px 28px 28px; margin-top:0;
-  display:grid; grid-template-columns:repeat(3,1fr); gap:26px;
+  padding:28px 32px 32px; margin-top:0;
+  display:grid; grid-template-columns:2fr 1fr 1fr; gap:32px;
   opacity:0; visibility:hidden; pointer-events:none;
   transition: opacity .18s ease, visibility .18s ease;
   z-index:400;
 }
 .has-dropdown:hover .dropdown,
+.has-dropdown.dropdown-open .dropdown,
 .has-dropdown:focus-within .dropdown{
   opacity:1; visibility:visible; pointer-events:auto;
 }
 .dropdown-col h5{
-  font-family:var(--sans); font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
-  color:var(--gold-deep); font-weight:600; margin-bottom:14px;
+  font-family:var(--sans); font-size:10.5px; letter-spacing:1.8px; text-transform:uppercase;
+  color:var(--gold-deep); font-weight:600; margin-bottom:14px; padding-bottom:10px;
+  border-bottom:1px solid rgba(198,164,117,.2);
 }
 .dropdown-col a{
-  display:block; text-decoration:none; color:var(--ink); font-size:13.5px;
-  letter-spacing:.2px; text-transform:none; padding:7px 0; font-weight:400;
+  display:block; text-decoration:none; color:var(--ink); font-size:13px;
+  letter-spacing:.2px; text-transform:none; padding:5px 0; font-weight:400;
+  transition:color .15s;
 }
 .dropdown-col a::after{ display:none; }
 .dropdown-col a:hover{ color:var(--gold-deep); }
-.dropdown-col a.view-all{ color:var(--gold-deep); font-weight:600; font-size:12.5px; letter-spacing:1px; text-transform:uppercase; margin-top:8px; }
-@media(max-width:1180px){ .has-dropdown .dropdown{ min-width:520px; } }
+.dropdown-col a.view-all{
+  color:var(--gold-deep); font-weight:600; font-size:11px; letter-spacing:1.5px;
+  text-transform:uppercase; margin-top:10px; padding-top:10px;
+  border-top:1px solid rgba(198,164,117,.18);
+}
+/* Facials col: 2-column link grid so 10 items stay compact */
+.dropdown-col--facials .facials-grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:0 16px;
+}
+.dropdown-col--facials .facials-grid a{
+  display:block; padding:4px 0;
+}
+.dropdown-col--facials > a.view-all{ grid-column:1/-1; }
+/* Single-column variant (Makeup) — the base .has-dropdown .dropdown rule
+   above is sized for the 3-column Treatments mega-menu; without this
+   override (matched at equal-or-higher specificity so it actually wins
+   the cascade — a plain .dropdown--narrow rule was too low-specificity
+   to beat .has-dropdown .dropdown and silently did nothing) a narrow
+   one-column panel inherited that 860px/3-column grid and rendered as a
+   single item next to two empty columns of blank space. */
+.has-dropdown .dropdown.dropdown--narrow{
+  width:max-content; max-width:min(260px, calc(100vw - 32px));
+  grid-template-columns:1fr;
+}
+/* Below 1180px the 3-column mega-menu no longer comfortably fits at
+   860px even with the max-width clamp above (it'd just get squeezed and
+   cramped); collapse it to one column so the clamp keeps it readable
+   instead of tiny. dropdown--narrow is already single-column and just
+   rides the max-width clamp from the base rule at every size. */
+@media(max-width:1180px){ .has-dropdown .dropdown{ width:95vw; grid-template-columns:1fr; } }
 
 .nav-right{ display:flex; align-items:center; gap:18px; }
 .nav-cta{ padding:11px 24px; }
@@ -462,36 +502,60 @@ header.nav{
 
 /* ---------- PRODUCTS (Merle Norman) ---------- */
 .products{ background: var(--cloud); }
+.products h2 em{ font-style:italic; color:var(--gold-deep); }
 .product-grid{
-  display:grid; grid-template-columns:repeat(5,1fr); gap:18px; margin-top:52px;
+  display:grid; grid-template-columns:repeat(4,1fr); gap:32px; margin-top:52px;
 }
-.product-tile{
-  aspect-ratio: 3/4; border-radius: var(--radius); overflow:hidden;
-  background: linear-gradient(160deg, var(--sky) 0%, var(--gold-pale) 130%);
-  border:1px solid var(--sky-line);
-  display:flex; align-items:center; justify-content:center;
-  position:relative;
+.product-card{
+  background:#fff; border:1px solid var(--sky-line); border-radius:var(--radius);
+  overflow:hidden; transition:box-shadow .3s ease, transform .3s ease;
 }
-.product-tile .ph{
-  text-align:center; padding:18px; color:var(--ink-soft);
+.product-card:hover{ box-shadow:0 24px 44px -24px rgba(34,48,58,.28); transform:translateY(-4px); }
+.product-card-media{
+  position:relative; aspect-ratio:1/1; overflow:hidden;
+  background:#fff;
+  display:flex; align-items:center; justify-content:center; padding:32px;
 }
-.product-tile .ph .mark{
-  width:44px; height:44px; margin:0 auto 14px; border-radius:50%;
-  border:1px solid var(--gold-deep); display:flex; align-items:center; justify-content:center;
-  color:var(--gold-deep); font-family:var(--serif); font-style:italic; font-size:18px;
+.product-card-media img{
+  max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain;
+  transition:transform .5s ease;
 }
-.product-tile .ph .name{ font-family:var(--serif); font-size:16px; color:var(--ink); }
-.product-tile .ph .sub{ font-size:10.5px; letter-spacing:1.5px; text-transform:uppercase; color:var(--ink-soft); margin-top:4px; }
+.product-card:hover .product-card-media img{ transform:scale(1.08); }
+.product-card-shop{
+  position:absolute; inset:auto 0 0 0; padding:16px;
+  display:flex; justify-content:center;
+  background:linear-gradient(to top, rgba(255,255,255,.92) 0%, rgba(255,255,255,0) 100%);
+  opacity:0; transform:translateY(10px);
+  transition:opacity .3s ease, transform .3s ease;
+}
+.product-card:hover .product-card-shop{ opacity:1; transform:translateY(0); }
+.product-card-body{ padding:20px 18px 24px; text-align:center; border-top:1px solid var(--sky-line); }
+.product-card-name{ font-family:var(--serif); font-size:16.5px; color:var(--ink); line-height:1.3; }
 .products-copy{ max-width:640px; margin:44px auto 0; text-align:center; }
 .products-copy p{ color:var(--ink-soft); font-size:16px; }
-@media(max-width:900px){ .product-grid{ grid-template-columns:repeat(3,1fr); } }
-@media(max-width:560px){ .product-grid{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:900px){ .product-grid{ grid-template-columns:repeat(2,1fr); gap:22px; } }
+@media(max-width:560px){
+  .product-grid{ grid-template-columns:1fr; max-width:360px; margin-left:auto; margin-right:auto; }
+  /* Shop Now has no hover on touch devices — keep it visible so it's reachable.
+     Stays an absolutely-positioned overlay (like desktop) so it doesn't get
+     laid out as a flex sibling next to the product image. */
+  .product-card-shop{ opacity:1; transform:none; }
+}
 
 /* ---------- TESTIMONIAL ---------- */
-.testimonial{ background: var(--sky); }
-.quote{ max-width:760px; margin:0 auto; text-align:center; }
-.quote p{ font-family:var(--serif); font-style:italic; font-size:clamp(22px,3vw,32px); line-height:1.5; color:var(--ink); }
-.quote .who{ margin-top:26px; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold-deep); }
+.testimonial{ position:relative; overflow:hidden; padding:140px 0; }
+.testimonial-img{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  object-position:center 30%; filter:brightness(.55) contrast(1.05);
+}
+.testimonial-tint{
+  position:absolute; inset:0;
+  background:linear-gradient(160deg, rgba(22,32,40,.85) 0%, rgba(107,79,33,.55) 100%);
+}
+.testimonial .quote{ position:relative; z-index:2; max-width:760px; margin:0 auto; text-align:center; }
+.quote p{ font-family:var(--serif); font-style:italic; font-size:clamp(22px,3vw,32px); line-height:1.5; color:#fff; }
+.quote .who{ margin-top:26px; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold-pale); }
+@media(max-width:600px){ .testimonial{ padding:96px 0; } }
 
 /* ---------- VISIT ---------- */
 .visit{ background: var(--cloud); }
@@ -712,27 +776,50 @@ footer.site-footer{ background: var(--ink); color: rgba(251,253,254,.75); paddin
 
 /* ---------- BENTO TREATMENTS GRID ---------- */
 .bento-grid{
-  display:grid; grid-template-columns: 1.3fr 1fr; grid-template-rows: 1fr 1fr;
-  gap:22px; margin-top:60px; min-height:640px;
+  display:grid; grid-template-columns: 1.45fr 1fr; grid-template-rows: 1fr 1fr;
+  gap:3px; margin-top:56px; min-height:82vh;
 }
 .bento-tile{
-  position:relative; border-radius:var(--radius); overflow:hidden; text-decoration:none; color:inherit;
+  position:relative; overflow:hidden; text-decoration:none; color:inherit;
   display:flex; align-items:flex-end;
 }
-.bento-tile.large{ grid-row: 1 / 3; }
 .bento-tile .media{ position:absolute; inset:0; }
-.bento-tile .media .tint{ background:linear-gradient(180deg, rgba(14,20,25,0) 30%, rgba(14,20,25,.86) 100%); mix-blend-mode:normal; }
-.bento-copy{ position:relative; z-index:2; padding:34px 34px 32px; color:#fff; width:100%; }
-.bento-kicker{ font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:8px; display:block; }
-.bento-copy h3{ font-family:var(--serif); font-style:italic; color:#fff; font-size:clamp(24px,2.4vw,32px); margin-bottom:10px; text-shadow:0 2px 18px rgba(0,0,0,.3); }
-.bento-tile.large .bento-copy h3{ font-size:clamp(28px,3vw,38px); }
-.bento-copy p{ color:rgba(251,253,254,.82); font-size:14.5px; max-width:420px; margin-bottom:14px; }
-.bento-copy .t-link{ color:var(--gold); }
-.bento-tile:hover .bento-copy .t-link{ border-color:var(--gold); }
+.bento-tile .media img{ width:100%; height:100%; object-fit:cover; object-position:center; transition:transform .7s ease; }
+.bento-tile:hover .media img{ transform:scale(1.04); }
+.bento-tile.large{ grid-row: 1 / 3; }
+.bento-tile .media .tint{
+  position:absolute; inset:0;
+  background:linear-gradient(160deg, rgba(14,20,25,0) 25%, rgba(14,20,25,.75) 80%, rgba(14,20,25,.88) 100%);
+}
+.bento-copy{ position:relative; z-index:2; padding:44px 48px; color:#fff; width:100%; }
+.bento-tile.large .bento-copy{ padding:56px 60px; }
+.bento-kicker{
+  font-family:var(--sans); font-size:10px; letter-spacing:2.5px; text-transform:uppercase;
+  color:var(--gold); margin-bottom:14px; display:flex; align-items:center; gap:10px; font-weight:600;
+}
+.bento-kicker::before{ content:''; display:block; width:20px; height:1px; background:var(--gold); opacity:.7; }
+.bento-copy h3{
+  font-family:var(--serif); font-style:italic; color:#fff;
+  font-size:clamp(26px,2.6vw,36px); margin-bottom:14px;
+  line-height:1.15; letter-spacing:-.02em;
+}
+.bento-tile.large .bento-copy h3{ font-size:clamp(32px,3.8vw,52px); margin-bottom:18px; }
+.bento-copy p{ color:rgba(251,253,254,.75); font-size:15px; max-width:440px; margin-bottom:20px; line-height:1.72; }
+.bento-copy .t-link{
+  color:var(--gold); border-color:rgba(198,164,117,.35);
+  font-size:10.5px; letter-spacing:2px;
+}
+.bento-tile:hover .bento-copy .t-link{ border-color:var(--gold); color:#fff; }
+@media(max-width:1024px){
+  .bento-grid{ min-height:70vh; }
+  .bento-tile.large .bento-copy{ padding:44px 40px; }
+  .bento-copy{ padding:32px 36px; }
+}
 @media(max-width:900px){
-  .bento-grid{ grid-template-columns:1fr; grid-template-rows:none; min-height:0; }
-  .bento-tile{ min-height:340px; }
-  .bento-tile.large{ grid-row:auto; min-height:420px; }
+  .bento-grid{ grid-template-columns:1fr; grid-template-rows:none; min-height:0; gap:3px; }
+  .bento-tile{ min-height:56vw; }
+  .bento-tile.large{ grid-row:auto; min-height:72vw; }
+  .bento-tile.large .bento-copy, .bento-copy{ padding:32px 28px; }
 }
 
 /* ---------- PROGRAMS (text-forward, numbered) ---------- */
