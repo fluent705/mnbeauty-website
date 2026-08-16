@@ -120,11 +120,30 @@
 }
 .pr-card h3 {
   font-family: var(--serif);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--ink);
-  line-height: 1.2;
-  margin-bottom: 14px;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+.pr-card-price {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.pr-card-price-now {
+  font-family: var(--serif);
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: var(--gold-deep);
+  line-height: 1;
+}
+.pr-card-price-reg {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: rgba(22,32,40,.4);
+  text-decoration: line-through;
 }
 .pr-card-desc {
   font-family: var(--sans);
@@ -220,8 +239,8 @@
             <h5>Facials</h5>
             <div class="facials-grid">
             <a href="../../services/facials/glow-n-go/index.html">Glow N Go Facial</a>
-            <a href="../../services/facials/rf-antiaging/index.html">RF Antiaging Facial</a>
-            <a href="../../services/facials/deep-cleansing/index.html">Deep Cleansing Facial</a>
+            <a href="../../services/facials/plasma-channeling-anti-aging/index.html">Plasma Channeling Anti Aging Facial</a>
+            <a href="../../services/facials/hydrafacial/index.html">HydraFacial</a>
             <a href="../../services/facials/gentlemans-facial/index.html">Gentleman&rsquo;s Facial</a>
             <a href="../../services/facials/glow-facial/index.html">Glow Facial</a>
             <a href="../../services/facials/diamond-glow/index.html">Diamond Glow Microderm</a>
@@ -316,43 +335,54 @@
 
         <!-- PROMO CARD 1 -->
         <div class="pr-card">
-          <span class="pr-card-badge">New Clients</span>
-          <h3>25% Off Your First Visit</h3>
-          <p class="pr-card-desc">First time at Merle Norman Metuchen? Save 25% on any facial or advanced treatment for your first appointment with us.</p>
+          <span class="pr-card-badge">Facial Package</span>
+          <h3>Red Carpet Glow Facial Package</h3>
+          <div class="pr-card-price">
+            <span class="pr-card-price-now">$149</span>
+            <span class="pr-card-price-reg">Reg $225</span>
+          </div>
+          <p class="pr-card-desc">Glow N Go Facial + Oxygen Infusion + Red Light Therapy, three treatments in one appointment for that camera-ready glow.</p>
           <div class="pr-card-meta">
-            <div class="pr-card-meta-row"><span class="pr-card-meta-label">Applies to</span><span class="pr-card-meta-value">All Facials &amp; Treatments</span></div>
-            <div class="pr-card-meta-row"><span class="pr-card-meta-label">Code</span><span class="pr-card-meta-value">FIRSTTIME25</span></div>
-            <div class="pr-card-meta-row"><span class="pr-card-meta-label">Valid</span><span class="pr-card-meta-value">New clients, ongoing</span></div>
+            <div class="pr-card-meta-row"><span class="pr-card-meta-label">Includes</span><span class="pr-card-meta-value">Glow N Go, Oxygen Infusion, Red Light</span></div>
+            <div class="pr-card-meta-row"><span class="pr-card-meta-label">Valid</span><span class="pr-card-meta-value">Currently running</span></div>
           </div>
           <a href="#" class="pr-card-btn" data-modal-open="reserve-modal">Claim This Offer</a>
         </div>
 
         <!-- PROMO CARD 2 -->
         <div class="pr-card">
-          <span class="pr-card-badge">Limited Time</span>
-          <h3>Bring a Friend, Save 15%</h3>
-          <p class="pr-card-desc">Book a facial together and you&rsquo;ll each save 15% on your treatment that day. Great excuse for a spa day.</p>
+          <span class="pr-card-badge">Body Treatment</span>
+          <h3>Tummy Tightening N Tone</h3>
+          <div class="pr-card-price">
+            <span class="pr-card-price-now">$199</span>
+            <span class="pr-card-price-reg">Reg $395</span>
+          </div>
+          <p class="pr-card-desc">Venus Legacy RF + Red Light + Smart EM Sculpt, a combined treatment for firmer, more toned-looking skin.</p>
           <div class="pr-card-meta">
-            <div class="pr-card-meta-row"><span class="pr-card-meta-label">Applies to</span><span class="pr-card-meta-value">Any Facial</span></div>
-            <div class="pr-card-meta-row"><span class="pr-card-meta-label">Valid</span><span class="pr-card-meta-value">Aug 1 &ndash; Aug 31, 2026</span></div>
+            <div class="pr-card-meta-row"><span class="pr-card-meta-label">Includes</span><span class="pr-card-meta-value">Venus Legacy RF, Red Light, Smart EM Sculpt</span></div>
+            <div class="pr-card-meta-row"><span class="pr-card-meta-label">Valid</span><span class="pr-card-meta-value">Currently running</span></div>
           </div>
           <a href="#" class="pr-card-btn" data-modal-open="reserve-modal">Claim This Offer</a>
         </div>
 
         <!-- PROMO CARD 3 -->
         <div class="pr-card">
-          <span class="pr-card-badge">Members</span>
-          <h3>Refer a Friend, Get $20</h3>
-          <p class="pr-card-desc">Refer a friend to the Facial Club. Once they join, you both get a $20 credit toward your next visit.</p>
+          <span class="pr-card-badge">Limited Time</span>
+          <h3>Cold Jet Plasma Skin Tightening Treatment</h3>
+          <div class="pr-card-price">
+            <span class="pr-card-price-now">$349</span>
+            <span class="pr-card-price-reg">Reg $700</span>
+          </div>
+          <p class="pr-card-desc">50% off your first Cold Jet Plasma Skin Tightening Treatment.</p>
           <div class="pr-card-meta">
-            <div class="pr-card-meta-row"><span class="pr-card-meta-label">Applies to</span><span class="pr-card-meta-value">Facial Club Membership</span></div>
-            <div class="pr-card-meta-row"><span class="pr-card-meta-label">Valid</span><span class="pr-card-meta-value">Ongoing</span></div>
+            <div class="pr-card-meta-row"><span class="pr-card-meta-label">Applies to</span><span class="pr-card-meta-value">First treatment only</span></div>
+            <div class="pr-card-meta-row"><span class="pr-card-meta-label">Valid</span><span class="pr-card-meta-value">Currently running</span></div>
           </div>
           <a href="#" class="pr-card-btn" data-modal-open="reserve-modal">Claim This Offer</a>
         </div>
 
       </div>
-      <p class="pr-note">Offers can&rsquo;t be combined unless noted. Mention the offer when you book so we can apply it to your visit.</p>
+      <p class="pr-note">Open to new and existing clients. Offers can&rsquo;t be combined unless noted &mdash; mention the offer when you book so we can apply it to your visit.</p>
     </div>
   </section>
 
@@ -444,6 +474,9 @@
         <div class="mn-field">
           <label for="rb-interest">What are you interested in?</label>
           <select id="rb-interest" name="interest">
+            <option>Red Carpet Glow Facial Package &mdash; $149</option>
+            <option>Tummy Tightening N Tone &mdash; $199</option>
+            <option>Cold Jet Plasma Skin Tightening Treatment &mdash; $349</option>
             <option>Facials</option>
             <option>Advance Skin Treatments</option>
             <option>Facial Club Membership</option>
